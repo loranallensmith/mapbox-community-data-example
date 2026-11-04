@@ -58,7 +58,10 @@ const result = {
 };
 for (const name of [
   "mapbox-gl-js",
-  "mapbox-search-js",
+  "pixelmatch",
+  "mapbox-gl-native",
+  "tippecanoe",
+  "delaunator",
   "mapbox-gl-draw",
   "mapbox-gl-geocoder",
 ]) {

@@ -1,18 +1,13 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-04T15:15:56.000Z",
+  "collectedAt": "2026-11-04T15:32:31.879Z",
   "window": {
-    "start": "2026-08-06T15:15:55.999Z",
-    "end": "2026-11-04T15:15:55.999Z",
+    "start": "2026-08-06T15:32:31.870Z",
+    "end": "2026-11-04T15:32:31.870Z",
     "days": 90
   },
   "responseSampling": "Newest five non-PR issues created in the window per repository; comments only, excludes author and GitHub Bot accounts. Censored unanswered items excluded from median.",
-  "candidates": [
-    {
-      "name": "mapbox/mapbox-search-js",
-      "status": "Not publicly retrievable (404); absence is not proof of nonexistence."
-    }
-  ],
+  "candidates": [],
   "repositories": [
     {
       "name": "mapbox/mapbox-gl-js",
@@ -358,6 +353,190 @@
             }
           ],
           "firstResponseHours": 33.02583333333333
+        }
+      ]
+    },
+    {
+      "name": "mapbox/pixelmatch",
+      "url": "https://github.com/mapbox/pixelmatch",
+      "description": "The smallest, simplest and fastest JavaScript pixel-level image comparison library",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-06T14:08:46Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 1,
+        "closedPrs": 1,
+        "medianPrCloseHours": 642.9525,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      },
+      "items": [
+        {
+          "number": 171,
+          "url": "https://github.com/mapbox/pixelmatch/pull/171",
+          "created_at": "2026-09-07T13:15:40Z",
+          "closed_at": "2026-10-04T08:12:49Z",
+          "pr": true
+        }
+      ],
+      "responseSample": []
+    },
+    {
+      "name": "mapbox/mapbox-gl-native",
+      "url": "https://github.com/mapbox/mapbox-gl-native",
+      "description": "Interactive, thoroughly customizable maps in native Android, iOS, macOS, Node.js, and Qt applications, powered by vector tiles and OpenGL",
+      "archived": true,
+      "disabled": false,
+      "pushedAt": "2023-07-27T10:31:03Z",
+      "branch": "master",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.mbgl-core.md",
+          "LICENSE.md",
+          "scripts/license.cmake",
+          "vendor/csscolorparser/LICENSE",
+          "vendor/icu/LICENSE",
+          "vendor/nunicode/LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      },
+      "items": [],
+      "responseSample": []
+    },
+    {
+      "name": "mapbox/tippecanoe",
+      "url": "https://github.com/mapbox/tippecanoe",
+      "description": "Build vector tilesets from large collections of GeoJSON features.",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:20:27Z",
+      "branch": "master",
+      "license": "BSD-2-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.md",
+          "milo/LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      },
+      "items": [],
+      "responseSample": []
+    },
+    {
+      "name": "mapbox/delaunator",
+      "url": "https://github.com/mapbox/delaunator",
+      "description": "An incredibly fast JavaScript library for Delaunay triangulation of 2D points",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-31T15:42:52Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 2,
+        "prsOpened": 1,
+        "closedPrs": 1,
+        "medianPrCloseHours": 675.8322222222222,
+        "responseSampleSize": 2,
+        "respondedSample": 1,
+        "medianSampleResponseHours": 3.0005555555555556
+      },
+      "items": [
+        {
+          "number": 100,
+          "url": "https://github.com/mapbox/delaunator/issues/100",
+          "created_at": "2026-10-31T12:31:48Z",
+          "closed_at": "2026-10-31T15:40:38Z",
+          "pr": false
+        },
+        {
+          "number": 99,
+          "url": "https://github.com/mapbox/delaunator/pull/99",
+          "created_at": "2026-10-03T11:49:27Z",
+          "closed_at": "2026-10-31T15:39:23Z",
+          "pr": true
+        },
+        {
+          "number": 98,
+          "url": "https://github.com/mapbox/delaunator/issues/98",
+          "created_at": "2026-10-02T16:34:29Z",
+          "closed_at": "2026-10-31T15:39:22Z",
+          "pr": false
+        }
+      ],
+      "responseSample": [
+        {
+          "number": 100,
+          "url": "https://github.com/mapbox/delaunator/issues/100",
+          "created_at": "2026-10-31T12:31:48Z",
+          "responses": [
+            {
+              "created_at": "2026-10-31T15:31:50Z",
+              "self": false,
+              "bot": false
+            },
+            {
+              "created_at": "2026-10-31T22:24:56Z",
+              "self": true,
+              "bot": false
+            }
+          ],
+          "firstResponseHours": 3.0005555555555556
+        },
+        {
+          "number": 98,
+          "url": "https://github.com/mapbox/delaunator/issues/98",
+          "created_at": "2026-10-02T16:34:29Z",
+          "responses": [],
+          "firstResponseHours": null
         }
       ]
     },
