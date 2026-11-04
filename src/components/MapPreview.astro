@@ -1,0 +1,66 @@
+---
+import { href } from "../lib/site";
+---
+
+<a
+  href={href("explorer")}
+  class="preview"
+  aria-label="Open Developer Ecosystem Explorer; schematic preview, not a live map"
+  style="text-decoration:none;display:block"
+>
+  <div class="preview-label">
+    <span>EXPERIMENT 01 / GEOGRAPHY</span>
+    <span>↗</span>
+  </div>
+  <svg
+    viewBox="0 0 480 310"
+    role="img"
+    aria-label="Schematic of four sourced community venues in North America and Europe"
+  >
+    <defs>
+      <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+        <path d="M30 0H0V30" fill="none" stroke="#c7d3c3" stroke-width=".6" />
+      </pattern>
+    </defs>
+    <rect width="480" height="310" fill="url(#grid)" />
+    <g fill="#c3d0bb" stroke="#a4b69e" stroke-width="1">
+      <path d="M10 80L48 40 102 28 149 52 180 47 195 76 165 98 139 94 118 125 93 138 80 167 57 131 35 120Z" />
+      <path d="M96 168L124 158 152 189 147 222 124 280 107 261 111 218 92 198Z" />
+      <path d="M271 80L289 64 305 70 321 63 348 77 365 68 409 82 468 71 474 139 445 161 409 135 389 157 353 145 333 111 308 111 296 99 278 107Z" />
+      <path d="M277 123L305 115 330 135 332 168 306 216 288 196 272 162Z" />
+    </g>
+    <path
+      d="M102 109Q195 15 287 88T319 94"
+      fill="none"
+      stroke="#8a9f83"
+      stroke-dasharray="4 5"
+    />
+    <g fill="#315d46" stroke="#f5f4ee" stroke-width="3">
+      <circle cx="102" cy="109" r="7" />
+      <circle cx="282" cy="88" r="7" />
+      <circle cx="290" cy="97" r="7" />
+      <circle cx="315" cy="90" r="7" />
+    </g>
+    <g fill="#35553e" font-size="10" font-family="sans-serif">
+      <text x="48" y="99">
+        PITTSBURGH
+      </text>
+      <text x="237" y="65">
+        LONDON
+      </text>
+      <text x="272" y="124">
+        BRUSSELS
+      </text>
+      <text x="325" y="85">
+        BERLIN
+      </text>
+      <text x="17" y="291" fill="#657761">
+        SCHEMATIC · NOT TO SCALE
+      </text>
+    </g>
+  </svg>
+  <div class="preview-bottom">
+    <strong>Where developer communities gather</strong>
+    <p>4 sourced venues · category layers · accessible list</p>
+  </div>
+</a>

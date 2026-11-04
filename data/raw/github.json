@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-11-04T15:15:56.000Z",
+  "window": {
+    "start": "2026-08-06T15:15:55.999Z",
+    "end": "2026-11-04T15:15:55.999Z",
+    "days": 90
+  },
+  "responseSampling": "Newest five non-PR issues created in the window per repository; comments only, excludes author and GitHub Bot accounts. Censored unanswered items excluded from median.",
+  "candidates": [
+    {
+      "name": "mapbox/mapbox-search-js",
+      "status": "Not publicly retrievable (404); absence is not proof of nonexistence."
+    }
+  ],
+  "repositories": [
+    {
+      "name": "mapbox/mapbox-gl-js",
+      "url": "https://github.com/mapbox/mapbox-gl-js",
+      "description": "Interactive, thoroughly customizable maps in the browser, powered by vector tiles and WebGL",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-04T14:31:14Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.txt",
+          "src/style-spec/LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 25,
+        "prsOpened": 12,
+        "closedPrs": 2,
+        "medianPrCloseHours": 138.5375,
+        "responseSampleSize": 5,
+        "respondedSample": 3,
+        "medianSampleResponseHours": 33.02583333333333
+      },
+      "items": [
+        {
+          "number": 13750,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13750",
+          "created_at": "2026-11-03T02:05:46Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13749,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13749",
+          "created_at": "2026-11-02T10:02:33Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13748,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13748",
+          "created_at": "2026-10-27T13:54:27Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13747,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13747",
+          "created_at": "2026-10-27T12:02:51Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13746,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13746",
+          "created_at": "2026-10-27T11:26:06Z",
+          "closed_at": "2026-10-29T08:15:20Z",
+          "pr": false
+        },
+        {
+          "number": 13745,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13745",
+          "created_at": "2026-10-26T15:43:45Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13744,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13744",
+          "created_at": "2026-10-26T07:13:33Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13743,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13743",
+          "created_at": "2026-10-22T15:19:30Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13742,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13742",
+          "created_at": "2026-10-22T03:21:07Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13741,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13741",
+          "created_at": "2026-10-21T20:11:31Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13740,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13740",
+          "created_at": "2026-10-16T18:51:04Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13739,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13739",
+          "created_at": "2026-10-08T22:08:18Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13738,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13738",
+          "created_at": "2026-10-07T08:14:58Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13737,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13737",
+          "created_at": "2026-10-07T03:33:59Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13736,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13736",
+          "created_at": "2026-10-05T19:52:06Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13735,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13735",
+          "created_at": "2026-10-02T18:49:46Z",
+          "closed_at": "2026-11-03T12:34:25Z",
+          "pr": false
+        },
+        {
+          "number": 13734,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13734",
+          "created_at": "2026-10-02T11:08:22Z",
+          "closed_at": "2026-10-02T11:53:02Z",
+          "pr": false
+        },
+        {
+          "number": 13733,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13733",
+          "created_at": "2026-09-30T10:45:23Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13732,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13732",
+          "created_at": "2026-09-28T21:27:35Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13731,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13731",
+          "created_at": "2026-09-28T14:32:24Z",
+          "closed_at": "2026-09-29T09:17:33Z",
+          "pr": false
+        },
+        {
+          "number": 13730,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13730",
+          "created_at": "2026-09-26T02:38:55Z",
+          "closed_at": "2026-09-28T09:31:21Z",
+          "pr": false
+        },
+        {
+          "number": 13729,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13729",
+          "created_at": "2026-09-23T19:23:38Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13728,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13728",
+          "created_at": "2026-09-19T19:53:29Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13727,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13727",
+          "created_at": "2026-09-19T14:52:24Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13726,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13726",
+          "created_at": "2026-09-15T15:27:55Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13723,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13723",
+          "created_at": "2026-09-01T11:42:24Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13722,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13722",
+          "created_at": "2026-08-31T19:31:59Z",
+          "closed_at": "2026-09-10T08:40:46Z",
+          "pr": true
+        },
+        {
+          "number": 13721,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13721",
+          "created_at": "2026-08-27T00:24:19Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13720,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13720",
+          "created_at": "2026-08-26T22:32:39Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13719,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13719",
+          "created_at": "2026-08-26T14:08:28Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13718,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13718",
+          "created_at": "2026-08-26T12:48:35Z",
+          "closed_at": "2026-08-28T12:44:18Z",
+          "pr": true
+        },
+        {
+          "number": 13717,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13717",
+          "created_at": "2026-08-20T06:30:11Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13716,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13716",
+          "created_at": "2026-08-15T07:49:07Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13715,
+          "url": "https://github.com/mapbox/mapbox-gl-js/pull/13715",
+          "created_at": "2026-08-14T11:06:12Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 13714,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13714",
+          "created_at": "2026-08-13T14:26:43Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13713,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13713",
+          "created_at": "2026-08-13T10:13:02Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 13712,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13712",
+          "created_at": "2026-08-12T14:44:42Z",
+          "closed_at": null,
+          "pr": false
+        }
+      ],
+      "responseSample": [
+        {
+          "number": 13750,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13750",
+          "created_at": "2026-11-03T02:05:46Z",
+          "responses": [],
+          "firstResponseHours": null
+        },
+        {
+          "number": 13748,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13748",
+          "created_at": "2026-10-27T13:54:27Z",
+          "responses": [
+            {
+              "created_at": "2026-10-28T15:10:06Z",
+              "self": false,
+              "bot": false
+            }
+          ],
+          "firstResponseHours": 25.260833333333334
+        },
+        {
+          "number": 13747,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13747",
+          "created_at": "2026-10-27T12:02:51Z",
+          "responses": [],
+          "firstResponseHours": null
+        },
+        {
+          "number": 13746,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13746",
+          "created_at": "2026-10-27T11:26:06Z",
+          "responses": [
+            {
+              "created_at": "2026-10-29T08:15:57Z",
+              "self": false,
+              "bot": false
+            }
+          ],
+          "firstResponseHours": 44.83083333333333
+        },
+        {
+          "number": 13744,
+          "url": "https://github.com/mapbox/mapbox-gl-js/issues/13744",
+          "created_at": "2026-10-26T07:13:33Z",
+          "responses": [
+            {
+              "created_at": "2026-10-27T16:15:06Z",
+              "self": false,
+              "bot": false
+            }
+          ],
+          "firstResponseHours": 33.02583333333333
+        }
+      ]
+    },
+    {
+      "name": "mapbox/mapbox-gl-draw",
+      "url": "https://github.com/mapbox/mapbox-gl-draw",
+      "description": "Draw tools for mapbox-gl-js",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-03T12:31:24Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 2,
+        "prsOpened": 35,
+        "closedPrs": 30,
+        "medianPrCloseHours": 72.82986111111111,
+        "responseSampleSize": 2,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      },
+      "items": [
+        {
+          "number": 1639,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1639",
+          "created_at": "2026-11-02T11:43:06Z",
+          "closed_at": "2026-11-03T12:31:21Z",
+          "pr": true
+        },
+        {
+          "number": 1638,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1638",
+          "created_at": "2026-11-02T11:42:56Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 1637,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1637",
+          "created_at": "2026-11-02T11:42:40Z",
+          "closed_at": "2026-11-03T12:31:01Z",
+          "pr": true
+        },
+        {
+          "number": 1636,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1636",
+          "created_at": "2026-10-29T21:12:13Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 1635,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1635",
+          "created_at": "2026-10-26T11:43:26Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 1634,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1634",
+          "created_at": "2026-10-26T11:43:16Z",
+          "closed_at": "2026-10-26T12:24:35Z",
+          "pr": true
+        },
+        {
+          "number": 1633,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1633",
+          "created_at": "2026-10-26T11:43:03Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 1632,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1632",
+          "created_at": "2026-10-26T11:42:53Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 1631,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1631",
+          "created_at": "2026-10-19T11:42:45Z",
+          "closed_at": "2026-10-19T11:53:33Z",
+          "pr": true
+        },
+        {
+          "number": 1630,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1630",
+          "created_at": "2026-10-19T11:42:36Z",
+          "closed_at": "2026-11-02T11:43:15Z",
+          "pr": true
+        },
+        {
+          "number": 1629,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1629",
+          "created_at": "2026-10-13T08:48:42Z",
+          "closed_at": null,
+          "pr": true
+        },
+        {
+          "number": 1628,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1628",
+          "created_at": "2026-10-13T08:48:32Z",
+          "closed_at": "2026-10-13T11:08:24Z",
+          "pr": true
+        },
+        {
+          "number": 1627,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1627",
+          "created_at": "2026-10-13T08:48:14Z",
+          "closed_at": "2026-10-19T11:42:52Z",
+          "pr": true
+        },
+        {
+          "number": 1626,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1626",
+          "created_at": "2026-10-05T11:43:06Z",
+          "closed_at": "2026-10-13T08:48:26Z",
+          "pr": true
+        },
+        {
+          "number": 1625,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1625",
+          "created_at": "2026-10-05T11:42:48Z",
+          "closed_at": "2026-10-13T08:48:43Z",
+          "pr": true
+        },
+        {
+          "number": 1624,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1624",
+          "created_at": "2026-10-05T11:42:37Z",
+          "closed_at": "2026-10-05T12:07:15Z",
+          "pr": true
+        },
+        {
+          "number": 1623,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1623",
+          "created_at": "2026-09-28T11:42:55Z",
+          "closed_at": "2026-09-28T12:55:00Z",
+          "pr": true
+        },
+        {
+          "number": 1622,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1622",
+          "created_at": "2026-09-28T11:42:39Z",
+          "closed_at": "2026-09-29T09:00:47Z",
+          "pr": true
+        },
+        {
+          "number": 1621,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1621",
+          "created_at": "2026-09-21T11:43:08Z",
+          "closed_at": "2026-10-05T11:42:45Z",
+          "pr": true
+        },
+        {
+          "number": 1620,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1620",
+          "created_at": "2026-09-21T11:43:03Z",
+          "closed_at": "2026-09-28T11:42:44Z",
+          "pr": true
+        },
+        {
+          "number": 1619,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1619",
+          "created_at": "2026-09-14T11:42:50Z",
+          "closed_at": "2026-09-28T11:42:58Z",
+          "pr": true
+        },
+        {
+          "number": 1618,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1618",
+          "created_at": "2026-09-14T11:17:15Z",
+          "closed_at": "2026-09-14T11:55:43Z",
+          "pr": true
+        },
+        {
+          "number": 1617,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1617",
+          "created_at": "2026-09-14T10:55:10Z",
+          "closed_at": "2026-09-14T11:05:38Z",
+          "pr": true
+        },
+        {
+          "number": 1616,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1616",
+          "created_at": "2026-09-07T11:42:33Z",
+          "closed_at": "2026-09-14T10:52:40Z",
+          "pr": true
+        },
+        {
+          "number": 1615,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1615",
+          "created_at": "2026-09-01T08:45:53Z",
+          "closed_at": null,
+          "pr": false
+        },
+        {
+          "number": 1614,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1614",
+          "created_at": "2026-08-31T11:42:40Z",
+          "closed_at": "2026-09-14T10:38:40Z",
+          "pr": true
+        },
+        {
+          "number": 1613,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1613",
+          "created_at": "2026-08-24T11:43:06Z",
+          "closed_at": "2026-09-14T10:52:57Z",
+          "pr": true
+        },
+        {
+          "number": 1612,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1612",
+          "created_at": "2026-08-24T11:42:48Z",
+          "closed_at": "2026-08-31T11:42:46Z",
+          "pr": true
+        },
+        {
+          "number": 1611,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1611",
+          "created_at": "2026-08-24T11:42:38Z",
+          "closed_at": "2026-09-07T11:42:36Z",
+          "pr": true
+        },
+        {
+          "number": 1610,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1610",
+          "created_at": "2026-08-13T10:34:05Z",
+          "closed_at": "2026-08-13T12:28:09Z",
+          "pr": true
+        },
+        {
+          "number": 1609,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1609",
+          "created_at": "2026-08-10T11:43:16Z",
+          "closed_at": "2026-08-13T12:33:18Z",
+          "pr": true
+        },
+        {
+          "number": 1608,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1608",
+          "created_at": "2026-08-10T11:43:08Z",
+          "closed_at": "2026-08-13T12:37:53Z",
+          "pr": true
+        },
+        {
+          "number": 1607,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1607",
+          "created_at": "2026-08-10T11:42:59Z",
+          "closed_at": "2026-08-13T12:35:53Z",
+          "pr": true
+        },
+        {
+          "number": 1606,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1606",
+          "created_at": "2026-08-10T11:42:54Z",
+          "closed_at": "2026-08-13T12:32:27Z",
+          "pr": true
+        },
+        {
+          "number": 1605,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1605",
+          "created_at": "2026-08-10T11:42:49Z",
+          "closed_at": "2026-08-13T12:32:07Z",
+          "pr": true
+        },
+        {
+          "number": 1604,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1604",
+          "created_at": "2026-08-10T11:42:44Z",
+          "closed_at": "2026-08-13T12:31:55Z",
+          "pr": true
+        },
+        {
+          "number": 1603,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1603",
+          "created_at": "2026-08-10T11:42:30Z",
+          "closed_at": "2026-08-13T12:31:00Z",
+          "pr": true
+        }
+      ],
+      "responseSample": [
+        {
+          "number": 1636,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1636",
+          "created_at": "2026-10-29T21:12:13Z",
+          "responses": [
+            {
+              "created_at": "2026-10-29T21:14:30Z",
+              "self": true,
+              "bot": false
+            }
+          ],
+          "firstResponseHours": null
+        },
+        {
+          "number": 1615,
+          "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1615",
+          "created_at": "2026-09-01T08:45:53Z",
+          "responses": [],
+          "firstResponseHours": null
+        }
+      ]
+    },
+    {
+      "name": "mapbox/mapbox-gl-geocoder",
+      "url": "https://github.com/mapbox/mapbox-gl-geocoder",
+      "description": "Geocoder control for mapbox-gl-js using Mapbox Geocoding API",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-27T23:55:01Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 10,
+        "closedPrs": 10,
+        "medianPrCloseHours": 14.514305555555556,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      },
+      "items": [
+        {
+          "number": 569,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/569",
+          "created_at": "2026-10-27T04:55:05Z",
+          "closed_at": "2026-10-27T12:11:06Z",
+          "pr": true
+        },
+        {
+          "number": 568,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/568",
+          "created_at": "2026-10-19T12:23:36Z",
+          "closed_at": "2026-10-19T13:17:18Z",
+          "pr": true
+        },
+        {
+          "number": 567,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/567",
+          "created_at": "2026-10-19T12:15:16Z",
+          "closed_at": "2026-10-19T12:19:46Z",
+          "pr": true
+        },
+        {
+          "number": 566,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/566",
+          "created_at": "2026-10-16T12:52:28Z",
+          "closed_at": "2026-10-17T13:53:08Z",
+          "pr": true
+        },
+        {
+          "number": 565,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/565",
+          "created_at": "2026-10-16T12:19:30Z",
+          "closed_at": "2026-10-16T12:37:58Z",
+          "pr": true
+        },
+        {
+          "number": 564,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/564",
+          "created_at": "2026-10-15T15:14:06Z",
+          "closed_at": "2026-10-19T13:37:01Z",
+          "pr": true
+        },
+        {
+          "number": 563,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/563",
+          "created_at": "2026-10-15T15:07:23Z",
+          "closed_at": "2026-10-15T15:12:41Z",
+          "pr": true
+        },
+        {
+          "number": 562,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/562",
+          "created_at": "2026-10-14T15:12:43Z",
+          "closed_at": "2026-10-15T12:58:25Z",
+          "pr": true
+        },
+        {
+          "number": 561,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/561",
+          "created_at": "2026-09-13T23:26:14Z",
+          "closed_at": "2026-10-01T12:07:03Z",
+          "pr": true
+        },
+        {
+          "number": 560,
+          "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/560",
+          "created_at": "2026-08-11T18:58:55Z",
+          "closed_at": "2026-10-19T13:32:26Z",
+          "pr": true
+        }
+      ],
+      "responseSample": []
+    }
+  ]
+}

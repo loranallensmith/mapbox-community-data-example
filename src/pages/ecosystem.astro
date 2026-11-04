@@ -1,0 +1,184 @@
+---
+import Layout from "../layouts/Layout.astro";
+import data from "../../data/processed/ecosystem.json";
+import { href, hours, date } from "../lib/site";
+---
+
+<Layout title="Ecosystem reconnaissance">
+  <div class="page-intro">
+    <div class="eyebrow">Research / Public GitHub evidence</div>
+    <h1>Signals, with their context.</h1>
+    <p class="lead">
+      An intentionally small sample of developer-facing repositories. No
+      community scores. No maintainer rankings.
+    </p>
+    <p>
+      Collected {date(data.collectedAt)} UTC · Created-item cohort:{" "}
+      {date(data.window.start)}–{date(data.window.end)}. Counts include
+      automation; they do not measure unique people or outside contributions.
+    </p>
+  </div>
+  <section>
+    <h2>Activity in the observation window</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>
+          Four indicators; duration and response are explicitly simplified
+          proxies.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Repository</th>
+            <th scope="col">New issues</th>
+            <th scope="col">New PRs</th>
+            <th scope="col">PR closure proxy</th>
+            <th scope="col">First-comment response proxy</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.repositories.map((r) => (
+            <tr>
+              <th scope="row">
+                <a href={r.url}>{r.name.replace("mapbox/", "")}</a>
+              </th>
+              <td>{r.metrics.issuesOpened}</td>
+              <td>{r.metrics.prsOpened}</td>
+              <td>
+                {hours(r.metrics.medianPrCloseHours)}
+                <small>{r.metrics.closedPrs} closed PRs</small>
+              </td>
+              <td>
+                {hours(r.metrics.medianSampleResponseHours)}
+                <small>
+                  {r.metrics.respondedSample}/{r.metrics.responseSampleSize}{" "}
+                  sampled issues have an eligible comment
+                </small>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="notice">
+      <strong>Read the denominators.</strong> Closure includes merged and
+      unmerged PRs created in the window and closed by its end; open PRs are
+      censored. Response medians exclude unanswered issues and include only
+      non-author, non-Bot issue comments. Draw’s 0/2 sample means no eligible
+      observed response, not zero-hour response. Geocoder has no new issues to
+      sample. <a href={href("methodology")}>Definitions and bias →</a>
+    </div>
+  </section>
+  <section class="two">
+    <div>
+      <h2>What kind of activity is visible?</h2>
+      <p>
+        Counts show the balance of new issues and PRs inside each repository’s
+        own cohort. They cannot explain who participates or why. Bars show the
+        share of items that are PRs, not community health.
+      </p>
+      {data.repositories.map((r) => {
+        const total = r.metrics.issuesOpened + r.metrics.prsOpened;
+        return (
+          <div style="margin-bottom:20px">
+            <span class="muted">
+              {r.name} · {r.metrics.prsOpened}/{total} items are PRs
+            </span>
+            <div
+              class="bar"
+              role="img"
+              aria-label={`${r.metrics.prsOpened} of ${total} items are pull requests`}
+            >
+              <span
+                style={`width:${total ? (r.metrics.prsOpened / total) * 100 : 0}%`}
+              />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+    <div class="card">
+      <span class="badge">Unavailable</span>
+      <h3>A trend needs more than one snapshot</h3>
+      <p>
+        Historical comparisons are not shown. There is one collected window, no
+        reliable baseline, and no contributor identity history.
+      </p>
+      <p>
+        New contributors, concentration, review duration, and newcomer success
+        remain unavailable. GitHub data alone cannot measure belonging, private
+        support, or developer satisfaction.
+      </p>
+      <a class="text-link" href={href("opportunities")}>
+        Questions worth testing →
+      </a>
+    </div>
+  </section>
+  <section id="pathways">
+    <h2>Repository purpose & contribution pathways</h2>
+    <p>
+      File presence is a discoverability check, not a measure of documentation
+      quality. Missing files may be replaced by README guidance or
+      organization-level defaults. Public visibility does not imply an
+      open-source license or unrestricted outside contribution.
+    </p>
+    {data.repositories.map((r) => (
+      <details open>
+        <summary>
+          {r.name} · {r.archived ? "Archived" : "Unarchived"} · last push{" "}
+          {date(r.pushedAt)}
+        </summary>
+        <p>{r.description}</p>
+        <p>
+          <strong>License:</strong>{" "}
+          {r.license === "NOASSERTION"
+            ? "GitHub could not assign a standard SPDX license. GL JS uses Mapbox-specific terms; inspect LICENSE.txt before reuse."
+            : r.license}{" "}
+          ·{" "}
+          <a href={`${r.url}/blob/${r.branch}/${r.docs.LICENSE[0]}`}>
+            Read license ↗
+          </a>
+        </p>
+        <p>
+          <strong>Contribution entry:</strong>{" "}
+          {r.docs.CONTRIBUTING.length ? (
+            <a href={`${r.url}/blob/${r.branch}/${r.docs.CONTRIBUTING[0]}`}>
+              CONTRIBUTING guidance ↗
+            </a>
+          ) : (
+            <a href={`${r.url}#developing-and-testing`}>
+              README development & custom modes ↗
+            </a>
+          )}
+          .{" "}
+          {r.name.endsWith("mapbox-gl-js")
+            ? "The guide describes development and tests, plus an internal import and Copybara sync workflow: accepted public PRs may appear Closed rather than Merged. Closure cannot be interpreted as rejection."
+            : r.name.endsWith("mapbox-gl-draw")
+              ? "The README invites pull requests and describes development/testing; no standalone CONTRIBUTING file was found."
+              : "The contribution guide provides a development and testing entry point; confirm issue scope before proposing changes."}
+        </p>
+        <p class="muted">
+          No dedicated SUPPORT or CODE_OF_CONDUCT filename found in this
+          repository tree. Organization defaults and README channels were not
+          exhaustively audited. Tree truncated: {String(r.treeTruncated)}.
+        </p>
+      </details>
+    ))}
+  </section>
+  <div class="notice">
+    <strong>Candidate excluded:</strong>{" "}
+    {data.candidates.map((c) => (
+      <p>
+        {c.name}: {c.status}{" "}
+        <a href="https://docs.mapbox.com/mapbox-search-js/">
+          Public Search JS documentation ↗
+        </a>{" "}
+        is a product reference, not evidence of a public contribution
+        repository.
+      </p>
+    ))}
+  </div>
+  <p>
+    <a href={href("data/github.json")}>Download normalized evidence JSON ↗</a> ·{" "}
+    <a href={href("data/ecosystem.json")}>Download presentation snapshot ↗</a>
+  </p>
+</Layout>

@@ -1,0 +1,237 @@
+---
+import Layout from "../layouts/Layout.astro";
+import locations from "../../data/processed/locations.json";
+---
+
+<Layout title="Developer Ecosystem Explorer">
+  <div class="page-intro">
+    <div class="eyebrow">Experiment 01 / Mapbox GL JS</div>
+    <h1>Where communities gather.</h1>
+    <p class="lead">
+      Four real venues. Three community categories. One small experiment in
+      making geographic data useful and accessible.
+    </p>
+    <p>
+      Historical editions, selected for verifiable venue information. These are
+      not Mapbox events, a representative community sample, or upcoming-event
+      recommendations. Coordinates are approximate, manually placed venue
+      points.
+    </p>
+  </div>
+  <div class="explorer-controls">
+    <label>
+      Community category
+      <select id="category">
+        <option value="all">All communities</option>
+        {[...new Set(locations.map((l) => l.category))].map((c) => (
+          <option>{c}</option>
+        ))}
+      </select>
+    </label>
+    <label>
+      Find an event or city
+      <input id="query" type="search" placeholder="Try Brussels or Python" />
+    </label>
+    <p id="count" role="status" aria-live="polite">
+      4 locations
+    </p>
+  </div>
+  <div class="map-shell">
+    <div
+      id="map"
+      role="region"
+      aria-label="Interactive community venue map; equivalent locations listed below"
+    ></div>
+    <div id="map-status" role="status">
+      The interactive map needs JavaScript and a public Mapbox token. Browse all
+      locations below.
+    </div>
+  </div>
+  <noscript>
+    <p class="notice">
+      JavaScript is disabled. Browse all sourced locations below; interactive
+      map and filters require JavaScript.
+    </p>
+  </noscript>
+  <h2 style="margin-top:35px">Browse the locations</h2>
+  <p class="muted">
+    The same data, available without using the map. Each card links to its
+    original venue source.
+  </p>
+  <div class="locations">
+    {locations.map((l) => (
+      <article
+        class="card location"
+        data-id={l.id}
+        data-category={l.category}
+        data-search={`${l.name} ${l.city} ${l.venue} ${l.note}`.toLowerCase()}
+      >
+        <span class="badge">{l.category}</span>
+        <h3>{l.name}</h3>
+        <p>
+          <strong>{l.city}</strong>
+          <br />
+          {l.venue}
+        </p>
+        <p>{l.note}</p>
+        <a href={l.source} class="text-link">
+          Verify venue source ↗
+        </a>
+        <br />
+        <button type="button" data-focus={l.id} hidden>
+          Show on map ↗
+        </button>
+      </article>
+    ))}
+  </div>
+  <p id="empty" class="empty" hidden>
+    No locations match. Try another category or clear your search.
+  </p>
+  <p class="muted">
+    Venue sources checked November 4, 2026. Search filters this local dataset;
+    Mapbox Search JS is outside this MVP’s scope.
+  </p>
+</Layout>
+<script>
+  import type { FeatureCollection, Feature } from "geojson";
+  import mapboxgl from "mapbox-gl";
+  import "mapbox-gl/dist/mapbox-gl.css";
+  import locations from "../../data/processed/locations.json";
+  const category = document.querySelector<HTMLSelectElement>("#category")!;
+  const query = document.querySelector<HTMLInputElement>("#query")!;
+  const status = document.querySelector<HTMLDivElement>("#map-status")!;
+  const cards = [...document.querySelectorAll<HTMLElement>(".location")];
+  let map: mapboxgl.Map | undefined;
+  let ready = false;
+  let popup: mapboxgl.Popup | undefined;
+  const matches = () =>
+    locations.filter(
+      (l) =>
+        (category.value === "all" || l.category === category.value) &&
+        `${l.name} ${l.city} ${l.venue} ${l.note}`
+          .toLowerCase()
+          .includes(query.value.toLowerCase().trim()),
+    );
+  const geojson = (): FeatureCollection => ({
+    type: "FeatureCollection",
+    features: matches().map((l) => ({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: l.coordinates },
+      properties: { id: l.id, category: l.category },
+    })),
+  });
+  function filter() {
+    const visible = matches();
+    for (const card of cards)
+      card.hidden = !visible.some((l) => l.id === card.dataset.id);
+    document.querySelector("#count")!.textContent =
+      `${visible.length} location${visible.length === 1 ? "" : "s"}`;
+    document.querySelector<HTMLElement>("#empty")!.hidden = visible.length > 0;
+    popup?.remove();
+    if (ready)
+      (map!.getSource("venues") as mapboxgl.GeoJSONSource).setData(geojson());
+  }
+  category.addEventListener("change", filter);
+  query.addEventListener("input", filter);
+  function show(id: string) {
+    const l = locations.find((l) => l.id === id);
+    if (!l || !map || !ready) return;
+    const content = document.createElement("div");
+    const heading = document.createElement("strong");
+    heading.textContent = l.name;
+    const p = document.createElement("p");
+    p.textContent = `${l.venue} · ${l.city}`;
+    const link = document.createElement("a");
+    link.href = l.source;
+    link.textContent = "Venue source ↗";
+    content.append(heading, p, link);
+    popup?.remove();
+    popup = new mapboxgl.Popup({ offset: 12 })
+      .setLngLat(l.coordinates as [number, number])
+      .setDOMContent(content)
+      .addTo(map);
+    map.flyTo({
+      center: l.coordinates as [number, number],
+      zoom: 10,
+      essential: false,
+    });
+  }
+  for (const button of document.querySelectorAll<HTMLButtonElement>(
+    "[data-focus]",
+  ))
+    button.addEventListener("click", () => show(button.dataset.focus!));
+  const token = import.meta.env.PUBLIC_MAPBOX_TOKEN;
+  if (!token || !token.startsWith("pk.") || token === "pk.your_public_token") {
+    status.textContent =
+      "Map setup: add a valid public pk. token as PUBLIC_MAPBOX_TOKEN in .env, then restart or rebuild. All four locations and filters work below without a token.";
+  } else if (!mapboxgl.supported()) {
+    status.textContent =
+      "This browser does not support the WebGL features needed for the map. Browse the equivalent location list below.";
+  } else {
+    try {
+      status.textContent = "Loading map…";
+      map = new mapboxgl.Map({
+        container: "map",
+        accessToken: token,
+        style: "mapbox://styles/mapbox/light-v11",
+        center: [-24, 45],
+        zoom: 1.6,
+      });
+      map.addControl(new mapboxgl.NavigationControl());
+      const timeout = window.setTimeout(() => {
+        if (!ready)
+          status.textContent =
+            "The map is taking longer than expected. Check your connection and token URL restrictions; the location list remains available.";
+      }, 15000);
+      map.on("error", () => {
+        status.hidden = false;
+        status.textContent =
+          "Map resources could not load. Check token permissions, URL restrictions, and network access. Browse the locations below.";
+      });
+      map.on("load", () => {
+        clearTimeout(timeout);
+        ready = true;
+        status.hidden = true;
+        map!.addSource("venues", { type: "geojson", data: geojson() });
+        map!.addLayer({
+          id: "venue-points",
+          type: "circle",
+          source: "venues",
+          paint: {
+            "circle-radius": 8,
+            "circle-color": [
+              "match",
+              ["get", "category"],
+              "Open source",
+              "#315d46",
+              "Cloud native",
+              "#9b4d32",
+              "#6863a0",
+            ],
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "#fff",
+          },
+        });
+        map!.on("click", "venue-points", (e) => {
+          const id = (e.features?.[0] as unknown as Feature | undefined)
+            ?.properties?.id;
+          if (typeof id === "string") show(id);
+        });
+        map!.on("mouseenter", "venue-points", () => {
+          map!.getCanvas().style.cursor = "pointer";
+        });
+        map!.on("mouseleave", "venue-points", () => {
+          map!.getCanvas().style.cursor = "";
+        });
+        for (const b of document.querySelectorAll<HTMLButtonElement>(
+          "[data-focus]",
+        ))
+          b.hidden = false;
+      });
+      window.addEventListener("pagehide", () => map?.remove(), { once: true });
+    } catch {
+      status.textContent =
+        "The map could not initialize. Browse the equivalent location list below.";
+    }
+  }
+</script>

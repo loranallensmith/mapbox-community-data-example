@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-11-04T15:15:56.000Z",
+  "window": {
+    "start": "2026-08-06T15:15:55.999Z",
+    "end": "2026-11-04T15:15:55.999Z",
+    "days": 90
+  },
+  "responseSampling": "Newest five non-PR issues created in the window per repository; comments only, excludes author and GitHub Bot accounts. Censored unanswered items excluded from median.",
+  "candidates": [
+    {
+      "name": "mapbox/mapbox-search-js",
+      "status": "Not publicly retrievable (404); absence is not proof of nonexistence."
+    }
+  ],
+  "repositories": [
+    {
+      "name": "mapbox/mapbox-gl-js",
+      "url": "https://github.com/mapbox/mapbox-gl-js",
+      "description": "Interactive, thoroughly customizable maps in the browser, powered by vector tiles and WebGL",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-04T14:31:14Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.txt",
+          "src/style-spec/LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 25,
+        "prsOpened": 12,
+        "closedPrs": 2,
+        "medianPrCloseHours": 138.5375,
+        "responseSampleSize": 5,
+        "respondedSample": 3,
+        "medianSampleResponseHours": 33.02583333333333
+      }
+    },
+    {
+      "name": "mapbox/mapbox-gl-draw",
+      "url": "https://github.com/mapbox/mapbox-gl-draw",
+      "description": "Draw tools for mapbox-gl-js",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-03T12:31:24Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 2,
+        "prsOpened": 35,
+        "closedPrs": 30,
+        "medianPrCloseHours": 72.82986111111111,
+        "responseSampleSize": 2,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-gl-geocoder",
+      "url": "https://github.com/mapbox/mapbox-gl-geocoder",
+      "description": "Geocoder control for mapbox-gl-js using Mapbox Geocoding API",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-27T23:55:01Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 10,
+        "closedPrs": 10,
+        "medianPrCloseHours": 14.514305555555556,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    }
+  ]
+}

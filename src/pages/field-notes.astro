@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+const notes = [
+  {
+    title: "Establish the technical baseline",
+    observation:
+      "The workspace had no application files. Its default Node executable was v8; a locally installed Node 24 runtime was available.",
+    evidence:
+      "package.json requires Node 22.12+. The build and validation commands use the newer runtime.",
+    interpretation:
+      "A current runtime is a prerequisite before evaluating SDK setup.",
+    opportunity: "Record runtime versions in a newcomer setup checklist.",
+    confidence: "High for this environment; not evidence of a Mapbox issue.",
+  },
+  {
+    title: "Separate product documentation from contribution access",
+    observation:
+      "GL JS and Search JS have public documentation. The candidate mapbox/mapbox-search-js API request returned 404.",
+    evidence:
+      "data/processed/ecosystem.json candidates; linked SDK documentation on the methodology page.",
+    interpretation:
+      "A developer can discover a product without necessarily discovering a public source contribution route.",
+    opportunity:
+      "Test whether newcomers can distinguish SDK learning, bug reporting, and source contribution destinations.",
+    confidence:
+      "High for observed availability; low for any inferred newcomer friction.",
+  },
+  {
+    title: "Implement a token-aware experiment",
+    observation:
+      "The implementation uses a public-token guard, a category-styled GeoJSON circle layer, local filtering, clickable details, and equivalent HTML cards.",
+    evidence:
+      "src/pages/explorer.astro; no-token setup message is rendered by the browser script.",
+    interpretation:
+      "A useful browsing path can remain available when the map cannot initialize.",
+    opportunity:
+      "Test this static Astro pattern with novice developers, including keyboard and WebGL-unavailable scenarios.",
+    confidence:
+      "High for code structure. Successful authenticated map rendering awaits a token and browser verification.",
+  },
+];
+---
+
+<Layout title="Developer experience field notes">
+  <div class="page-intro">
+    <div class="eyebrow">Journal / Implementation evidence</div>
+    <h1>Keep the experience honest.</h1>
+    <p class="lead">
+      A chronological engineering record, followed by prompts for the author’s
+      firsthand experience.
+    </p>
+    <div class="notice">
+      These are AI-assisted implementation observations from November 4, 2026.
+      They are not the author’s personal experiences or an external developer
+      study. Human review pending.
+    </div>
+  </div>
+  <div class="journal">
+    {notes.map((n, i) => (
+      <article>
+        <span class="eyebrow">2026-11-04 · Entry 0{i + 1}</span>
+        <h2>{n.title}</h2>
+        <dl>
+          <dt>Observation</dt>
+          <dd>{n.observation}</dd>
+          <dt>Evidence</dt>
+          <dd>{n.evidence}</dd>
+          <dt>Interpretation</dt>
+          <dd>{n.interpretation}</dd>
+          <dt>Opportunity</dt>
+          <dd>{n.opportunity}</dd>
+          <dt>Confidence</dt>
+          <dd>{n.confidence}</dd>
+        </dl>
+      </article>
+    ))}
+  </div>
+  <section>
+    <h2>Firsthand notes to complete</h2>
+    <p>
+      Copy the template in <code>src/content/firsthand-template.md</code>. For
+      each topic, supply what actually happened, a source or reproduction,
+      interpretation, possible intervention, and confidence with rationale.
+    </p>
+    <div class="grid">
+      {[
+        "Documentation navigation & SDK getting started",
+        "Token configuration & first successful render",
+        "Adding and styling geographic data",
+        "Accessibility & mobile interaction",
+        "Deployment & production URL restrictions",
+        "Unexpected discoveries & remaining friction",
+      ].map((topic) => (
+        <article class="card">
+          <span class="badge">Author input required</span>
+          <h3>{topic}</h3>
+          <p>
+            No firsthand observation recorded. Add a dated note after testing.
+          </p>
+        </article>
+      ))}
+    </div>
+    <p class="muted" style="margin-top:20px">
+      Search integration was not attempted. Local event filtering is not Mapbox
+      Search JS.
+    </p>
+  </section>
+</Layout>

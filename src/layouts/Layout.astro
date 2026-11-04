@@ -1,0 +1,76 @@
+---
+import "../styles/global.css";
+import { href } from "../lib/site";
+import data from "../../data/processed/ecosystem.json";
+const {
+  title,
+  description = "An independent exploration of mapping, public contribution pathways, and developer experience.",
+} = Astro.props;
+const nav = [
+  ["", "Overview"],
+  ["explorer", "Explorer"],
+  ["ecosystem", "Ecosystem"],
+  ["field-notes", "Field notes"],
+  ["opportunities", "Opportunities"],
+  ["methodology", "Methodology"],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} · Mapbox Field Notes</title>
+    <link rel="icon" href={href("favicon.svg")} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header>
+      <a class="brand" href={href()}>
+        <span class="brand-icon">↗</span>
+        <span>
+          FIELD NOTES <small>MAPBOX DEVELOPER ECOSYSTEM</small>
+        </span>
+      </a>
+      <span class="edition">INDEPENDENT RESEARCH · 01</span>
+    </header>
+    <nav aria-label="Main navigation">
+      {nav.map(([path, label]) => (
+        <a
+          aria-current={
+            Astro.url.pathname.replace(/\/$/, "") ===
+            href(path).replace(/\/$/, "")
+              ? "page"
+              : undefined
+          }
+          href={href(path)}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+    <main id="main">
+      <slot />
+    </main>
+    <footer>
+      <div>
+        <strong>A small study. An open notebook.</strong>
+        <p>
+          Independent exploration. No affiliation, assessment, or endorsement by
+          Mapbox.
+        </p>
+      </div>
+      <div>
+        Snapshot: {data.collectedAt.slice(0, 10)} UTC
+        <br />
+        AI-assisted analysis · human review pending
+        <br />
+        <a href={href("methodology")}>Sources & limitations ↗</a>
+      </div>
+    </footer>
+  </body>
+</html>

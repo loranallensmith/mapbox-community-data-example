@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { href } from "../lib/site";
+const proposals = [
+  {
+    title: "A contribution route-finding exercise",
+    problem:
+      "Can a developer tell where to learn, ask for support, report a bug, and propose a source change?",
+    evidence:
+      "The Search JS candidate returned 404 while product docs are public; GL JS, Draw, and Geocoder expose different entry paths.",
+    audience:
+      "Developers new to Mapbox who want to participate beyond SDK usage.",
+    intervention:
+      "Give five consenting newcomers GL JS and Search JS tasks. Ask them to identify the correct destination, then prototype a product-to-participation routing page.",
+    metric:
+      "Correct destination selection and task completion time before and after the routing page.",
+    learning:
+      "Whether route ambiguity actually exists, and which wording resolves it.",
+    limits:
+      "No usability evidence yet. Confirm current official support and contribution policies with maintainers before proposing a routing change.",
+    link: "ecosystem",
+  },
+  {
+    title: "An Astro map starter with a useful failure path",
+    problem:
+      "How can an Astro developer keep a map-based experience useful before token setup and when WebGL or network resources fail?",
+    evidence:
+      "This explorer separates HTML venue cards from a token-gated GL JS layer and uses the same dataset for filtering.",
+    audience: "Frontend developers adding Mapbox GL JS to a static Astro site.",
+    intervention:
+      "Package the explorer as a small annotated example covering public tokens, URL restrictions, GeoJSON styling, and accessible fallback browsing.",
+    metric:
+      "Successful first render plus completion of a keyboard-only venue-finding task; record setup errors and elapsed time.",
+    learning:
+      "Which setup and accessibility steps need more explanation than a basic map render.",
+    limits:
+      "Authenticated map, mobile, and assistive-technology verification are pending. Validate the starter before teaching it.",
+    link: "explorer",
+  },
+  {
+    title: "Explain GL JS’s public PR lifecycle",
+    problem:
+      "Can a first-time GL JS contributor understand why an accepted public PR might appear closed rather than merged?",
+    evidence:
+      "GL JS’s contribution guide documents internal import followed by Copybara sync; accepted public PRs can appear Closed on GitHub.",
+    audience: "First-time contributors proposing changes to GL JS.",
+    intervention:
+      "Test comprehension of the existing contribution guide, then prototype a short public-PR lifecycle explanation linked from a contributor checklist.",
+    metric:
+      "Correct interpretation of example PR states and identification of the next contributor action before and after the explanation.",
+    learning:
+      "Whether the existing lifecycle documentation answers newcomer questions, and where additional context would help.",
+    limits:
+      "The workflow is documented already; no confusion has been observed. Requires volunteer participants and maintainer agreement before upstream changes.",
+    link: "ecosystem#pathways",
+  },
+];
+---
+
+<Layout title="Opportunities Worth Testing">
+  <div class="page-intro">
+    <div class="eyebrow">Strategy / Evidence to experiments</div>
+    <h1>Opportunities Worth Testing.</h1>
+    <p class="lead">
+      Three bounded proposals. Each starts with a specific observation and a
+      question the evidence cannot yet answer.
+    </p>
+    <p>
+      These are hypotheses for discussion, not judgments about Mapbox’s internal
+      strategy or claims of unmet needs. No experiment has been run.
+    </p>
+  </div>
+  {proposals.map((p, i) => (
+    <section class="card">
+      <span class="eyebrow">
+        Experiment 0{i + 1} · Hypothesis · Human review pending
+      </span>
+      <h2 style="margin-top:18px">{p.title}</h2>
+      <div class="two">
+        <div>
+          <h3>Developer question</h3>
+          <p>{p.problem}</p>
+          <h3>Supporting evidence</h3>
+          <p>
+            {p.evidence} <a href={href(p.link)}>Inspect evidence ↗</a>
+          </p>
+          <h3>Target audience</h3>
+          <p>{p.audience}</p>
+        </div>
+        <div>
+          <h3>Proposed intervention</h3>
+          <p>{p.intervention}</p>
+          <h3>Success metric</h3>
+          <p>{p.metric}</p>
+          <h3>Expected learning</h3>
+          <p>{p.learning}</p>
+        </div>
+      </div>
+      <div class="rule">
+        <strong>Limitations & dependencies</strong>
+        <p>{p.limits}</p>
+      </div>
+    </section>
+  ))}
+</Layout>

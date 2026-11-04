@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MapPreview from "../components/MapPreview.astro";
+import data from "../../data/processed/ecosystem.json";
+import { href, date } from "../lib/site";
+const total = data.repositories.reduce(
+  (s, r) => s + r.metrics.issuesOpened + r.metrics.prsOpened,
+  0,
+);
+---
+
+<Layout title="Overview">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">A developer relations notebook</div>
+      <h1>
+        Mapbox Developer
+        <br />
+        Ecosystem <em>Field Notes.</em>
+      </h1>
+      <p class="lead">
+        Build something useful. Follow the public evidence. Find the next
+        question worth asking.
+      </p>
+      <p>
+        An independent, time-boxed exploration of Mapbox’s developer tools and
+        contribution pathways, pairing a working geographic experiment with
+        careful ecosystem research.
+      </p>
+      <div class="actions">
+        <a class="button" href={href("explorer")}>
+          Explore the experiment ↗
+        </a>
+        <a class="text-link" href={href("ecosystem")}>
+          Read the research →
+        </a>
+      </div>
+      <div class="meta rule">
+        Collected {date(data.collectedAt)} · {date(data.window.start)}–
+        {date(data.window.end)}
+        <br />
+        Public GitHub evidence only · AI-assisted, review pending
+      </div>
+    </div>
+    <MapPreview />
+  </div>
+  <div class="stats">
+    <div>
+      <strong>{data.repositories.length}</strong>
+      <span>repositories observed</span>
+    </div>
+    <div>
+      <strong>{data.window.days} days</strong>
+      <span>bounded observation window</span>
+    </div>
+    <div>
+      <strong>{total}</strong>
+      <span>new issues + pull requests</span>
+    </div>
+  </div>
+  <section>
+    <div class="section-head">
+      <h2>What the evidence says so far</h2>
+      <a class="text-link" href={href("methodology")}>
+        Inspect the method ↗
+      </a>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="number">01 /</span>
+        <span class="badge">Observation</span>
+        <h3>One ecosystem, several entry points</h3>
+        <p>
+          GL JS, Draw, and Geocoder are public and unarchived in this snapshot.
+          The candidate Search JS repository returned 404; its SDK documentation
+          remains public.
+        </p>
+        <a class="text-link" href={href("ecosystem")}>
+          Repository evidence →
+        </a>
+      </article>
+      <article class="card">
+        <span class="number">02 /</span>
+        <span class="badge">Observation</span>
+        <h3>File visibility is only a starting point</h3>
+        <p>
+          Two sampled repositories expose a CONTRIBUTING file. Draw’s guidance
+          lives in its README. A filename check alone would miss that pathway.
+        </p>
+        <a class="text-link" href={href("ecosystem") + "#pathways"}>
+          Inspect contribution pathways →
+        </a>
+      </article>
+      <article class="card">
+        <span class="number">03 /</span>
+        <span class="badge">Limitation</span>
+        <h3>Public PR status needs context</h3>
+        <p>
+          GL JS documents an internal import and sync process: accepted public
+          PRs can appear closed rather than merged. Public state counts alone
+          cannot establish acceptance or rejection.
+        </p>
+        <a class="text-link" href={href("methodology")}>
+          Understand the boundaries →
+        </a>
+      </article>
+    </div>
+  </section>
+  <section class="two">
+    <div>
+      <div class="eyebrow">From implementation to inquiry</div>
+      <h2 style="margin-top:20px">A notebook you can inspect.</h2>
+      <p>
+        The explorer tests GeoJSON styling, filtering, and token-aware states.
+        The research keeps generated evidence separate from editorial
+        interpretation. Proposed interventions remain hypotheses.
+      </p>
+    </div>
+    <div>
+      <details open>
+        <summary>01 · Build and learn</summary>
+        <p>
+          Browse real, historical conference venues with a map and an equivalent
+          list. The map needs your public token.
+        </p>
+      </details>
+      <details>
+        <summary>02 · Investigate public pathways</summary>
+        <p>
+          Inspect bounded GitHub cohorts and reproducible indicators without
+          scoring communities or maintainers.
+        </p>
+      </details>
+      <details>
+        <summary>03 · Test a useful intervention</summary>
+        <p>
+          Turn specific observations into small DevRel experiments with explicit
+          measures and dependencies.
+        </p>
+      </details>
+    </div>
+  </section>
+  <div class="notice">
+    This is independent research, not an official Mapbox assessment, audit, or
+    endorsement. Firsthand field notes and strategic interpretations require the
+    author’s review.{" "}
+    {import.meta.env.PUBLIC_REPO_URL ? (
+      <a href={import.meta.env.PUBLIC_REPO_URL}>View the GitHub repository ↗</a>
+    ) : (
+      <span>
+        GitHub publication is pending; setup and source structure are documented
+        on the methodology page.
+      </span>
+    )}
+  </div>
+</Layout>

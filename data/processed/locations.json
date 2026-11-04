@@ -1,0 +1,6 @@
+[
+{"id":"fosdem","name":"FOSDEM 2026","category":"Open source","city":"Brussels, Belgium","venue":"ULB Solbosch campus","coordinates":[4.381,50.812],"source":"https://archive.fosdem.org/2026/schedule/buildings/","note":"A volunteer-organized gathering for free and open-source software. Historical edition; not an upcoming-event listing."},
+{"id":"kubecon","name":"KubeCon + CloudNativeCon Europe 2025","category":"Cloud native","city":"London, United Kingdom","venue":"Excel London","coordinates":[0.0298,51.508],"source":"https://events.linuxfoundation.org/archive/2025/kubecon-cloudnativecon-europe/attend/faq/","note":"A CNCF conference for the cloud-native community. Historical edition."},
+{"id":"pycon","name":"PyCon US 2025","category":"Language communities","city":"Pittsburgh, United States","venue":"David L. Lawrence Convention Center","coordinates":[-79.996,40.445],"source":"https://us.pycon.org/2025/","note":"The Python community’s annual US gathering. Historical edition."},
+{"id":"jsconf","name":"JSConf EU 2019","category":"Language communities","city":"Berlin, Germany","venue":"Arena Berlin","coordinates":[13.453,52.497],"source":"https://2019.jsconf.eu/about/","note":"A not-for-profit conference for the JavaScript community. Historical edition."}
+]
