@@ -1,209 +1,240 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import data from "../../data/processed/ecosystem.json";
+import { href } from "../lib/site";
 ---
 
 <Layout title="Methodology">
   <div class="page-intro">
-    <div class="eyebrow">Method / Reproduce & challenge</div>
-    <h1>Make the boundaries visible.</h1>
+    <div class="eyebrow">Definitions / Provenance / Limitations</div>
+    <h1>Methodology</h1>
     <p class="lead">
-      Public evidence can help us ask better questions. It cannot describe the
-      whole community.
+      What is measured, how sources are selected, and where the evidence stops.
     </p>
   </div>
   <div class="prose">
-    <h2>Questions & sampling</h2>
-    <p>
-      How does a newcomer find a starting point? Where are contribution and
-      support channels visible? What can issue and pull-request workflows tell
-      us about public engagement, and where could education reduce friction?
-    </p>
-    <p>
-      We purposefully selected GL JS as the core browser SDK, then Draw and
-      Geocoder as developer-facing plugins with visible activity in the
-      collected window. These are three repositories, not a random sample of
-      Mapbox’s ecosystem. Search JS was checked but its candidate GitHub URL
-      returned 404.
-    </p>
-    <p>
-      The 90-day window balances a bounded collection budget against recent
-      activity. It is not seasonally representative. Exact window:{" "}
-      <code>{data.window.start}</code> through <code>{data.window.end}</code>,
-      inclusive. Collection began at <code>{data.collectedAt}</code>. API calls
-      occur sequentially, not as an atomic snapshot.
-    </p>
-    <h2>CHAOSS references & operational definitions</h2>
-    <p>
-      Definitions were checked against the{" "}
-      <a href="https://www.chaoss.community/kb-metrics-and-metrics-models/">
-        current CHAOSS metrics catalog
-      </a>{" "}
-      on November 4, 2026. This is CHAOSS-inspired reconnaissance, not a claim
-      of full conformance.
-    </p>
-    <ol>
-      <li>
-        <a href="https://www.chaoss.community/kb/metric-issues-new/">
-          Issues New
+    <details open>
+      <summary>Scope & source selection</summary>
+      <p>
+        The current GitHub sample contains {data.repositories.length} explicitly
+        selected repositories, including archived projects. It is not random or
+        representative of all Mapbox developers. Selected owner/repository names
+        live in <code>config/sources.json</code>; the original expanded
+        selection has been preserved.
+      </p>
+      <p>
+        GitHub window: <code>{data.window.start}</code> through{" "}
+        <code>{data.window.end}</code>, inclusive. Collected{" "}
+        <code>{data.collectedAt}</code>. A 90-day default bounds collection cost
+        and recent activity; it is not seasonally representative. Sequential API
+        calls do not form an atomic snapshot.
+      </p>
+      <p>
+        Popularity discovery is a separate, bounded GitHub search. Its exact
+        query, ordering, star/fork counts, and collection timestamp are saved.
+        Stars are cumulative signals, not adoption or health. Applying
+        candidates retains the explicit repository list and changes the sample;
+        review coverage before comparison.
+      </p>
+      <a class="text-link" href={href("sources")}>
+        Inspect all channel statuses and observation windows →
+      </a>
+    </details>
+    <details>
+      <summary>Metric definitions & CHAOSS alignment</summary>
+      <p>
+        Definitions reference the{" "}
+        <a href="https://www.chaoss.community/kb-metrics-and-metrics-models/">
+          CHAOSS metrics catalog
         </a>
-        : count non-PR issue creation events in the window; all states included.
-        GitHub’s issues endpoint also returns PRs, which we separate.
-      </li>
-      <li>
-        <a href="https://www.chaoss.community/kb/metric-change-requests/">
-          Change Requests
-        </a>
-        : count PRs created in the window. This is volume, not acceptance,
-        quality, or unique contributors.
-      </li>
-      <li>
-        <a href="https://www.chaoss.community/kb/metric-change-requests-duration/">
-          Change Requests Duration
-        </a>
-        : CHAOSS uses accepted/merged requests. Our{" "}
-        <strong>PR closure proxy</strong> instead measures hours from creation
-        to closure for created-window PRs closed by window end, including
-        unmerged closures. We do not retrieve merge status. GL JS’s contribution
-        guide describes an internal import and Copybara sync process in which
-        accepted public PRs can appear closed rather than merged; GitHub merge
-        flags alone would also need contextual interpretation. Report median
-        with closed denominator; open PRs are right-censored. This favors faster
-        completed work and is not review duration.
-      </li>
-      <li>
-        <a href="https://www.chaoss.community/kb/metric-time-to-first-response/">
-          Time to First Response
-        </a>
-        : our <strong>sampled issue-comment proxy</strong> uses the newest five
-        issues per repository created in the window, or all if fewer. Earliest
-        comment by someone other than the author, excluding accounts typed Bot
-        by GitHub, up to window end. Self and bot comments are excluded.
-        Reactions, issue events, reviews, discussions, and other channels are
-        absent. Undeclared bot accounts can remain. Median uses responded items
-        only; unanswered count is always shown. The small newest-first sample
-        has recency and censoring bias.
-      </li>
-      <li>
-        <strong>Contribution discoverability check</strong>: a qualitative
-        inventory of named CONTRIBUTING, SUPPORT, LICENSE, and CODE_OF_CONDUCT
-        files, supplemented by linked README and guide review. This is a local
-        proxy, not a named CHAOSS metric. File presence does not establish
-        usability, acceptance policy, or newcomer success.
-      </li>
-    </ol>
-    <h2>Acquisition & reproducibility</h2>
-    <p>
-      <code>npm run research:collect</code> retrieves public metadata, recursive
-      default-branch trees, issues updated since window start, and comments for
-      the bounded issue sample. Creation timestamps select the actual cohort.
-      All paginated issue and comment endpoints follow GitHub’s next-page link
-      indication. A 30-page guard fails rather than emitting partial metrics.
-      Tree truncation is disclosed.
-    </p>
-    <pre>npm ci
-npm run research:collect
+        . These are aligned indicators and labeled proxies, not a claim of full
+        CHAOSS conformance.
+      </p>
+      <ol>
+        <li>
+          <a href="https://www.chaoss.community/kb/metric-issues-new/">
+            Issues New
+          </a>
+          : non-PR issue creation events inside the window, all states. GitHub’s
+          issue endpoint also returns PRs, which are separated.
+        </li>
+        <li>
+          <a href="https://www.chaoss.community/kb/metric-change-requests/">
+            Change Requests
+          </a>
+          : PR creation events in the window. No quality, acceptance, or
+          unique-person inference.
+        </li>
+        <li>
+          <a href="https://www.chaoss.community/kb/metric-change-requests-duration/">
+            Change Requests Duration
+          </a>{" "}
+          uses accepted/merged requests. Our <strong>PR closure proxy</strong>{" "}
+          measures creation-to-closure hours for created-window PRs closed by
+          window end, including unmerged closures. Open requests are
+          right-censored, favoring completed work. This is not review duration.
+          GL JS’s guide describes an internal import and Copybara workflow:
+          accepted public PRs may appear closed instead of merged.
+        </li>
+        <li>
+          <a href="https://www.chaoss.community/kb/metric-time-to-first-response/">
+            Time to First Response
+          </a>
+          : our <strong>sampled issue-comment proxy</strong> uses the newest
+          configured number of non-PR issues per repository. Earliest comment
+          from a non-author, non-Bot account by window end. Median uses
+          responded items only; both sample and responded denominators are
+          displayed. Undeclared bot accounts can remain. Reactions, events,
+          discussions, reviews, and private support are excluded.
+        </li>
+        <li>
+          <strong>Contribution discoverability</strong>: inventory of named
+          CONTRIBUTING, SUPPORT, LICENSE, and CODE_OF_CONDUCT files. A local
+          qualitative proxy, not a named CHAOSS metric. README or
+          organization-level guidance may exist; file presence is not usability
+          or acceptance policy.
+        </li>
+      </ol>
+    </details>
+    <details>
+      <summary>Content channels & Discord access</summary>
+      <p>
+        RSS/Atom collection saves linked titles, dates, and publisher names; it
+        does not copy article bodies. The article source uses its own configured
+        window and a bounded feed item limit. Feeds expose only retained
+        entries, not publication archives. Known configured Mapbox publisher
+        URLs are excluded, but other affiliation and content quality remain
+        unverified.
+      </p>
+      <p>
+        YouTube collection requires an API key and uses bounded video search
+        queries, page limits, date bounds, and optional known-official channel
+        exclusions. Search results are not all videos; no view-count, influence,
+        or outcome claims are made. Affiliation and relevance need human review.
+        No transcripts or comments are collected.
+      </p>
+      <p>
+        Curated sources accept manually selected public links, including undated
+        resources. They are clearly distinguished from automated discovery. All
+        links require HTTP(S) URLs.
+      </p>
+      <p>
+        Discord is not connected for message scraping. An invite does not confer
+        API permissions. An optional import accepts publishable, non-identifying
+        aggregate totals with a public source URL and exact window bounds.
+        Imported labels/counts are retained; message text, IDs, and arbitrary
+        extra fields are discarded.
+      </p>
+      <p>
+        Channel windows differ. The portal displays link counts as coverage of
+        configured sources, never total ecosystem size. Duplicate URLs are
+        removed within a source; cross-source appearances retain provenance.
+      </p>
+    </details>
+    <details>
+      <summary>Reproduce collection & extend sources</summary>
+      <pre>npm run research:sources
+npm run research:discover
+npm run research:collect -- --source github
+npm run research:collect -- --source articles
 npm test
-npm run check
-npm run lint
 npm run build</pre>
-    <p>
-      Use Node 22.12+ (Node 24 tested). Set <code>GITHUB_TOKEN</code> in the
-      process environment for higher rate limits; Node scripts do not
-      automatically load .env. Never expose it through PUBLIC_ variables.
-      Optional <code>RESEARCH_END</code> pins the cohort end in ISO format.
-      Requerying an old window can differ because GitHub records change or
-      disappear; use the committed snapshot for exact numerical reproduction.
-    </p>
-    <p>
-      The collector retries transient server and 429 failures with bounded
-      delays, honors Retry-After up to 30 seconds, and stops with
-      remaining-rate/reset diagnostics on other failures. It does not silently
-      substitute zeroes. Failed runs leave the previous snapshot intact. GitHub
-      authentication and API limits can restrict collection.
-    </p>
-    <h2>Data provenance & privacy</h2>
-    <p>
-      <code>data/raw/github.json</code> is normalized evidence, not a full API
-      response dump. It retains repository metadata, item numbers, source links,
-      creation and closure times, and sampled comment timestamps with self/bot
-      flags. Names, emails, profile data, and comment text are omitted.{" "}
-      <code>data/processed/ecosystem.json</code> contains presentation
-      aggregates. Editorial conclusions live in page source, separate from
-      generated data. Both JSON files are published for inspection.
-    </p>
-    <p>
-      Conference locations are curated historical venue points, verified against
-      organizer pages linked in each card. Coordinates were manually
-      approximated at venue level; they are not survey-grade. This dataset is
-      for testing map interactions, not for estimating developer population,
-      current attendance, or Mapbox community reach.
-    </p>
-    <h2>What we cannot conclude</h2>
-    <ul>
-      <li>
-        No inference about employee performance, internal strategy,
-        organizational dysfunction, or private support quality.
-      </li>
-      <li>
-        No identity resolution, contributor employer attribution, demographic
-        inference, or maintainer ranking.
-      </li>
-      <li>
-        Automation remains in activity totals. One participant may create many
-        items.
-      </li>
-      <li>
-        Deleted, transferred, inaccessible, or moderated activity may be
-        missing. GitHub is a changing data source.
-      </li>
-      <li>
-        No firsthand interviews or usability studies were conducted.
-        Contribution guides were not tested by outside contributors.
-      </li>
-      <li>
-        One snapshot cannot establish a trend or intervention effect. Geographic
-        examples are unrelated to the GitHub sample.
-      </li>
-    </ul>
-    <h2>Human review & publication</h2>
-    <p>
-      Before sharing as the author’s portfolio: verify licenses and contribution
-      requirements, review every interpretation, complete firsthand field notes,
-      supply a restricted public Mapbox token, and record a successful
-      production map render. AI-assisted analysis remains provisional until that
-      review.
-    </p>
-    <p>
-      Source layout: <code>src/pages</code> presentation,{" "}
-      <code>scripts/research</code> acquisition and metric calculations,{" "}
-      <code>data</code> snapshots, and <code>docs/methodology</code> provenance.
-      GitHub Pages deployment and exact setup instructions are in README.md.
-      GitHub repository publication is pending until an authenticated remote is
-      configured.
-    </p>
-    <h2>Primary technical references</h2>
-    <ul>
-      <li>
+      <p>
+        The collector loads .env automatically. Optional{" "}
+        <code>GITHUB_TOKEN</code> raises public API limits;{" "}
+        <code>YOUTUBE_API_KEY</code> enables video search. Credentials stay
+        server-side during collection and are never written into snapshots. The
+        static website has no collector credentials.
+      </p>
+      <p>
+        GitHub acquisition paginates issue/comment endpoints, uses a 30-page
+        completeness guard, and discloses tree truncation. Requests have
+        timeouts, transient retries, and bounded Retry-After delays. An
+        incomplete source run retains previous evidence and reports an error.
+        Missing optional credentials have a distinct status and do not become
+        zero measurements.
+      </p>
+      <p>
+        Set <code>RESEARCH_END</code> to pin the observation endpoint. A requery
+        can change because GitHub records are mutable. Exact numerical
+        reproduction uses committed normalized evidence and metric tests.
+        Discovery and public content can change independently; preserve dated
+        snapshots in Git.
+      </p>
+      <p>
+        <code>data/raw/github.json</code> retains minimized item dates, URLs,
+        and sampled comment timestamps with author/bot flags. It omits profile
+        data and comment bodies. <code>data/processed/ecosystem.json</code> is
+        derived display data. <code>data/raw/channels</code> stores normalized
+        per-source evidence; <code>data/processed/channels.json</code> stores
+        source status and content links. Editorial interpretation remains in
+        page source.
+      </p>
+      <p>
+        Extension instructions, schemas, and configuration examples:{" "}
+        <code>docs/SOURCES.md</code>. See README for build and GitHub Pages
+        deployment.
+      </p>
+    </details>
+    <details>
+      <summary>Interpretation limits & human review</summary>
+      <ul>
+        <li>
+          No inference about employee performance, organizational dysfunction,
+          internal strategy, or private support quality.
+        </li>
+        <li>
+          No identity resolution, demographic inference, contributor employer
+          attribution, or maintainer ranking.
+        </li>
+        <li>
+          Automation remains in activity totals. One person may create many
+          items. Deleted, inaccessible, transferred, or moderated activity may
+          be missing.
+        </li>
+        <li>
+          No interviews or newcomer studies conducted. Proposed DevRel
+          experiments remain hypotheses.
+        </li>
+        <li>
+          One snapshot does not establish a trend. Popularity-based sample
+          changes prevent naive before/after comparisons.
+        </li>
+        <li>
+          Conference venues are real historical examples with manual approximate
+          coordinates; they do not describe Mapbox’s geographic community. The
+          pixelmatch demo uses a synthetic sample, not research data.
+        </li>
+        <li>
+          Review content relevance, affiliations, licenses, and interpretation
+          before presenting as the author’s conclusions.
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>Technical references</summary>
+      <p>
         <a href="https://docs.mapbox.com/mapbox-gl-js/guides/get-started/">
-          GL JS getting started
-        </a>
-      </li>
-      <li>
-        <a href="https://docs.mapbox.com/mapbox-gl-js/example/data-driven-circle-colors/">
-          Data-driven circle styling
-        </a>
-      </li>
-      <li>
+          GL JS setup
+        </a>{" "}
+        ·{" "}
         <a href="https://docs.mapbox.com/help/dive-deeper/access-tokens/">
-          Token scopes and URL restrictions
-        </a>
-      </li>
-      <li>
-        <a href="https://docs.github.com/en/rest/issues/issues#list-repository-issues">
-          GitHub issues API
-        </a>
-      </li>
-    </ul>
+          Token restrictions
+        </a>{" "}
+        ·{" "}
+        <a href="https://docs.github.com/en/rest/search/search#search-repositories">
+          GitHub discovery API
+        </a>{" "}
+        ·{" "}
+        <a href="https://developers.google.com/youtube/v3/docs/search/list">
+          YouTube search API
+        </a>{" "}
+        ·{" "}
+        <a href="https://docs.discord.com/developers/resources/channel">
+          Discord API
+        </a>{" "}
+        · <a href="https://github.com/mapbox/pixelmatch">pixelmatch</a>
+      </p>
+    </details>
   </div>
 </Layout>

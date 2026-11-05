@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import data from "../../data/processed/channels.json";
+import { href, date } from "../lib/site";
+const types = [...new Set(data.items.map((i) => i.kind))];
+const publishers = [...new Set(data.items.map((i) => i.publisher))].sort();
+---
+
+<Layout title="Community content">
+  <div class="page-intro">
+    <div class="eyebrow">Public resources / Outside the repository</div>
+    <h1>Community content</h1>
+    <p class="lead">
+      Articles, videos, and projects found through configured public sources.
+    </p>
+  </div>
+  <div class="content-controls">
+    <label>
+      Search resources
+      <input
+        id="content-query"
+        type="search"
+        placeholder="Topic, title, or publisher"
+      />
+    </label>
+    <label>
+      Content type
+      <select id="content-kind" aria-label="Content type">
+        <option value="all">All types</option>
+        {types.map((t) => (
+          <option>{t}</option>
+        ))}
+      </select>
+    </label>
+    <label>
+      Publisher
+      <select id="content-publisher" aria-label="Publisher">
+        <option value="all">All publishers</option>
+        {publishers.map((p) => (
+          <option>{p}</option>
+        ))}
+      </select>
+    </label>
+    <span class="muted" id="content-count" role="status" aria-live="polite">
+      {data.items.length} resources
+    </span>
+  </div>
+  <p class="metric-note">
+    Automatically discovered links are unreviewed. Known configured Mapbox
+    publisher URLs are excluded from the article feed; other affiliations and
+    content quality are unverified. These are source results, not endorsements.
+  </p>
+  <div class="grid">
+    {data.items.map((item) => (
+      <article
+        class="card content-card"
+        data-kind={item.kind}
+        data-publisher={item.publisher}
+        data-search={`${item.title} ${item.publisher} ${item.kind}`.toLowerCase()}
+      >
+        <div>
+          <span class="badge">{item.kind}</span>{" "}
+          <span class="badge gray">{item.reviewStatus}</span>
+        </div>
+        <h3>
+          <a href={item.url}>{item.title} ↗</a>
+        </h3>
+        <p>{item.publisher}</p>
+        <div class="meta">
+          Published{" "}
+          {item.publishedAt ? date(item.publishedAt) : "date unavailable"}
+          <br />
+          Source: {item.sourceId} · collected {date(item.collectedAt)}
+          <br />
+          Affiliation: {item.affiliation}
+        </div>
+      </article>
+    ))}
+  </div>
+  <p id="content-empty" class="notice" hidden={data.items.length > 0}>
+    No resources match. Clear the filters or connect another source.
+  </p>
+  <section class="card" style="margin-top:25px">
+    <h2>Coverage</h2>
+    <div class="two">
+      <div>
+        <h3>YouTube</h3>
+        <p>
+          Connect an API key to collect bounded video search results. Configure
+          queries and known official channel exclusions. No transcripts,
+          comments, or popularity claims are inferred.
+        </p>
+      </div>
+      <div>
+        <h3>Discord</h3>
+        <p>
+          Not connected. Server-approved, publishable aggregate imports are
+          supported; no member messages are scraped.
+        </p>
+      </div>
+    </div>
+    <a class="text-link" href={href("sources")}>
+      Manage source configuration →
+    </a>{" "}
+    ·{" "}
+    <a class="text-link" href={href("data/channels.json")}>
+      Download resource metadata ↗
+    </a>
+  </section>
+</Layout>
+<script>
+  const query = document.querySelector<HTMLInputElement>("#content-query")!,
+    kind = document.querySelector<HTMLSelectElement>("#content-kind")!,
+    publisher =
+      document.querySelector<HTMLSelectElement>("#content-publisher")!,
+    cards = [...document.querySelectorAll<HTMLElement>(".content-card")];
+  function filter() {
+    let visible = 0;
+    for (const card of cards) {
+      const match =
+        (kind.value === "all" || card.dataset.kind === kind.value) &&
+        (publisher.value === "all" ||
+          card.dataset.publisher === publisher.value) &&
+        card.dataset.search!.includes(query.value.toLowerCase().trim());
+      card.hidden = !match;
+      if (match) visible++;
+    }
+    document.querySelector("#content-count")!.textContent =
+      `${visible} resource${visible === 1 ? "" : "s"}`;
+    document.querySelector<HTMLElement>("#content-empty")!.hidden = visible > 0;
+  }
+  query.addEventListener("input", filter);
+  kind.addEventListener("change", filter);
+  publisher.addEventListener("change", filter);
+</script>

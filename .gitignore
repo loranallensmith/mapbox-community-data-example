@@ -8,3 +8,6 @@ dist/
 public/data/
 test-results/
 playwright-report/
+
+# Only normalized publishable aggregates may leave import files.
+data/imports/

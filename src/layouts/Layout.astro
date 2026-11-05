@@ -4,15 +4,22 @@ import { href } from "../lib/site";
 import data from "../../data/processed/ecosystem.json";
 const {
   title,
-  description = "An independent exploration of mapping, public contribution pathways, and developer experience.",
+  description = "Live Mapbox ecosystem demos, public repository metrics, and community-created resources.",
 } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const isActive = (path: string) =>
+  currentPath === href(path).replace(/\/$/, "") ||
+  (path === "projects" &&
+    [href("explorer"), href("image-diff")].includes(currentPath));
 const nav = [
-  ["", "Overview"],
-  ["explorer", "Explorer"],
-  ["ecosystem", "Ecosystem"],
-  ["field-notes", "Field notes"],
-  ["opportunities", "Opportunities"],
-  ["methodology", "Methodology"],
+  ["", "Overview", "◫"],
+  ["projects", "Projects", "▧"],
+  ["ecosystem", "GitHub activity", "⌘"],
+  ["community", "Community content", "◎"],
+  ["sources", "Data sources", "⊞"],
+  ["opportunities", "Experiments", "↗"],
+  ["field-notes", "Build log", "≡"],
+  ["methodology", "Methodology", "⋮"],
 ];
 ---
 
@@ -22,55 +29,67 @@ const nav = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <title>{title} · Mapbox Field Notes</title>
+    <title>{title} · Mapbox Developer Ecosystem</title>
     <link rel="icon" href={href("favicon.svg")} type="image/svg+xml" />
   </head>
   <body>
     <a class="skip" href="#main">
       Skip to content
     </a>
-    <header>
+    <aside class="sidebar">
       <a class="brand" href={href()}>
-        <span class="brand-icon">↗</span>
+        <span class="brand-icon">
+          M<span>↗</span>
+        </span>
         <span>
-          FIELD NOTES <small>MAPBOX DEVELOPER ECOSYSTEM</small>
+          Developer
+          <br />
+          <strong>ecosystem</strong>
         </span>
       </a>
-      <span class="edition">INDEPENDENT RESEARCH · 01</span>
-    </header>
-    <nav aria-label="Main navigation">
-      {nav.map(([path, label]) => (
-        <a
-          aria-current={
-            Astro.url.pathname.replace(/\/$/, "") ===
-            href(path).replace(/\/$/, "")
-              ? "page"
-              : undefined
-          }
-          href={href(path)}
-        >
-          {label}
-        </a>
-      ))}
-    </nav>
-    <main id="main">
-      <slot />
-    </main>
-    <footer>
-      <div>
-        <strong>A small study. An open notebook.</strong>
-        <p>
-          Independent exploration. No affiliation, assessment, or endorsement by
-          Mapbox.
-        </p>
-      </div>
-      <div>
-        Snapshot: {data.collectedAt.slice(0, 10)} UTC
+      <div class="sidebar-label">MAPBOX / INDEPENDENT EXPLORATION</div>
+      <nav aria-label="Main navigation">
+        {nav.map(([path, label, icon]) => (
+          <a
+            href={href(path)}
+            aria-current={isActive(path) ? "page" : undefined}
+          >
+            <span aria-hidden="true">{icon}</span>
+            {label}
+          </a>
+        ))}
+      </nav>
+      <div class="sidebar-note">
+        <span class="status-dot"></span> Static site · Public evidence
         <br />
-        AI-assisted analysis · human review pending
-        <br />
-        <a href={href("methodology")}>Sources & limitations ↗</a>
+        <a href={href("sources")}>Configure your sources →</a>
       </div>
-    </footer>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span>
+          MAPBOX <span class="topbar-divider">/</span> DEVELOPER ECOSYSTEM
+        </span>
+        <span class="snapshot-label">
+          GitHub snapshot <strong>{data.collectedAt.slice(0, 10)}</strong>
+        </span>
+      </header>
+      <main id="main">
+        <slot />
+      </main>
+      <footer>
+        <span>Independent project. No Mapbox affiliation or endorsement.</span>
+        <span>
+          <a href={href("methodology")}>Methodology</a> · AI-assisted analysis,
+          review pending
+          {import.meta.env.PUBLIC_REPO_URL && (
+            <>
+              {" "}
+              · <a href={import.meta.env.PUBLIC_REPO_URL}>Source code ↗</a>
+            </>
+          )}
+        </span>
+      </footer>
+    </div>
   </body>
 </html>

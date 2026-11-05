@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "lastRunAt": "2026-11-05T00:41:59.273Z",
+  "sources": [
+    {
+      "id": "github",
+      "type": "github",
+      "status": "collected",
+      "message": "Public GitHub metadata and bounded activity cohort.",
+      "lastCollectedAt": "2026-11-05T00:41:59.273Z",
+      "window": {
+        "start": "2026-08-07T00:41:59.272Z",
+        "end": "2026-11-05T00:41:59.272Z",
+        "days": 90
+      },
+      "retained": false,
+      "itemCount": 0
+    },
+    {
+      "id": "youtube",
+      "type": "youtube",
+      "status": "needs-credential",
+      "message": "Set YOUTUBE_API_KEY to collect public video metadata.",
+      "lastCollectedAt": null,
+      "window": null,
+      "retained": false,
+      "itemCount": 0
+    },
+    {
+      "id": "articles",
+      "type": "feed",
+      "status": "collected",
+      "message": "Feed entries only; dated items in this window, subject to publisher feed retention. No full article text collected.",
+      "lastCollectedAt": "2026-11-05T00:41:59.273Z",
+      "window": {
+        "start": "2025-11-05T00:41:59.272Z",
+        "end": "2026-11-05T00:41:59.272Z",
+        "days": 365
+      },
+      "retained": false,
+      "itemCount": 4
+    },
+    {
+      "id": "curated",
+      "type": "curated",
+      "status": "collected",
+      "message": "Manually selected public links; not an exhaustive sample. Undated and older links may be included.",
+      "lastCollectedAt": "2026-11-05T00:41:59.273Z",
+      "window": {
+        "start": "2026-08-07T00:41:59.272Z",
+        "end": "2026-11-05T00:41:59.272Z",
+        "days": 90
+      },
+      "retained": false,
+      "itemCount": 0
+    },
+    {
+      "id": "discord",
+      "type": "discord-aggregate",
+      "status": "disabled",
+      "message": "Not connected. Requires a server-approved integration and permission to publish aggregate data; an invite is not API access.",
+      "lastCollectedAt": null,
+      "window": null,
+      "retained": false,
+      "itemCount": 0
+    }
+  ],
+  "items": [
+    {
+      "id": "https://dev.to/yurii_tapmap/a-map-drawn-by-its-users-how-we-built-map-and-style-marketplaces-in-tapmap-551c",
+      "sourceId": "articles",
+      "title": "A map drawn by its users: how we built map and style marketplaces in TapMap",
+      "url": "https://dev.to/yurii_tapmap/a-map-drawn-by-its-users-how-we-built-map-and-style-marketplaces-in-tapmap-551c",
+      "kind": "Article",
+      "publisher": "Yurii Nazarenko",
+      "publishedAt": "2026-11-02T06:13:29.000Z",
+      "collectedAt": "2026-11-05T00:41:59.273Z",
+      "affiliation": "Unverified",
+      "reviewStatus": "Needs review"
+    },
+    {
+      "id": "https://dev.to/yurii_tapmap/a-whole-country-on-the-phone-without-map-clustering-3a5g",
+      "sourceId": "articles",
+      "title": "A whole country on the phone, without map clustering",
+      "url": "https://dev.to/yurii_tapmap/a-whole-country-on-the-phone-without-map-clustering-3a5g",
+      "kind": "Article",
+      "publisher": "Yurii Nazarenko",
+      "publishedAt": "2026-10-31T20:19:12.000Z",
+      "collectedAt": "2026-11-05T00:41:59.273Z",
+      "affiliation": "Unverified",
+      "reviewStatus": "Needs review"
+    },
+    {
+      "id": "https://dev.to/vmodal_ai/build-interactive-maps-in-flutter-with-mapbox-sdk-108a",
+      "sourceId": "articles",
+      "title": "Build Interactive Maps in Flutter with Mapbox SDK",
+      "url": "https://dev.to/vmodal_ai/build-interactive-maps-in-flutter-with-mapbox-sdk-108a",
+      "kind": "Article",
+      "publisher": "vmodal_ai",
+      "publishedAt": "2026-08-05T09:05:06.000Z",
+      "collectedAt": "2026-11-05T00:41:59.273Z",
+      "affiliation": "Unverified",
+      "reviewStatus": "Needs review"
+    },
+    {
+      "id": "https://dev.to/githubopensource/unlock-the-worlds-secrets-this-github-project-is-your-real-time-global-intelligence-command-2cee",
+      "sourceId": "articles",
+      "title": "Unlock the World's Secrets: This GitHub Project is Your Real-Time Global Intelligence Command Center!",
+      "url": "https://dev.to/githubopensource/unlock-the-worlds-secrets-this-github-project-is-your-real-time-global-intelligence-command-2cee",
+      "kind": "Article",
+      "publisher": "GitHubOpenSource",
+      "publishedAt": "2026-07-31T15:15:50.000Z",
+      "collectedAt": "2026-11-05T00:41:59.273Z",
+      "affiliation": "Unverified",
+      "reviewStatus": "Needs review"
+    }
+  ]
+}

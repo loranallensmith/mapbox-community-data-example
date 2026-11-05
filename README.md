@@ -1,71 +1,88 @@
-# Mapbox Developer Ecosystem Field Notes
+# Mapbox Developer Ecosystem
 
-An independent, time-boxed technical experiment and public ecosystem notebook. **Not an official Mapbox assessment, audit, or endorsement.** AI-assisted interpretations and firsthand journal prompts require human review.
+A static portfolio and ecosystem portal: working library demos, public GitHub activity, community resources, and configurable data sources. Independent exploration; no Mapbox affiliation, assessment, audit, or endorsement. AI-assisted interpretation and content relevance require review.
 
-## What is implemented
+## Run locally
 
-- Static Astro + strict TypeScript + Tailwind site with six pages: overview, explorer, ecosystem, field notes, opportunities, methodology.
-- Mapbox GL JS GeoJSON circles styled by community category, filters, local event search, venue popups, and focus-from-list controls. Equivalent sourced HTML cards work without a map or JavaScript.
-- Helpful missing-token, unsupported-WebGL, loading, resource-error, and no-results states.
-- Reproducible GitHub REST collection, minimized version-controlled evidence, four quantitative indicators, discoverability inventory, metric tests, CI, and GitHub Pages deployment.
-- Four curated **historical** conference venues. This is not a list of Mapbox events or a geographic sample of its community.
-
-No Mapbox token was supplied during implementation. Authenticated map rendering, real-device mobile interaction, and assistive-technology testing still require verification. No live public deployment or firsthand author experience is claimed.
-
-## Setup
-
-Use **Node 22.12+**; Node 24 was used here. Check `node --version` if your shell selects an older runtime.
+Use **Node 22.12+** (Node 24 tested).
 
 ```sh
 npm ci
 cp .env.example .env
-# Edit .env to set PUBLIC_MAPBOX_TOKEN=pk....
+# Set PUBLIC_MAPBOX_TOKEN to a restricted public pk. token.
 npm run dev
 ```
 
-Open the local URL printed by Astro. Without a token, the site and venue list still work and the map explains setup.
+Application, build configuration, and collector all read `.env` automatically. Existing shell variables take precedence. Do not overwrite an existing `.env` when updating this checkout.
 
-Use a **public `pk.` Mapbox token**, with only permissions needed by GL JS, and URL restrictions for localhost and your deployment origin as appropriate. Browser tokens are inherently visible in built JS and requests. Never use or commit an `sk.` secret token. `.env` is ignored; `.env.example` contains placeholders only. See [Mapbox token documentation](https://docs.mapbox.com/help/dive-deeper/access-tokens/). GL JS and service usage retain Mapbox terms; the project's MIT license does not replace them. The token is injected at build time; changing it requires a rebuild.
+- `PUBLIC_MAPBOX_TOKEN`: public `pk.` token, browser-visible. Use minimum read scopes and URL restrictions for localhost and production. Never use `sk.` tokens. [Mapbox setup](https://docs.mapbox.com/accounts/guides/tokens/).
+- `GITHUB_TOKEN`: optional build-time public API authentication; no write permissions needed for research. Never prefix it with PUBLIC_.
+- `YOUTUBE_API_KEY`: optional build-time key for YouTube Data API v3. Restrict to that API. No PUBLIC_ prefix.
+- `PUBLIC_REPO_URL`: optional actual GitHub source URL, blank until published.
+- `BASE_PATH`: `/` locally; Pages workflow derives its deployment value.
+- `SITE_URL`: intended site origin; Pages workflow derives it automatically.
 
-`PUBLIC_REPO_URL` optionally adds a real source link after publication. No fake remote URL is displayed by default. `BASE_PATH` and `SITE_URL` support GitHub Pages subpaths.
+`.env` is ignored. Changing browser token requires restarting development/rebuilding the site. Without a token, venue browsing and filters remain available.
 
-## Research snapshot
+## Explore the portal
 
-Actually collected on **2026-11-04 UTC**, for the preceding 90 days:
+| Route            | Purpose                                                                                  |
+| ---------------- | ---------------------------------------------------------------------------------------- |
+| `/`              | Compact overview: live projects, current metrics, source coverage, content links         |
+| `/projects`      | Project gallery with previews and library source links                                   |
+| `/explorer`      | Mapbox GL JS venue map, category layers, local filters, accessible list                  |
+| `/image-diff`    | Working pixelmatch comparison lab: synthetic example, local uploads, sensitivity control |
+| `/ecosystem`     | Search/filter repository metrics, archived status, contribution and license links        |
+| `/community`     | Search/filter public article/video/project metadata                                      |
+| `/sources`       | Per-channel status, freshness, discovery shortlist, setup and extension instructions     |
+| `/opportunities` | Evidence-linked hypotheses for DevRel experiments                                        |
+| `/field-notes`   | Implementation log and author-input prompts                                              |
+| `/methodology`   | Definitions, source selection, limitations, and reproducibility                          |
 
-| Repository                | New issues | New PRs | Sampled issues |
-| ------------------------- | ---------: | ------: | -------------: |
-| mapbox/mapbox-gl-js       |         25 |      12 |              5 |
-| mapbox/mapbox-gl-draw     |          2 |      35 |              2 |
-| mapbox/mapbox-gl-geocoder |          0 |      10 |              0 |
+The map uses four sourced historical conference venues, not upcoming or Mapbox-affiliated events. The pixelmatch demo starts with a synthetic UI sample; user-provided images stay in the browser. Neither demo claims a production outcome.
 
-The candidate `mapbox/mapbox-search-js` returned 404. Do not infer that its product or documentation is unavailable.
+## Configure collection
+
+Edit **[config/sources.json](config/sources.json)**. Add full owner/repository names, discovery criteria, feed URLs, YouTube queries, or curated links without editing the collector. Your seven selected repositories and the existing GitHub evidence have been preserved.
 
 ```sh
-npm run research:collect
+npm run research:sources
+npm run research:discover                       # review popularity candidates
+npm run research:discover -- --apply            # explicitly merge candidates; retain existing choices
+npm run research:collect -- --source github
+npm run research:collect -- --source articles
+npm run research:collect -- --source youtube
+npm run research:collect                        # all enabled sources
 ```
 
-Optional `GITHUB_TOKEN` must be supplied in the process environment (scripts do not load `.env` automatically). No token is necessary below GitHub's unauthenticated quota. It is never included in saved data. Optional `RESEARCH_END` pins the ISO cohort end. Example:
+**[docs/SOURCES.md](docs/SOURCES.md)** explains every adapter, the configuration schemas, credentials, selection bias, and adding new adapter types.
 
-```sh
-RESEARCH_END=2026-11-04T14:30:22.730Z npm run research:collect
+- **GitHub:** explicitly selected public repositories, configurable response sample. Discovery uses bounded public search sorted by stars/forks/recent update with a recent-push criterion. Popularity does not imply adoption or health. Discovery does not change the sample unless explicitly applied.
+- **RSS/Atom:** linked metadata from configured feeds. The starter DEV feed excludes the known Mapbox publisher path; remaining affiliations and content relevance are unverified.
+- **YouTube:** public video search metadata through the official API. Missing key is reported as `needs-credential`; no fabricated videos or engagement statistics.
+- **Curated:** manually selected public URLs for sites without feeds; unknown dates stay unknown.
+- **Discord:** disabled by default. Supports an explicitly publishable aggregate export with public provenance, not message scraping or member-only data. An invite alone is insufficient access.
+
+Sources refresh independently. Failed sources retain older data with visible freshness/error status; other sources continue. Missing optional credentials are distinct from empty observations. The collector exits nonzero for actual source errors. Snapshots are static files; there are no runtime collection calls in the browser.
+
+Optional `RESEARCH_END` pins the collection endpoint. Requerying mutable public APIs is not exact historical reproduction; use the committed normalized evidence and metric tests for that. Different channels have different observation windows and incomplete retention. Never compare their raw counts as equivalent engagement measures.
+
+## Data layout
+
+```text
+config/sources.json                 source definitions; no credentials
+scripts/research/adapters/          GitHub, YouTube, feeds, curated, aggregate import
+scripts/research/collect.mjs         source runner; automatic .env loading
+scripts/research/discover.mjs        bounded GitHub candidate discovery
+data/raw/github.json                existing minimized GitHub evidence
+data/processed/ecosystem.json       repository aggregates
+data/raw/channels/<id>.json         minimized per-source evidence
+data/processed/channels.json        content links, run states, freshness
+data/processed/discovery.json       dated popularity shortlist
+data/processed/locations.json       sourced historical venue dataset
 ```
 
-The collector follows pagination, limits runaway traversal, retries transient failures, and fails loudly on rate limits and incomplete pagination. It saves only after all repositories complete; on failure the previous snapshot remains. A live API query is not an immutable reconstruction of the past. Exact reproduction uses the committed evidence and pure transformation tests.
-
-- `data/raw/github.json`: minimized normalized source evidence, item URLs and dates, sampled comment timestamps and bot/self flags; no names, email, comment bodies, or profiles.
-- `data/processed/ecosystem.json`: derived display snapshot.
-- `data/processed/locations.json`: curated venue dataset and original organizer links.
-- `scripts/research/`: acquisition and pure calculations with tests.
-- `src/pages/`: presentation and reviewed/provisional editorial content.
-- `src/content/firsthand-template.md`: author journal template.
-- `docs/methodology/PROVENANCE.md`: provenance notes.
-
-The build copies evidence into `public/data` for static downloads. Rebuild after collection. These copies are ignored by Git to avoid duplicated source-of-truth files.
-
-Indicators align with CHAOSS Issues New and Change Requests. PR time-to-closure and sampled first-comment response are **proxies** with explicitly different scope. GL JS documents internal import and Copybara sync, so an accepted public PR can appear closed rather than merged. Closed PRs include unmerged requests; responses exclude author and GitHub Bot comments. Unanswered observations are censored and shown in denominators. No contributor ranking, health score, unique-person inference, or historical trend is claimed. See `/methodology` for exact formulas and [CHAOSS references](https://www.chaoss.community/kb-metrics-and-metrics-models/).
-
-After refreshing, review README counts and editorial claims manually. `research.yml` produces an artifact for review; it deliberately does not auto-publish updated conclusions. A schedule can be added after review policy is agreed.
+Build copies public evidence/configuration into ignored `public/data` and then `dist/data`. No API keys, message bodies, profile records, or image uploads belong in these snapshots. Article/video titles and publisher display names are public metadata; content bodies are not copied. Editorial interpretation remains separate in page source.
 
 ## Validate
 
@@ -74,38 +91,39 @@ npm test
 npm run check
 npm run lint
 npm run build
-npm run preview
 ```
 
-Optional browser suite: with Google Chrome installed and a no-token production build, run `npm run test:browser`. See [validation record](docs/VALIDATION.md) for completed checks and limits.
+Tests cover metric calculations, snapshot consistency, timestamp boundaries, source validation, missing credentials, bounded YouTube pagination, RSS/Atom filtering, safe link normalization, deduplication, failed-source retention, discovery merging, and aggregate privacy boundaries.
 
-Metric tests cover cohort boundaries, PR/issue separation, empty data, duration medians, self/bot exclusions, and consistency between committed raw evidence and processed aggregates. Astro checks `.astro` templates and strict TypeScript; ESLint checks JS/TS scripts (Astro templates are covered by Astro check).
+Optional Chrome browser checks:
 
-Before portfolio publication, test with a restricted token: map load, category colors, local filters, zero matches, venue popup, list-to-map focus, keyboard use, narrow viewport, blocked network, invalid token, and reduced motion. Confirm attribution remains visible. Record results in field notes; do not replace pending evidence with assumed success.
+```sh
+PUBLIC_MAPBOX_TOKEN= BASE_PATH=/ npm run build
+npm run test:browser
+npm run build # restore configured deployment output
+```
+
+Requires installed Google Chrome. Browser tests exercise 1280px/390px layouts, route navigation, resource/repository filtering, evidence downloads, no-token and no-JavaScript browsing, and real pixelmatch output. Authenticated Mapbox resource behavior is a separate environment-dependent check. See [validation record](docs/VALIDATION.md). Astro may leave preview running in the background; stop an owned preview with `npm exec astro -- preview stop`.
 
 ## Publish on GitHub Pages
 
-An authenticated GitHub remote is not configured in this workspace. To publish:
-
-1. Authenticate: `gh auth login -h github.com`.
-2. Create a public repository and push this working tree:
+1. Authenticate with GitHub: `gh auth login -h github.com`.
+2. Commit and push to a public repository. For a new remote:
    ```sh
    git add .
-   git commit -m "Build independent Mapbox ecosystem field notes"
-   gh repo create mapbox-developer-ecosystem-field-notes --public --source=. --remote=origin --push
+   git commit -m "Build Mapbox ecosystem portal"
+   gh repo create mapbox-developer-ecosystem --public --source=. --remote=origin --push
    ```
-   If a remote already exists, use it instead of creating another.
-3. Repository **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. Repository **Settings → Secrets and variables → Actions → Variables**: add `PUBLIC_MAPBOX_TOKEN` with a restricted public token. Do not put any secret token here.
-5. Run **Deploy GitHub Pages** from Actions, or push to `main`. The workflow derives the origin/base path, validates, builds, and uploads `dist`. If your branch has a different name, adjust `pages.yml`.
-6. Add the returned Pages URL to the token's allowed URLs, then verify a production render. Check the repository About section and set its website link.
+   Reuse an existing remote if one is already configured.
+3. Settings → Pages → Source: **GitHub Actions**.
+4. Actions repository **Variables**: add `PUBLIC_MAPBOX_TOKEN` containing a URL-restricted public token.
+5. Run **Deploy GitHub Pages**, or push to `main`. The workflow validates, builds, derives the base path/origin/source URL, and deploys `dist`.
+6. Add the Pages URL to Mapbox token restrictions and verify a real production map render.
 
-For a custom domain, configure Pages and override build origin/base path accordingly. For any static host, deploy `dist` after setting the intended `SITE_URL` and `BASE_PATH` at build time. No runtime server or GitHub credential is needed by the website. The map fetches Mapbox resources directly; all research data is bundled locally.
+The research workflow uses GitHub's automatic token and an optional `YOUTUBE_API_KEY` Actions secret. It uploads evidence for review and never auto-publishes changing interpretations. Add scheduled refresh only after establishing review policy. Any static host can serve `dist` with the intended SITE_URL/BASE_PATH supplied at build time.
 
-## Review and next steps
+## Research boundaries
 
-1. Supply a restricted public token and complete browser/mobile/keyboard checks, recording the first real render and deployment.
-2. Review licensing, contribution policies, provisional analysis, and fill in the author's firsthand field notes.
-3. Expand response collection beyond the tiny newest-issue sample, retrieve actual PR merge/review events, and add a second comparable snapshot before discussing trends.
+CHAOSS-inspired issue and change-request counts plus labeled closure/response proxies. Closed PRs are not necessarily merged or rejected: GL JS documents internal import and Copybara sync. Small newest-issue response samples exclude unanswered cases from medians. No community health score, maintainer ranking, demographic inference, or private support judgment. No trends from one snapshot.
 
-Original code and prose: MIT. Third-party material and Mapbox services keep their own licenses and terms. See LICENSE and the linked sources.
+Human review: verify source relevance/affiliations, contribution policies and licenses; complete firsthand author notes; validate deployment and authenticated map interaction. Original project code/prose is MIT; Mapbox services, libraries, trademarks, and third-party works retain their own terms.

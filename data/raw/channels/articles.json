@@ -1,0 +1,68 @@
+{
+  "sourceId": "articles",
+  "collectedAt": "2026-11-05T00:41:59.273Z",
+  "window": {
+    "start": "2025-11-05T00:41:59.272Z",
+    "end": "2026-11-05T00:41:59.272Z",
+    "days": 365
+  },
+  "data": {
+    "feeds": [
+      {
+        "url": "https://dev.to/feed/tag/mapbox",
+        "examined": 12,
+        "available": 12
+      }
+    ],
+    "items": [
+      {
+        "id": "https://dev.to/yurii_tapmap/a-map-drawn-by-its-users-how-we-built-map-and-style-marketplaces-in-tapmap-551c",
+        "sourceId": "articles",
+        "title": "A map drawn by its users: how we built map and style marketplaces in TapMap",
+        "url": "https://dev.to/yurii_tapmap/a-map-drawn-by-its-users-how-we-built-map-and-style-marketplaces-in-tapmap-551c",
+        "kind": "Article",
+        "publisher": "Yurii Nazarenko",
+        "publishedAt": "2026-11-02T06:13:29.000Z",
+        "collectedAt": "2026-11-05T00:41:59.273Z",
+        "affiliation": "Unverified",
+        "reviewStatus": "Needs review"
+      },
+      {
+        "id": "https://dev.to/yurii_tapmap/a-whole-country-on-the-phone-without-map-clustering-3a5g",
+        "sourceId": "articles",
+        "title": "A whole country on the phone, without map clustering",
+        "url": "https://dev.to/yurii_tapmap/a-whole-country-on-the-phone-without-map-clustering-3a5g",
+        "kind": "Article",
+        "publisher": "Yurii Nazarenko",
+        "publishedAt": "2026-10-31T20:19:12.000Z",
+        "collectedAt": "2026-11-05T00:41:59.273Z",
+        "affiliation": "Unverified",
+        "reviewStatus": "Needs review"
+      },
+      {
+        "id": "https://dev.to/vmodal_ai/build-interactive-maps-in-flutter-with-mapbox-sdk-108a",
+        "sourceId": "articles",
+        "title": "Build Interactive Maps in Flutter with Mapbox SDK",
+        "url": "https://dev.to/vmodal_ai/build-interactive-maps-in-flutter-with-mapbox-sdk-108a",
+        "kind": "Article",
+        "publisher": "vmodal_ai",
+        "publishedAt": "2026-08-05T09:05:06.000Z",
+        "collectedAt": "2026-11-05T00:41:59.273Z",
+        "affiliation": "Unverified",
+        "reviewStatus": "Needs review"
+      },
+      {
+        "id": "https://dev.to/githubopensource/unlock-the-worlds-secrets-this-github-project-is-your-real-time-global-intelligence-command-2cee",
+        "sourceId": "articles",
+        "title": "Unlock the World's Secrets: This GitHub Project is Your Real-Time Global Intelligence Command Center!",
+        "url": "https://dev.to/githubopensource/unlock-the-worlds-secrets-this-github-project-is-your-real-time-global-intelligence-command-2cee",
+        "kind": "Article",
+        "publisher": "GitHubOpenSource",
+        "publishedAt": "2026-07-31T15:15:50.000Z",
+        "collectedAt": "2026-11-05T00:41:59.273Z",
+        "affiliation": "Unverified",
+        "reviewStatus": "Needs review"
+      }
+    ]
+  }
+}

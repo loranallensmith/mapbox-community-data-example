@@ -1,0 +1,510 @@
+{
+  "collectedAt": "2026-11-05T00:39:15.653Z",
+  "query": "org:mapbox archived:false fork:false pushed:>=2025-11-05",
+  "sort": "stars",
+  "totalMatches": 337,
+  "limit": 50,
+  "limitations": "Stars are cumulative popularity signals, not current adoption or community health. Discovery candidates do not automatically join the research sample.",
+  "repositories": [
+    {
+      "name": "mapbox/mapbox-gl-js",
+      "url": "https://github.com/mapbox/mapbox-gl-js",
+      "description": "Interactive, thoroughly customizable maps in the browser, powered by vector tiles and WebGL",
+      "stars": 12465,
+      "forks": 2383,
+      "pushedAt": "2026-11-04T14:31:14Z",
+      "archived": false,
+      "selected": true
+    },
+    {
+      "name": "mapbox/pixelmatch",
+      "url": "https://github.com/mapbox/pixelmatch",
+      "description": "The smallest, simplest and fastest JavaScript pixel-level image comparison library",
+      "stars": 7009,
+      "forks": 333,
+      "pushedAt": "2026-10-06T14:08:46Z",
+      "archived": false,
+      "selected": true
+    },
+    {
+      "name": "mapbox/tippecanoe",
+      "url": "https://github.com/mapbox/tippecanoe",
+      "description": "Build vector tilesets from large collections of GeoJSON features.",
+      "stars": 3139,
+      "forks": 427,
+      "pushedAt": "2026-06-29T15:20:27Z",
+      "archived": false,
+      "selected": true
+    },
+    {
+      "name": "mapbox/delaunator",
+      "url": "https://github.com/mapbox/delaunator",
+      "description": "An incredibly fast JavaScript library for Delaunay triangulation of 2D points",
+      "stars": 2639,
+      "forks": 155,
+      "pushedAt": "2026-10-31T15:42:52Z",
+      "archived": false,
+      "selected": true
+    },
+    {
+      "name": "mapbox/awesome-vector-tiles",
+      "url": "https://github.com/mapbox/awesome-vector-tiles",
+      "description": "Awesome implementations of the Mapbox Vector Tile specification",
+      "stars": 2635,
+      "forks": 293,
+      "pushedAt": "2026-08-10T19:17:38Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/earcut",
+      "url": "https://github.com/mapbox/earcut",
+      "description": "The fastest and smallest JavaScript polygon triangulation library for your WebGL apps",
+      "stars": 2623,
+      "forks": 228,
+      "pushedAt": "2026-10-23T10:20:57Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/supercluster",
+      "url": "https://github.com/mapbox/supercluster",
+      "description": "A very fast geospatial point clustering library for browsers and Node.",
+      "stars": 2389,
+      "forks": 303,
+      "pushedAt": "2026-09-03T08:35:00Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/geojson.io",
+      "url": "https://github.com/mapbox/geojson.io",
+      "description": "A quick, simple tool for creating, viewing, and sharing spatial data",
+      "stars": 2276,
+      "forks": 642,
+      "pushedAt": "2026-08-17T20:17:11Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/geojson-vt",
+      "url": "https://github.com/mapbox/geojson-vt",
+      "description": "Slice GeoJSON into vector tiles on the fly in the browser",
+      "stars": 2084,
+      "forks": 281,
+      "pushedAt": "2026-09-30T14:41:39Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/robosat",
+      "url": "https://github.com/mapbox/robosat",
+      "description": " Semantic segmentation on aerial and satellite imagery. Extracts features such as: buildings, parking lots, roads, water, clouds",
+      "stars": 2067,
+      "forks": 384,
+      "pushedAt": "2026-06-29T15:11:59Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/maki",
+      "url": "https://github.com/mapbox/maki",
+      "description": "A POI Icon Set",
+      "stars": 1584,
+      "forks": 210,
+      "pushedAt": "2026-06-24T09:57:57Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/polylabel",
+      "url": "https://github.com/mapbox/polylabel",
+      "description": "A fast algorithm for finding the pole of inaccessibility of a polygon (in JavaScript and C++)",
+      "stars": 1557,
+      "forks": 163,
+      "pushedAt": "2026-06-25T10:36:23Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/togeojson",
+      "url": "https://github.com/mapbox/togeojson",
+      "description": "convert KML and GPX to GeoJSON, without the fuss",
+      "stars": 1326,
+      "forks": 321,
+      "pushedAt": "2026-06-29T15:20:50Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/node-pre-gyp",
+      "url": "https://github.com/mapbox/node-pre-gyp",
+      "description": "Node.js tool for easy binary deployment of C++ addons",
+      "stars": 1155,
+      "forks": 270,
+      "pushedAt": "2026-10-28T07:26:07Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/webgl-wind",
+      "url": "https://github.com/mapbox/webgl-wind",
+      "description": "Wind power visualization with WebGL particles",
+      "stars": 1112,
+      "forks": 230,
+      "pushedAt": "2026-08-06T18:42:10Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-gl-draw",
+      "url": "https://github.com/mapbox/mapbox-gl-draw",
+      "description": "Draw tools for mapbox-gl-js",
+      "stars": 1092,
+      "forks": 611,
+      "pushedAt": "2026-11-03T12:31:24Z",
+      "archived": false,
+      "selected": true
+    },
+    {
+      "name": "mapbox/earcut.hpp",
+      "url": "https://github.com/mapbox/earcut.hpp",
+      "description": "Fast, header-only polygon triangulation",
+      "stars": 1048,
+      "forks": 157,
+      "pushedAt": "2026-10-31T08:51:06Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/geobuf",
+      "url": "https://github.com/mapbox/geobuf",
+      "description": "A compact binary encoding for geographic data.",
+      "stars": 1035,
+      "forks": 86,
+      "pushedAt": "2026-06-29T15:21:16Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/vector-tile-spec",
+      "url": "https://github.com/mapbox/vector-tile-spec",
+      "description": "Mapbox Vector Tile specification",
+      "stars": 1013,
+      "forks": 213,
+      "pushedAt": "2026-06-29T15:24:39Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-navigation-ios",
+      "url": "https://github.com/mapbox/mapbox-navigation-ios",
+      "description": "Turn-by-turn navigation logic and UI in Swift on iOS",
+      "stars": 919,
+      "forks": 329,
+      "pushedAt": "2026-11-04T08:18:44Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/pbf",
+      "url": "https://github.com/mapbox/pbf",
+      "description": "A low-level, lightweight protocol buffers implementation in JavaScript.",
+      "stars": 886,
+      "forks": 113,
+      "pushedAt": "2026-09-02T10:42:00Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/Fingertips",
+      "url": "https://github.com/mapbox/Fingertips",
+      "description": "Touch indicators on external displays for iOS applications.",
+      "stars": 827,
+      "forks": 91,
+      "pushedAt": "2026-06-16T13:47:46Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-unity-sdk",
+      "url": "https://github.com/mapbox/mapbox-unity-sdk",
+      "description": "Mapbox Unity SDK - https://www.mapbox.com/unity/",
+      "stars": 786,
+      "forks": 228,
+      "pushedAt": "2026-10-20T10:55:23Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-sdk-js",
+      "url": "https://github.com/mapbox/mapbox-sdk-js",
+      "description": "A JavaScript client to Mapbox services, supporting Node, browsers, and React Native",
+      "stars": 772,
+      "forks": 191,
+      "pushedAt": "2026-09-10T20:11:02Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/concaveman",
+      "url": "https://github.com/mapbox/concaveman",
+      "description": "A very fast 2D concave hull algorithm in JavaScript",
+      "stars": 724,
+      "forks": 84,
+      "pushedAt": "2026-06-24T10:29:32Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/osm-bright",
+      "url": "https://github.com/mapbox/osm-bright",
+      "description": "A Carto template for OpenStreetMap data",
+      "stars": 702,
+      "forks": 221,
+      "pushedAt": "2026-06-29T15:05:31Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/storytelling",
+      "url": "https://github.com/mapbox/storytelling",
+      "description": "Storytelling with maps template",
+      "stars": 680,
+      "forks": 302,
+      "pushedAt": "2026-06-29T15:16:49Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/leaflet-omnivore",
+      "url": "https://github.com/mapbox/leaflet-omnivore",
+      "description": "universal format parser for Leaflet & Mapbox.js",
+      "stars": 680,
+      "forks": 127,
+      "pushedAt": "2026-06-24T10:19:24Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/tiny-sdf",
+      "url": "https://github.com/mapbox/tiny-sdf",
+      "description": "Browser-side SDF font generator",
+      "stars": 676,
+      "forks": 66,
+      "pushedAt": "2026-10-08T14:30:37Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/polyline",
+      "url": "https://github.com/mapbox/polyline",
+      "description": "polyline encoding and decoding in javascript",
+      "stars": 674,
+      "forks": 100,
+      "pushedAt": "2026-06-24T10:23:07Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mbtiles-spec",
+      "url": "https://github.com/mapbox/mbtiles-spec",
+      "description": "specification documents for the MBTiles tileset format",
+      "stars": 673,
+      "forks": 99,
+      "pushedAt": "2026-06-29T14:59:15Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/martini",
+      "url": "https://github.com/mapbox/martini",
+      "description": "A JavaScript library for real-time RTIN terrain mesh generation",
+      "stars": 661,
+      "forks": 41,
+      "pushedAt": "2026-06-24T10:21:40Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-navigation-android",
+      "url": "https://github.com/mapbox/mapbox-navigation-android",
+      "description": "Mapbox Navigation SDK for Android",
+      "stars": 653,
+      "forks": 322,
+      "pushedAt": "2026-11-04T15:19:39Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-maps-ios",
+      "url": "https://github.com/mapbox/mapbox-maps-ios",
+      "description": "Interactive, thoroughly customizable maps for iOS powered by vector tiles and Metal",
+      "stars": 602,
+      "forks": 199,
+      "pushedAt": "2026-11-04T12:41:39Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-maps-android",
+      "url": "https://github.com/mapbox/mapbox-maps-android",
+      "description": "Interactive, thoroughly customizable maps in native Android powered by vector tiles and OpenGL.",
+      "stars": 581,
+      "forks": 166,
+      "pushedAt": "2026-11-03T17:21:57Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-gl-leaflet",
+      "url": "https://github.com/mapbox/mapbox-gl-leaflet",
+      "description": "binding from Mapbox GL JS to the Leaflet API",
+      "stars": 546,
+      "forks": 148,
+      "pushedAt": "2026-06-17T19:59:00Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/tilelive",
+      "url": "https://github.com/mapbox/tilelive",
+      "description": "fast interface to tiles with pluggable backends - NOT ACTIVELY MAINTAINED",
+      "stars": 540,
+      "forks": 106,
+      "pushedAt": "2026-06-29T15:19:34Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mercantile",
+      "url": "https://github.com/mapbox/mercantile",
+      "description": "Spherical mercator tile and coordinate utilities",
+      "stars": 452,
+      "forks": 70,
+      "pushedAt": "2026-06-29T14:59:51Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-java",
+      "url": "https://github.com/mapbox/mapbox-java",
+      "description": "The Mapbox Java SDK – Java wrappers around Mapbox APIs and other location data ",
+      "stars": 438,
+      "forks": 118,
+      "pushedAt": "2026-10-15T08:32:27Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/cheap-ruler",
+      "url": "https://github.com/mapbox/cheap-ruler",
+      "description": "Fast approximations for common geodesic measurements 🌐",
+      "stars": 433,
+      "forks": 37,
+      "pushedAt": "2026-10-07T15:32:57Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/vector-tile-js",
+      "url": "https://github.com/mapbox/vector-tile-js",
+      "description": "Parses vector tiles with JavaScript",
+      "stars": 404,
+      "forks": 91,
+      "pushedAt": "2026-06-24T10:28:32Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-gl-geocoder",
+      "url": "https://github.com/mapbox/mapbox-gl-geocoder",
+      "description": "Geocoder control for mapbox-gl-js using Mapbox Geocoding API",
+      "stars": 389,
+      "forks": 181,
+      "pushedAt": "2026-10-27T23:55:01Z",
+      "archived": false,
+      "selected": true
+    },
+    {
+      "name": "mapbox/variant",
+      "url": "https://github.com/mapbox/variant",
+      "description": "C++11/C++14 Variant",
+      "stars": 384,
+      "forks": 96,
+      "pushedAt": "2026-06-29T15:24:24Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/protozero",
+      "url": "https://github.com/mapbox/protozero",
+      "description": "Minimalist protocol buffer decoder and encoder in C++",
+      "stars": 380,
+      "forks": 83,
+      "pushedAt": "2026-11-03T08:30:55Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/leaflet-image",
+      "url": "https://github.com/mapbox/leaflet-image",
+      "description": "leaflet maps to images",
+      "stars": 380,
+      "forks": 141,
+      "pushedAt": "2026-04-13T23:10:32Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mapbox-maps-flutter",
+      "url": "https://github.com/mapbox/mapbox-maps-flutter",
+      "description": "Interactive, thoroughly customizable maps for Flutter powered by Mapbox Maps SDK",
+      "stars": 379,
+      "forks": 205,
+      "pushedAt": "2026-11-04T10:23:42Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/csv2geojson",
+      "url": "https://github.com/mapbox/csv2geojson",
+      "description": "magically convert csv files to geojson files",
+      "stars": 373,
+      "forks": 80,
+      "pushedAt": "2026-06-29T14:37:22Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/mcp-server",
+      "url": "https://github.com/mapbox/mcp-server",
+      "description": "Mapbox Model Context Protocol (MCP) server",
+      "stars": 366,
+      "forks": 44,
+      "pushedAt": "2026-11-04T21:44:15Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/potpack",
+      "url": "https://github.com/mapbox/potpack",
+      "description": "A tiny rectangle packing JavaScript library (for sprite layouts)",
+      "stars": 355,
+      "forks": 24,
+      "pushedAt": "2026-06-18T08:17:46Z",
+      "archived": false,
+      "selected": false
+    },
+    {
+      "name": "mapbox/shp-write",
+      "url": "https://github.com/mapbox/shp-write",
+      "description": "create and write to shapefiles in pure javascript",
+      "stars": 321,
+      "forks": 193,
+      "pushedAt": "2026-06-24T09:55:10Z",
+      "archived": false,
+      "selected": false
+    }
+  ]
+}

@@ -1,0 +1,5180 @@
+{
+  "sourceId": "github",
+  "collectedAt": "2026-11-05T00:41:59.273Z",
+  "window": {
+    "start": "2026-08-07T00:41:59.272Z",
+    "end": "2026-11-05T00:41:59.272Z",
+    "days": 90
+  },
+  "data": {
+    "schemaVersion": 1,
+    "collectedAt": "2026-11-05T00:41:59.273Z",
+    "window": {
+      "start": "2026-08-07T00:41:59.272Z",
+      "end": "2026-11-05T00:41:59.272Z",
+      "days": 90
+    },
+    "responseSampling": "Newest 20 non-PR issues created in the window per repository; comments only, excludes author and GitHub Bot accounts. Censored unanswered items excluded from median.",
+    "selection": {
+      "mode": "explicit",
+      "repositories": [
+        "mapbox/mapbox-gl-js",
+        "mapbox/pixelmatch",
+        "mapbox/mapbox-gl-native",
+        "mapbox/tippecanoe",
+        "mapbox/delaunator",
+        "mapbox/mapbox-gl-draw",
+        "mapbox/mapbox-gl-geocoder",
+        "mapbox/awesome-vector-tiles",
+        "mapbox/earcut",
+        "mapbox/supercluster",
+        "mapbox/geojson.io",
+        "mapbox/geojson-vt",
+        "mapbox/robosat",
+        "mapbox/maki",
+        "mapbox/polylabel",
+        "mapbox/togeojson",
+        "mapbox/node-pre-gyp",
+        "mapbox/webgl-wind",
+        "mapbox/earcut.hpp",
+        "mapbox/geobuf",
+        "mapbox/vector-tile-spec",
+        "mapbox/mapbox-navigation-ios",
+        "mapbox/pbf",
+        "mapbox/Fingertips",
+        "mapbox/mapbox-unity-sdk",
+        "mapbox/mapbox-sdk-js",
+        "mapbox/concaveman",
+        "mapbox/osm-bright",
+        "mapbox/storytelling",
+        "mapbox/leaflet-omnivore",
+        "mapbox/tiny-sdf",
+        "mapbox/polyline",
+        "mapbox/mbtiles-spec",
+        "mapbox/martini",
+        "mapbox/mapbox-navigation-android",
+        "mapbox/mapbox-maps-ios",
+        "mapbox/mapbox-maps-android",
+        "mapbox/mapbox-gl-leaflet",
+        "mapbox/tilelive",
+        "mapbox/mercantile",
+        "mapbox/mapbox-java",
+        "mapbox/cheap-ruler",
+        "mapbox/vector-tile-js",
+        "mapbox/variant",
+        "mapbox/protozero",
+        "mapbox/leaflet-image",
+        "mapbox/mapbox-maps-flutter",
+        "mapbox/csv2geojson",
+        "mapbox/mcp-server",
+        "mapbox/potpack",
+        "mapbox/shp-write"
+      ]
+    },
+    "candidates": [],
+    "repositories": [
+      {
+        "name": "mapbox/mapbox-gl-js",
+        "url": "https://github.com/mapbox/mapbox-gl-js",
+        "description": "Interactive, thoroughly customizable maps in the browser, powered by vector tiles and WebGL",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-04T14:31:14Z",
+        "branch": "main",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.txt",
+            "src/style-spec/LICENSE.txt"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 25,
+          "prsOpened": 12,
+          "closedPrs": 2,
+          "medianPrCloseHours": 138.5375,
+          "responseSampleSize": 20,
+          "respondedSample": 11,
+          "medianSampleResponseHours": 30.230833333333333
+        },
+        "items": [
+          {
+            "number": 13750,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13750",
+            "created_at": "2026-11-03T02:05:46Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13749,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13749",
+            "created_at": "2026-11-02T10:02:33Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13748,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13748",
+            "created_at": "2026-10-27T13:54:27Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13747,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13747",
+            "created_at": "2026-10-27T12:02:51Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13746,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13746",
+            "created_at": "2026-10-27T11:26:06Z",
+            "closed_at": "2026-10-29T08:15:20Z",
+            "pr": false
+          },
+          {
+            "number": 13745,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13745",
+            "created_at": "2026-10-26T15:43:45Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13744,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13744",
+            "created_at": "2026-10-26T07:13:33Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13743,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13743",
+            "created_at": "2026-10-22T15:19:30Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13742,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13742",
+            "created_at": "2026-10-22T03:21:07Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13741,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13741",
+            "created_at": "2026-10-21T20:11:31Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13740,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13740",
+            "created_at": "2026-10-16T18:51:04Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13739,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13739",
+            "created_at": "2026-10-08T22:08:18Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13738,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13738",
+            "created_at": "2026-10-07T08:14:58Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13737,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13737",
+            "created_at": "2026-10-07T03:33:59Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13736,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13736",
+            "created_at": "2026-10-05T19:52:06Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13735,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13735",
+            "created_at": "2026-10-02T18:49:46Z",
+            "closed_at": "2026-11-03T12:34:25Z",
+            "pr": false
+          },
+          {
+            "number": 13734,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13734",
+            "created_at": "2026-10-02T11:08:22Z",
+            "closed_at": "2026-10-02T11:53:02Z",
+            "pr": false
+          },
+          {
+            "number": 13733,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13733",
+            "created_at": "2026-09-30T10:45:23Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13732,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13732",
+            "created_at": "2026-09-28T21:27:35Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13731,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13731",
+            "created_at": "2026-09-28T14:32:24Z",
+            "closed_at": "2026-09-29T09:17:33Z",
+            "pr": false
+          },
+          {
+            "number": 13730,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13730",
+            "created_at": "2026-09-26T02:38:55Z",
+            "closed_at": "2026-09-28T09:31:21Z",
+            "pr": false
+          },
+          {
+            "number": 13729,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13729",
+            "created_at": "2026-09-23T19:23:38Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13728,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13728",
+            "created_at": "2026-09-19T19:53:29Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13727,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13727",
+            "created_at": "2026-09-19T14:52:24Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13726,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13726",
+            "created_at": "2026-09-15T15:27:55Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13723,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13723",
+            "created_at": "2026-09-01T11:42:24Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13722,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13722",
+            "created_at": "2026-08-31T19:31:59Z",
+            "closed_at": "2026-09-10T08:40:46Z",
+            "pr": true
+          },
+          {
+            "number": 13721,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13721",
+            "created_at": "2026-08-27T00:24:19Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13720,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13720",
+            "created_at": "2026-08-26T22:32:39Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13719,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13719",
+            "created_at": "2026-08-26T14:08:28Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13718,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13718",
+            "created_at": "2026-08-26T12:48:35Z",
+            "closed_at": "2026-08-28T12:44:18Z",
+            "pr": true
+          },
+          {
+            "number": 13717,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13717",
+            "created_at": "2026-08-20T06:30:11Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13716,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13716",
+            "created_at": "2026-08-15T07:49:07Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13715,
+            "url": "https://github.com/mapbox/mapbox-gl-js/pull/13715",
+            "created_at": "2026-08-14T11:06:12Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 13714,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13714",
+            "created_at": "2026-08-13T14:26:43Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13713,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13713",
+            "created_at": "2026-08-13T10:13:02Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 13712,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13712",
+            "created_at": "2026-08-12T14:44:42Z",
+            "closed_at": null,
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 13750,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13750",
+            "created_at": "2026-11-03T02:05:46Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13748,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13748",
+            "created_at": "2026-10-27T13:54:27Z",
+            "responses": [
+              {
+                "created_at": "2026-10-28T15:10:06Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 25.260833333333334
+          },
+          {
+            "number": 13747,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13747",
+            "created_at": "2026-10-27T12:02:51Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13746,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13746",
+            "created_at": "2026-10-27T11:26:06Z",
+            "responses": [
+              {
+                "created_at": "2026-10-29T08:15:57Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 44.83083333333333
+          },
+          {
+            "number": 13744,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13744",
+            "created_at": "2026-10-26T07:13:33Z",
+            "responses": [
+              {
+                "created_at": "2026-10-27T16:15:06Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 33.02583333333333
+          },
+          {
+            "number": 13742,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13742",
+            "created_at": "2026-10-22T03:21:07Z",
+            "responses": [
+              {
+                "created_at": "2026-10-22T15:11:00Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-23T09:34:58Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-23T09:41:00Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-23T15:53:33Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-23T16:04:34Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-23T17:18:30Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-23T17:42:19Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-26T10:08:43Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 30.230833333333333
+          },
+          {
+            "number": 13741,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13741",
+            "created_at": "2026-10-21T20:11:31Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13740,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13740",
+            "created_at": "2026-10-16T18:51:04Z",
+            "responses": [
+              {
+                "created_at": "2026-10-19T17:08:07Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13739,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13739",
+            "created_at": "2026-10-08T22:08:18Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13737,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13737",
+            "created_at": "2026-10-07T03:33:59Z",
+            "responses": [
+              {
+                "created_at": "2026-10-07T06:47:04Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 3.2180555555555554
+          },
+          {
+            "number": 13736,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13736",
+            "created_at": "2026-10-05T19:52:06Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13735,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13735",
+            "created_at": "2026-10-02T18:49:46Z",
+            "responses": [
+              {
+                "created_at": "2026-10-26T12:41:35Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-11-01T11:13:54Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-11-01T13:11:48Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-11-03T12:39:34Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 712.4022222222222
+          },
+          {
+            "number": 13734,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13734",
+            "created_at": "2026-10-02T11:08:22Z",
+            "responses": [
+              {
+                "created_at": "2026-10-02T11:53:02Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 0.7444444444444445
+          },
+          {
+            "number": 13733,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13733",
+            "created_at": "2026-09-30T10:45:23Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13732,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13732",
+            "created_at": "2026-09-28T21:27:35Z",
+            "responses": [
+              {
+                "created_at": "2026-09-29T06:05:04Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 8.624722222222223
+          },
+          {
+            "number": 13731,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13731",
+            "created_at": "2026-09-28T14:32:24Z",
+            "responses": [
+              {
+                "created_at": "2026-09-29T08:20:44Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 17.805555555555557
+          },
+          {
+            "number": 13730,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13730",
+            "created_at": "2026-09-26T02:38:55Z",
+            "responses": [
+              {
+                "created_at": "2026-09-28T09:32:21Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 54.89055555555556
+          },
+          {
+            "number": 13727,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13727",
+            "created_at": "2026-09-19T14:52:24Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13726,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13726",
+            "created_at": "2026-09-15T15:27:55Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 13723,
+            "url": "https://github.com/mapbox/mapbox-gl-js/issues/13723",
+            "created_at": "2026-09-01T11:42:24Z",
+            "responses": [
+              {
+                "created_at": "2026-09-22T10:14:57Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-25T14:15:17Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 502.5425
+          }
+        ]
+      },
+      {
+        "name": "mapbox/pixelmatch",
+        "url": "https://github.com/mapbox/pixelmatch",
+        "description": "The smallest, simplest and fastest JavaScript pixel-level image comparison library",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-06T14:08:46Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 1,
+          "closedPrs": 1,
+          "medianPrCloseHours": 642.9525,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 171,
+            "url": "https://github.com/mapbox/pixelmatch/pull/171",
+            "created_at": "2026-09-07T13:15:40Z",
+            "closed_at": "2026-10-04T08:12:49Z",
+            "pr": true
+          }
+        ],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mapbox-gl-native",
+        "url": "https://github.com/mapbox/mapbox-gl-native",
+        "description": "Interactive, thoroughly customizable maps in native Android, iOS, macOS, Node.js, and Qt applications, powered by vector tiles and OpenGL",
+        "archived": true,
+        "disabled": false,
+        "pushedAt": "2023-07-27T10:31:03Z",
+        "branch": "master",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.mbgl-core.md",
+            "LICENSE.md",
+            "scripts/license.cmake",
+            "vendor/csscolorparser/LICENSE",
+            "vendor/icu/LICENSE",
+            "vendor/nunicode/LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/tippecanoe",
+        "url": "https://github.com/mapbox/tippecanoe",
+        "description": "Build vector tilesets from large collections of GeoJSON features.",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:20:27Z",
+        "branch": "master",
+        "license": "BSD-2-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.md",
+            "milo/LICENSE.txt"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/delaunator",
+        "url": "https://github.com/mapbox/delaunator",
+        "description": "An incredibly fast JavaScript library for Delaunay triangulation of 2D points",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-31T15:42:52Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 2,
+          "prsOpened": 1,
+          "closedPrs": 1,
+          "medianPrCloseHours": 675.8322222222222,
+          "responseSampleSize": 2,
+          "respondedSample": 1,
+          "medianSampleResponseHours": 3.0005555555555556
+        },
+        "items": [
+          {
+            "number": 100,
+            "url": "https://github.com/mapbox/delaunator/issues/100",
+            "created_at": "2026-10-31T12:31:48Z",
+            "closed_at": "2026-10-31T15:40:38Z",
+            "pr": false
+          },
+          {
+            "number": 99,
+            "url": "https://github.com/mapbox/delaunator/pull/99",
+            "created_at": "2026-10-03T11:49:27Z",
+            "closed_at": "2026-10-31T15:39:23Z",
+            "pr": true
+          },
+          {
+            "number": 98,
+            "url": "https://github.com/mapbox/delaunator/issues/98",
+            "created_at": "2026-10-02T16:34:29Z",
+            "closed_at": "2026-10-31T15:39:22Z",
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 100,
+            "url": "https://github.com/mapbox/delaunator/issues/100",
+            "created_at": "2026-10-31T12:31:48Z",
+            "responses": [
+              {
+                "created_at": "2026-10-31T15:31:50Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-31T22:24:56Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 3.0005555555555556
+          },
+          {
+            "number": 98,
+            "url": "https://github.com/mapbox/delaunator/issues/98",
+            "created_at": "2026-10-02T16:34:29Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/mapbox-gl-draw",
+        "url": "https://github.com/mapbox/mapbox-gl-draw",
+        "description": "Draw tools for mapbox-gl-js",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-03T12:31:24Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 2,
+          "prsOpened": 35,
+          "closedPrs": 30,
+          "medianPrCloseHours": 72.82986111111111,
+          "responseSampleSize": 2,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 1639,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1639",
+            "created_at": "2026-11-02T11:43:06Z",
+            "closed_at": "2026-11-03T12:31:21Z",
+            "pr": true
+          },
+          {
+            "number": 1638,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1638",
+            "created_at": "2026-11-02T11:42:56Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1637,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1637",
+            "created_at": "2026-11-02T11:42:40Z",
+            "closed_at": "2026-11-03T12:31:01Z",
+            "pr": true
+          },
+          {
+            "number": 1636,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1636",
+            "created_at": "2026-10-29T21:12:13Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 1635,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1635",
+            "created_at": "2026-10-26T11:43:26Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1634,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1634",
+            "created_at": "2026-10-26T11:43:16Z",
+            "closed_at": "2026-10-26T12:24:35Z",
+            "pr": true
+          },
+          {
+            "number": 1633,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1633",
+            "created_at": "2026-10-26T11:43:03Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1632,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1632",
+            "created_at": "2026-10-26T11:42:53Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1631,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1631",
+            "created_at": "2026-10-19T11:42:45Z",
+            "closed_at": "2026-10-19T11:53:33Z",
+            "pr": true
+          },
+          {
+            "number": 1630,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1630",
+            "created_at": "2026-10-19T11:42:36Z",
+            "closed_at": "2026-11-02T11:43:15Z",
+            "pr": true
+          },
+          {
+            "number": 1629,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1629",
+            "created_at": "2026-10-13T08:48:42Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1628,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1628",
+            "created_at": "2026-10-13T08:48:32Z",
+            "closed_at": "2026-10-13T11:08:24Z",
+            "pr": true
+          },
+          {
+            "number": 1627,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1627",
+            "created_at": "2026-10-13T08:48:14Z",
+            "closed_at": "2026-10-19T11:42:52Z",
+            "pr": true
+          },
+          {
+            "number": 1626,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1626",
+            "created_at": "2026-10-05T11:43:06Z",
+            "closed_at": "2026-10-13T08:48:26Z",
+            "pr": true
+          },
+          {
+            "number": 1625,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1625",
+            "created_at": "2026-10-05T11:42:48Z",
+            "closed_at": "2026-10-13T08:48:43Z",
+            "pr": true
+          },
+          {
+            "number": 1624,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1624",
+            "created_at": "2026-10-05T11:42:37Z",
+            "closed_at": "2026-10-05T12:07:15Z",
+            "pr": true
+          },
+          {
+            "number": 1623,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1623",
+            "created_at": "2026-09-28T11:42:55Z",
+            "closed_at": "2026-09-28T12:55:00Z",
+            "pr": true
+          },
+          {
+            "number": 1622,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1622",
+            "created_at": "2026-09-28T11:42:39Z",
+            "closed_at": "2026-09-29T09:00:47Z",
+            "pr": true
+          },
+          {
+            "number": 1621,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1621",
+            "created_at": "2026-09-21T11:43:08Z",
+            "closed_at": "2026-10-05T11:42:45Z",
+            "pr": true
+          },
+          {
+            "number": 1620,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1620",
+            "created_at": "2026-09-21T11:43:03Z",
+            "closed_at": "2026-09-28T11:42:44Z",
+            "pr": true
+          },
+          {
+            "number": 1619,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1619",
+            "created_at": "2026-09-14T11:42:50Z",
+            "closed_at": "2026-09-28T11:42:58Z",
+            "pr": true
+          },
+          {
+            "number": 1618,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1618",
+            "created_at": "2026-09-14T11:17:15Z",
+            "closed_at": "2026-09-14T11:55:43Z",
+            "pr": true
+          },
+          {
+            "number": 1617,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1617",
+            "created_at": "2026-09-14T10:55:10Z",
+            "closed_at": "2026-09-14T11:05:38Z",
+            "pr": true
+          },
+          {
+            "number": 1616,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1616",
+            "created_at": "2026-09-07T11:42:33Z",
+            "closed_at": "2026-09-14T10:52:40Z",
+            "pr": true
+          },
+          {
+            "number": 1615,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1615",
+            "created_at": "2026-09-01T08:45:53Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 1614,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1614",
+            "created_at": "2026-08-31T11:42:40Z",
+            "closed_at": "2026-09-14T10:38:40Z",
+            "pr": true
+          },
+          {
+            "number": 1613,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1613",
+            "created_at": "2026-08-24T11:43:06Z",
+            "closed_at": "2026-09-14T10:52:57Z",
+            "pr": true
+          },
+          {
+            "number": 1612,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1612",
+            "created_at": "2026-08-24T11:42:48Z",
+            "closed_at": "2026-08-31T11:42:46Z",
+            "pr": true
+          },
+          {
+            "number": 1611,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1611",
+            "created_at": "2026-08-24T11:42:38Z",
+            "closed_at": "2026-09-07T11:42:36Z",
+            "pr": true
+          },
+          {
+            "number": 1610,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1610",
+            "created_at": "2026-08-13T10:34:05Z",
+            "closed_at": "2026-08-13T12:28:09Z",
+            "pr": true
+          },
+          {
+            "number": 1609,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1609",
+            "created_at": "2026-08-10T11:43:16Z",
+            "closed_at": "2026-08-13T12:33:18Z",
+            "pr": true
+          },
+          {
+            "number": 1608,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1608",
+            "created_at": "2026-08-10T11:43:08Z",
+            "closed_at": "2026-08-13T12:37:53Z",
+            "pr": true
+          },
+          {
+            "number": 1607,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1607",
+            "created_at": "2026-08-10T11:42:59Z",
+            "closed_at": "2026-08-13T12:35:53Z",
+            "pr": true
+          },
+          {
+            "number": 1606,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1606",
+            "created_at": "2026-08-10T11:42:54Z",
+            "closed_at": "2026-08-13T12:32:27Z",
+            "pr": true
+          },
+          {
+            "number": 1605,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1605",
+            "created_at": "2026-08-10T11:42:49Z",
+            "closed_at": "2026-08-13T12:32:07Z",
+            "pr": true
+          },
+          {
+            "number": 1604,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1604",
+            "created_at": "2026-08-10T11:42:44Z",
+            "closed_at": "2026-08-13T12:31:55Z",
+            "pr": true
+          },
+          {
+            "number": 1603,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/pull/1603",
+            "created_at": "2026-08-10T11:42:30Z",
+            "closed_at": "2026-08-13T12:31:00Z",
+            "pr": true
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 1636,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1636",
+            "created_at": "2026-10-29T21:12:13Z",
+            "responses": [
+              {
+                "created_at": "2026-10-29T21:14:30Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          },
+          {
+            "number": 1615,
+            "url": "https://github.com/mapbox/mapbox-gl-draw/issues/1615",
+            "created_at": "2026-09-01T08:45:53Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/mapbox-gl-geocoder",
+        "url": "https://github.com/mapbox/mapbox-gl-geocoder",
+        "description": "Geocoder control for mapbox-gl-js using Mapbox Geocoding API",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-27T23:55:01Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 10,
+          "closedPrs": 10,
+          "medianPrCloseHours": 14.514305555555556,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 569,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/569",
+            "created_at": "2026-10-27T04:55:05Z",
+            "closed_at": "2026-10-27T12:11:06Z",
+            "pr": true
+          },
+          {
+            "number": 568,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/568",
+            "created_at": "2026-10-19T12:23:36Z",
+            "closed_at": "2026-10-19T13:17:18Z",
+            "pr": true
+          },
+          {
+            "number": 567,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/567",
+            "created_at": "2026-10-19T12:15:16Z",
+            "closed_at": "2026-10-19T12:19:46Z",
+            "pr": true
+          },
+          {
+            "number": 566,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/566",
+            "created_at": "2026-10-16T12:52:28Z",
+            "closed_at": "2026-10-17T13:53:08Z",
+            "pr": true
+          },
+          {
+            "number": 565,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/565",
+            "created_at": "2026-10-16T12:19:30Z",
+            "closed_at": "2026-10-16T12:37:58Z",
+            "pr": true
+          },
+          {
+            "number": 564,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/564",
+            "created_at": "2026-10-15T15:14:06Z",
+            "closed_at": "2026-10-19T13:37:01Z",
+            "pr": true
+          },
+          {
+            "number": 563,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/563",
+            "created_at": "2026-10-15T15:07:23Z",
+            "closed_at": "2026-10-15T15:12:41Z",
+            "pr": true
+          },
+          {
+            "number": 562,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/562",
+            "created_at": "2026-10-14T15:12:43Z",
+            "closed_at": "2026-10-15T12:58:25Z",
+            "pr": true
+          },
+          {
+            "number": 561,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/561",
+            "created_at": "2026-09-13T23:26:14Z",
+            "closed_at": "2026-10-01T12:07:03Z",
+            "pr": true
+          },
+          {
+            "number": 560,
+            "url": "https://github.com/mapbox/mapbox-gl-geocoder/pull/560",
+            "created_at": "2026-08-11T18:58:55Z",
+            "closed_at": "2026-10-19T13:32:26Z",
+            "pr": true
+          }
+        ],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/awesome-vector-tiles",
+        "url": "https://github.com/mapbox/awesome-vector-tiles",
+        "description": "Awesome implementations of the Mapbox Vector Tile specification",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-08-10T19:17:38Z",
+        "branch": "master",
+        "license": "CC0-1.0",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 2,
+          "closedPrs": 1,
+          "medianPrCloseHours": 1.0691666666666666,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 121,
+            "url": "https://github.com/mapbox/awesome-vector-tiles/pull/121",
+            "created_at": "2026-08-21T13:54:19Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 120,
+            "url": "https://github.com/mapbox/awesome-vector-tiles/pull/120",
+            "created_at": "2026-08-10T18:13:29Z",
+            "closed_at": "2026-08-10T19:17:38Z",
+            "pr": true
+          }
+        ],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/earcut",
+        "url": "https://github.com/mapbox/earcut",
+        "description": "The fastest and smallest JavaScript polygon triangulation library for your WebGL apps",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-23T10:20:57Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 7,
+          "prsOpened": 9,
+          "closedPrs": 8,
+          "medianPrCloseHours": 18.605833333333337,
+          "responseSampleSize": 7,
+          "respondedSample": 2,
+          "medianSampleResponseHours": 1.4738888888888888
+        },
+        "items": [
+          {
+            "number": 223,
+            "url": "https://github.com/mapbox/earcut/issues/223",
+            "created_at": "2026-10-29T19:00:40Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 222,
+            "url": "https://github.com/mapbox/earcut/pull/222",
+            "created_at": "2026-10-23T10:22:11Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 221,
+            "url": "https://github.com/mapbox/earcut/issues/221",
+            "created_at": "2026-10-19T15:12:03Z",
+            "closed_at": "2026-10-22T21:10:06Z",
+            "pr": false
+          },
+          {
+            "number": 220,
+            "url": "https://github.com/mapbox/earcut/pull/220",
+            "created_at": "2026-10-17T19:33:31Z",
+            "closed_at": "2026-10-17T22:10:06Z",
+            "pr": true
+          },
+          {
+            "number": 219,
+            "url": "https://github.com/mapbox/earcut/issues/219",
+            "created_at": "2026-10-17T19:07:58Z",
+            "closed_at": "2026-10-17T22:09:25Z",
+            "pr": false
+          },
+          {
+            "number": 218,
+            "url": "https://github.com/mapbox/earcut/pull/218",
+            "created_at": "2026-10-16T13:29:35Z",
+            "closed_at": "2026-10-17T13:42:36Z",
+            "pr": true
+          },
+          {
+            "number": 217,
+            "url": "https://github.com/mapbox/earcut/pull/217",
+            "created_at": "2026-10-14T00:41:28Z",
+            "closed_at": "2026-10-14T08:11:54Z",
+            "pr": true
+          },
+          {
+            "number": 216,
+            "url": "https://github.com/mapbox/earcut/pull/216",
+            "created_at": "2026-10-09T11:07:27Z",
+            "closed_at": "2026-10-17T15:36:18Z",
+            "pr": true
+          },
+          {
+            "number": 215,
+            "url": "https://github.com/mapbox/earcut/issues/215",
+            "created_at": "2026-10-09T10:42:09Z",
+            "closed_at": "2026-10-17T15:35:36Z",
+            "pr": false
+          },
+          {
+            "number": 214,
+            "url": "https://github.com/mapbox/earcut/pull/214",
+            "created_at": "2026-10-07T17:26:51Z",
+            "closed_at": "2026-10-08T13:37:14Z",
+            "pr": true
+          },
+          {
+            "number": 213,
+            "url": "https://github.com/mapbox/earcut/issues/213",
+            "created_at": "2026-10-07T17:03:18Z",
+            "closed_at": "2026-10-08T13:37:16Z",
+            "pr": false
+          },
+          {
+            "number": 212,
+            "url": "https://github.com/mapbox/earcut/pull/212",
+            "created_at": "2026-10-05T14:08:48Z",
+            "closed_at": "2026-10-06T18:50:32Z",
+            "pr": true
+          },
+          {
+            "number": 211,
+            "url": "https://github.com/mapbox/earcut/issues/211",
+            "created_at": "2026-10-05T13:28:15Z",
+            "closed_at": "2026-10-06T18:50:33Z",
+            "pr": false
+          },
+          {
+            "number": 210,
+            "url": "https://github.com/mapbox/earcut/pull/210",
+            "created_at": "2026-09-21T15:42:50Z",
+            "closed_at": "2026-09-22T08:45:09Z",
+            "pr": true
+          },
+          {
+            "number": 209,
+            "url": "https://github.com/mapbox/earcut/pull/209",
+            "created_at": "2026-09-03T18:33:55Z",
+            "closed_at": "2026-09-04T08:37:55Z",
+            "pr": true
+          },
+          {
+            "number": 208,
+            "url": "https://github.com/mapbox/earcut/issues/208",
+            "created_at": "2026-09-03T18:23:57Z",
+            "closed_at": "2026-09-04T08:37:01Z",
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 223,
+            "url": "https://github.com/mapbox/earcut/issues/223",
+            "created_at": "2026-10-29T19:00:40Z",
+            "responses": [
+              {
+                "created_at": "2026-10-29T21:16:07Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-29T21:20:45Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 2.2575
+          },
+          {
+            "number": 221,
+            "url": "https://github.com/mapbox/earcut/issues/221",
+            "created_at": "2026-10-19T15:12:03Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 219,
+            "url": "https://github.com/mapbox/earcut/issues/219",
+            "created_at": "2026-10-17T19:07:58Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 215,
+            "url": "https://github.com/mapbox/earcut/issues/215",
+            "created_at": "2026-10-09T10:42:09Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 213,
+            "url": "https://github.com/mapbox/earcut/issues/213",
+            "created_at": "2026-10-07T17:03:18Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 211,
+            "url": "https://github.com/mapbox/earcut/issues/211",
+            "created_at": "2026-10-05T13:28:15Z",
+            "responses": [
+              {
+                "created_at": "2026-10-05T14:09:40Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-06T09:29:29Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 0.6902777777777778
+          },
+          {
+            "number": 208,
+            "url": "https://github.com/mapbox/earcut/issues/208",
+            "created_at": "2026-09-03T18:23:57Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/supercluster",
+        "url": "https://github.com/mapbox/supercluster",
+        "description": "A very fast geospatial point clustering library for browsers and Node.",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-09-03T08:35:00Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 1,
+          "prsOpened": 2,
+          "closedPrs": 1,
+          "medianPrCloseHours": 0.02861111111111111,
+          "responseSampleSize": 1,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 265,
+            "url": "https://github.com/mapbox/supercluster/issues/265",
+            "created_at": "2026-10-23T15:33:38Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 264,
+            "url": "https://github.com/mapbox/supercluster/pull/264",
+            "created_at": "2026-09-27T09:58:52Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 263,
+            "url": "https://github.com/mapbox/supercluster/pull/263",
+            "created_at": "2026-08-10T09:35:40Z",
+            "closed_at": "2026-08-10T09:37:23Z",
+            "pr": true
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 265,
+            "url": "https://github.com/mapbox/supercluster/issues/265",
+            "created_at": "2026-10-23T15:33:38Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/geojson.io",
+        "url": "https://github.com/mapbox/geojson.io",
+        "description": "A quick, simple tool for creating, viewing, and sharing spatial data",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-08-17T20:17:11Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 2,
+          "prsOpened": 5,
+          "closedPrs": 2,
+          "medianPrCloseHours": 83.71944444444445,
+          "responseSampleSize": 2,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 1031,
+            "url": "https://github.com/mapbox/geojson.io/pull/1031",
+            "created_at": "2026-11-03T12:55:29Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1030,
+            "url": "https://github.com/mapbox/geojson.io/pull/1030",
+            "created_at": "2026-09-24T02:24:59Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1029,
+            "url": "https://github.com/mapbox/geojson.io/issues/1029",
+            "created_at": "2026-09-21T05:16:06Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 1028,
+            "url": "https://github.com/mapbox/geojson.io/issues/1028",
+            "created_at": "2026-09-02T20:56:04Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 1027,
+            "url": "https://github.com/mapbox/geojson.io/pull/1027",
+            "created_at": "2026-08-25T21:01:50Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1026,
+            "url": "https://github.com/mapbox/geojson.io/pull/1026",
+            "created_at": "2026-08-12T19:00:57Z",
+            "closed_at": "2026-08-12T19:37:23Z",
+            "pr": true
+          },
+          {
+            "number": 1025,
+            "url": "https://github.com/mapbox/geojson.io/pull/1025",
+            "created_at": "2026-08-10T21:27:17Z",
+            "closed_at": "2026-08-17T20:17:11Z",
+            "pr": true
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 1029,
+            "url": "https://github.com/mapbox/geojson.io/issues/1029",
+            "created_at": "2026-09-21T05:16:06Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 1028,
+            "url": "https://github.com/mapbox/geojson.io/issues/1028",
+            "created_at": "2026-09-02T20:56:04Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/geojson-vt",
+        "url": "https://github.com/mapbox/geojson-vt",
+        "description": "Slice GeoJSON into vector tiles on the fly in the browser",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-09-30T14:41:39Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 1,
+          "prsOpened": 2,
+          "closedPrs": 1,
+          "medianPrCloseHours": 2.151111111111111,
+          "responseSampleSize": 1,
+          "respondedSample": 1,
+          "medianSampleResponseHours": 15.734166666666667
+        },
+        "items": [
+          {
+            "number": 198,
+            "url": "https://github.com/mapbox/geojson-vt/pull/198",
+            "created_at": "2026-10-28T04:04:50Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 197,
+            "url": "https://github.com/mapbox/geojson-vt/pull/197",
+            "created_at": "2026-09-26T18:24:27Z",
+            "closed_at": "2026-09-26T20:33:31Z",
+            "pr": true
+          },
+          {
+            "number": 196,
+            "url": "https://github.com/mapbox/geojson-vt/issues/196",
+            "created_at": "2026-09-26T02:19:18Z",
+            "closed_at": "2026-09-26T18:02:21Z",
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 196,
+            "url": "https://github.com/mapbox/geojson-vt/issues/196",
+            "created_at": "2026-09-26T02:19:18Z",
+            "responses": [
+              {
+                "created_at": "2026-09-26T18:03:21Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 15.734166666666667
+          }
+        ]
+      },
+      {
+        "name": "mapbox/robosat",
+        "url": "https://github.com/mapbox/robosat",
+        "description": " Semantic segmentation on aerial and satellite imagery. Extracts features such as: buildings, parking lots, roads, water, clouds",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:11:59Z",
+        "branch": "master",
+        "license": "MIT",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/maki",
+        "url": "https://github.com/mapbox/maki",
+        "description": "A POI Icon Set",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-24T09:57:57Z",
+        "branch": "main",
+        "license": "CC0-1.0",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.txt"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/polylabel",
+        "url": "https://github.com/mapbox/polylabel",
+        "description": "A fast algorithm for finding the pole of inaccessibility of a polygon (in JavaScript and C++)",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-25T10:36:23Z",
+        "branch": "master",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/togeojson",
+        "url": "https://github.com/mapbox/togeojson",
+        "description": "convert KML and GPX to GeoJSON, without the fuss",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:20:50Z",
+        "branch": "master",
+        "license": "BSD-2-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/node-pre-gyp",
+        "url": "https://github.com/mapbox/node-pre-gyp",
+        "description": "Node.js tool for easy binary deployment of C++ addons",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-28T07:26:07Z",
+        "branch": "master",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [
+            "contributing.md"
+          ],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 2,
+          "prsOpened": 34,
+          "closedPrs": 28,
+          "medianPrCloseHours": 138.67902777777778,
+          "responseSampleSize": 2,
+          "respondedSample": 1,
+          "medianSampleResponseHours": 0.2475
+        },
+        "items": [
+          {
+            "number": 1020,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1020",
+            "created_at": "2026-10-26T18:38:46Z",
+            "closed_at": "2026-10-28T07:25:59Z",
+            "pr": true
+          },
+          {
+            "number": 1019,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1019",
+            "created_at": "2026-10-23T18:33:45Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1018,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1018",
+            "created_at": "2026-10-22T18:32:58Z",
+            "closed_at": "2026-10-23T18:33:54Z",
+            "pr": true
+          },
+          {
+            "number": 1017,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1017",
+            "created_at": "2026-10-20T18:32:54Z",
+            "closed_at": "2026-10-22T18:33:05Z",
+            "pr": true
+          },
+          {
+            "number": 1016,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1016",
+            "created_at": "2026-10-19T18:34:26Z",
+            "closed_at": "2026-10-20T04:11:14Z",
+            "pr": true
+          },
+          {
+            "number": 1015,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1015",
+            "created_at": "2026-10-13T23:59:40Z",
+            "closed_at": "2026-10-14T22:47:17Z",
+            "pr": true
+          },
+          {
+            "number": 1014,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1014",
+            "created_at": "2026-10-13T23:55:37Z",
+            "closed_at": "2026-10-20T18:33:02Z",
+            "pr": true
+          },
+          {
+            "number": 1013,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1013",
+            "created_at": "2026-10-04T22:46:09Z",
+            "closed_at": "2026-10-05T01:06:08Z",
+            "pr": true
+          },
+          {
+            "number": 1012,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1012",
+            "created_at": "2026-10-04T22:24:59Z",
+            "closed_at": "2026-10-06T03:02:02Z",
+            "pr": true
+          },
+          {
+            "number": 1011,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1011",
+            "created_at": "2026-10-04T15:46:14Z",
+            "closed_at": "2026-10-04T17:20:54Z",
+            "pr": true
+          },
+          {
+            "number": 1010,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1010",
+            "created_at": "2026-10-03T12:55:10Z",
+            "closed_at": "2026-10-04T01:40:16Z",
+            "pr": true
+          },
+          {
+            "number": 1009,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1009",
+            "created_at": "2026-09-30T09:26:20Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1008,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1008",
+            "created_at": "2026-09-30T09:12:25Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1007,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1007",
+            "created_at": "2026-09-29T18:32:45Z",
+            "closed_at": "2026-10-05T01:08:21Z",
+            "pr": true
+          },
+          {
+            "number": 1006,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1006",
+            "created_at": "2026-09-28T18:34:04Z",
+            "closed_at": "2026-10-05T01:19:57Z",
+            "pr": true
+          },
+          {
+            "number": 1005,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1005",
+            "created_at": "2026-09-27T11:36:04Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1004,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1004",
+            "created_at": "2026-09-22T18:32:55Z",
+            "closed_at": "2026-10-05T01:08:26Z",
+            "pr": true
+          },
+          {
+            "number": 1003,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1003",
+            "created_at": "2026-09-21T18:34:06Z",
+            "closed_at": "2026-09-28T18:34:12Z",
+            "pr": true
+          },
+          {
+            "number": 1002,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1002",
+            "created_at": "2026-09-17T15:31:46Z",
+            "closed_at": "2026-09-17T15:32:26Z",
+            "pr": true
+          },
+          {
+            "number": 1001,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1001",
+            "created_at": "2026-09-17T11:48:36Z",
+            "closed_at": "2026-09-24T17:16:29Z",
+            "pr": true
+          },
+          {
+            "number": 1000,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/1000",
+            "created_at": "2026-09-17T10:17:35Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 999,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/999",
+            "created_at": "2026-09-17T09:44:08Z",
+            "closed_at": "2026-09-17T09:59:56Z",
+            "pr": true
+          },
+          {
+            "number": 998,
+            "url": "https://github.com/mapbox/node-pre-gyp/issues/998",
+            "created_at": "2026-09-16T11:27:20Z",
+            "closed_at": "2026-09-24T17:16:30Z",
+            "pr": false
+          },
+          {
+            "number": 997,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/997",
+            "created_at": "2026-09-15T11:59:42Z",
+            "closed_at": "2026-09-17T11:03:42Z",
+            "pr": true
+          },
+          {
+            "number": 996,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/996",
+            "created_at": "2026-09-15T11:20:23Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 995,
+            "url": "https://github.com/mapbox/node-pre-gyp/issues/995",
+            "created_at": "2026-09-15T11:04:24Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 994,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/994",
+            "created_at": "2026-09-14T18:34:28Z",
+            "closed_at": "2026-09-21T18:34:09Z",
+            "pr": true
+          },
+          {
+            "number": 993,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/993",
+            "created_at": "2026-09-07T18:32:42Z",
+            "closed_at": "2026-09-22T18:32:59Z",
+            "pr": true
+          },
+          {
+            "number": 992,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/992",
+            "created_at": "2026-08-31T18:34:13Z",
+            "closed_at": "2026-09-14T18:34:32Z",
+            "pr": true
+          },
+          {
+            "number": 991,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/991",
+            "created_at": "2026-08-27T18:32:55Z",
+            "closed_at": "2026-09-07T18:32:45Z",
+            "pr": true
+          },
+          {
+            "number": 990,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/990",
+            "created_at": "2026-08-24T18:34:20Z",
+            "closed_at": "2026-08-31T18:34:17Z",
+            "pr": true
+          },
+          {
+            "number": 989,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/989",
+            "created_at": "2026-08-24T18:32:49Z",
+            "closed_at": "2026-08-27T18:33:00Z",
+            "pr": true
+          },
+          {
+            "number": 988,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/988",
+            "created_at": "2026-08-17T19:15:39Z",
+            "closed_at": "2026-08-24T18:34:24Z",
+            "pr": true
+          },
+          {
+            "number": 987,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/987",
+            "created_at": "2026-08-11T18:33:19Z",
+            "closed_at": "2026-09-29T18:32:49Z",
+            "pr": true
+          },
+          {
+            "number": 986,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/986",
+            "created_at": "2026-08-11T18:33:07Z",
+            "closed_at": "2026-08-24T18:32:53Z",
+            "pr": true
+          },
+          {
+            "number": 985,
+            "url": "https://github.com/mapbox/node-pre-gyp/pull/985",
+            "created_at": "2026-08-07T18:33:46Z",
+            "closed_at": "2026-08-17T19:15:43Z",
+            "pr": true
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 998,
+            "url": "https://github.com/mapbox/node-pre-gyp/issues/998",
+            "created_at": "2026-09-16T11:27:20Z",
+            "responses": [
+              {
+                "created_at": "2026-09-16T11:42:11Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-16T13:01:00Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-16T13:15:57Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-16T13:17:45Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-16T13:29:04Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-16T17:12:54Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-17T09:46:23Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-17T10:08:10Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-17T10:17:11Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-17T10:23:43Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-17T10:30:47Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-17T10:49:36Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 0.2475
+          },
+          {
+            "number": 995,
+            "url": "https://github.com/mapbox/node-pre-gyp/issues/995",
+            "created_at": "2026-09-15T11:04:24Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/webgl-wind",
+        "url": "https://github.com/mapbox/webgl-wind",
+        "description": "Wind power visualization with WebGL particles",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-08-06T18:42:10Z",
+        "branch": "master",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/earcut.hpp",
+        "url": "https://github.com/mapbox/earcut.hpp",
+        "description": "Fast, header-only polygon triangulation",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-31T08:51:06Z",
+        "branch": "master",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 1,
+          "prsOpened": 4,
+          "closedPrs": 2,
+          "medianPrCloseHours": 235.00875,
+          "responseSampleSize": 1,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 140,
+            "url": "https://github.com/mapbox/earcut.hpp/pull/140",
+            "created_at": "2026-10-31T15:35:56Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 139,
+            "url": "https://github.com/mapbox/earcut.hpp/pull/139",
+            "created_at": "2026-10-30T21:58:51Z",
+            "closed_at": "2026-10-31T08:51:06Z",
+            "pr": true
+          },
+          {
+            "number": 138,
+            "url": "https://github.com/mapbox/earcut.hpp/pull/138",
+            "created_at": "2026-10-14T15:46:30Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 137,
+            "url": "https://github.com/mapbox/earcut.hpp/issues/137",
+            "created_at": "2026-10-14T15:04:24Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 136,
+            "url": "https://github.com/mapbox/earcut.hpp/pull/136",
+            "created_at": "2026-09-09T06:42:41Z",
+            "closed_at": "2026-09-28T09:51:29Z",
+            "pr": true
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 137,
+            "url": "https://github.com/mapbox/earcut.hpp/issues/137",
+            "created_at": "2026-10-14T15:04:24Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/geobuf",
+        "url": "https://github.com/mapbox/geobuf",
+        "description": "A compact binary encoding for geographic data.",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:21:16Z",
+        "branch": "master",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/vector-tile-spec",
+        "url": "https://github.com/mapbox/vector-tile-spec",
+        "description": "Mapbox Vector Tile specification",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:24:39Z",
+        "branch": "master",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [
+            "CODE_OF_CONDUCT.md"
+          ],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mapbox-navigation-ios",
+        "url": "https://github.com/mapbox/mapbox-navigation-ios",
+        "description": "Turn-by-turn navigation logic and UI in Swift on iOS",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-04T08:18:44Z",
+        "branch": "main",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.md"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 5,
+          "prsOpened": 9,
+          "closedPrs": 9,
+          "medianPrCloseHours": 1.7241666666666666,
+          "responseSampleSize": 5,
+          "respondedSample": 1,
+          "medianSampleResponseHours": 2.28
+        },
+        "items": [
+          {
+            "number": 4859,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4859",
+            "created_at": "2026-10-13T15:30:08Z",
+            "closed_at": "2026-10-14T07:42:43Z",
+            "pr": true
+          },
+          {
+            "number": 4858,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4858",
+            "created_at": "2026-10-10T03:13:44Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 4857,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4857",
+            "created_at": "2026-10-09T08:23:25Z",
+            "closed_at": "2026-10-13T15:25:08Z",
+            "pr": true
+          },
+          {
+            "number": 4856,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4856",
+            "created_at": "2026-10-07T14:09:12Z",
+            "closed_at": "2026-10-13T09:06:06Z",
+            "pr": true
+          },
+          {
+            "number": 4855,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4855",
+            "created_at": "2026-10-07T12:54:42Z",
+            "closed_at": "2026-10-07T12:54:46Z",
+            "pr": true
+          },
+          {
+            "number": 4854,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4854",
+            "created_at": "2026-10-07T10:49:35Z",
+            "closed_at": "2026-10-07T12:33:02Z",
+            "pr": true
+          },
+          {
+            "number": 4853,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4853",
+            "created_at": "2026-10-01T12:34:00Z",
+            "closed_at": "2026-10-01T13:06:11Z",
+            "pr": true
+          },
+          {
+            "number": 4852,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4852",
+            "created_at": "2026-10-01T10:41:00Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 4851,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4851",
+            "created_at": "2026-09-11T19:48:12Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 4850,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4850",
+            "created_at": "2026-08-28T12:40:09Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 4849,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4849",
+            "created_at": "2026-08-26T14:31:30Z",
+            "closed_at": "2026-08-26T14:31:37Z",
+            "pr": true
+          },
+          {
+            "number": 4848,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4848",
+            "created_at": "2026-08-26T12:07:16Z",
+            "closed_at": "2026-08-26T13:33:44Z",
+            "pr": true
+          },
+          {
+            "number": 4847,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/pull/4847",
+            "created_at": "2026-08-25T14:54:17Z",
+            "closed_at": "2026-08-25T17:15:24Z",
+            "pr": true
+          },
+          {
+            "number": 4846,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4846",
+            "created_at": "2026-08-07T13:45:52Z",
+            "closed_at": null,
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 4858,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4858",
+            "created_at": "2026-10-10T03:13:44Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 4852,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4852",
+            "created_at": "2026-10-01T10:41:00Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 4851,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4851",
+            "created_at": "2026-09-11T19:48:12Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 4850,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4850",
+            "created_at": "2026-08-28T12:40:09Z",
+            "responses": [
+              {
+                "created_at": "2026-08-28T14:56:57Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-08-31T11:51:01Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-17T00:43:01Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-22T14:20:54Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 2.28
+          },
+          {
+            "number": 4846,
+            "url": "https://github.com/mapbox/mapbox-navigation-ios/issues/4846",
+            "created_at": "2026-08-07T13:45:52Z",
+            "responses": [
+              {
+                "created_at": "2026-08-07T17:39:43Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-08-15T15:42:02Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/pbf",
+        "url": "https://github.com/mapbox/pbf",
+        "description": "A low-level, lightweight protocol buffers implementation in JavaScript.",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-09-02T10:42:00Z",
+        "branch": "main",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 1,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 1,
+          "respondedSample": 1,
+          "medianSampleResponseHours": 258.1613888888889
+        },
+        "items": [
+          {
+            "number": 150,
+            "url": "https://github.com/mapbox/pbf/issues/150",
+            "created_at": "2026-08-22T16:28:13Z",
+            "closed_at": "2026-09-02T10:37:59Z",
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 150,
+            "url": "https://github.com/mapbox/pbf/issues/150",
+            "created_at": "2026-08-22T16:28:13Z",
+            "responses": [
+              {
+                "created_at": "2026-09-02T10:37:54Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 258.1613888888889
+          }
+        ]
+      },
+      {
+        "name": "mapbox/Fingertips",
+        "url": "https://github.com/mapbox/Fingertips",
+        "description": "Touch indicators on external displays for iOS applications.",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-16T13:47:46Z",
+        "branch": "main",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.md"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mapbox-unity-sdk",
+        "url": "https://github.com/mapbox/mapbox-unity-sdk",
+        "description": "Mapbox Unity SDK - https://www.mapbox.com/unity/",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-20T10:55:23Z",
+        "branch": "main",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE",
+            "LICENSE.meta",
+            "Runtime/Mapbox/BaseModule/Plugins/iOS/LICENSE.md",
+            "Runtime/Mapbox/BaseModule/Plugins/iOS/LICENSE.md.meta"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 2,
+          "prsOpened": 1,
+          "closedPrs": 1,
+          "medianPrCloseHours": 23.588055555555556,
+          "responseSampleSize": 2,
+          "respondedSample": 1,
+          "medianSampleResponseHours": 0.37722222222222224
+        },
+        "items": [
+          {
+            "number": 2001,
+            "url": "https://github.com/mapbox/mapbox-unity-sdk/pull/2001",
+            "created_at": "2026-10-19T11:20:06Z",
+            "closed_at": "2026-10-20T10:55:23Z",
+            "pr": true
+          },
+          {
+            "number": 2000,
+            "url": "https://github.com/mapbox/mapbox-unity-sdk/issues/2000",
+            "created_at": "2026-09-28T09:50:05Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 1999,
+            "url": "https://github.com/mapbox/mapbox-unity-sdk/issues/1999",
+            "created_at": "2026-08-18T18:12:33Z",
+            "closed_at": "2026-08-24T09:52:51Z",
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 2000,
+            "url": "https://github.com/mapbox/mapbox-unity-sdk/issues/2000",
+            "created_at": "2026-09-28T09:50:05Z",
+            "responses": [
+              {
+                "created_at": "2026-09-28T10:12:43Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-28T10:41:49Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-20T10:48:24Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 0.37722222222222224
+          },
+          {
+            "number": 1999,
+            "url": "https://github.com/mapbox/mapbox-unity-sdk/issues/1999",
+            "created_at": "2026-08-18T18:12:33Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/mapbox-sdk-js",
+        "url": "https://github.com/mapbox/mapbox-sdk-js",
+        "description": "A JavaScript client to Mapbox services, supporting Node, browsers, and React Native",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-09-10T20:11:02Z",
+        "branch": "main",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [
+            "CODE_OF_CONDUCT.md"
+          ],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 2,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 2,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 511,
+            "url": "https://github.com/mapbox/mapbox-sdk-js/issues/511",
+            "created_at": "2026-09-15T05:45:43Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 510,
+            "url": "https://github.com/mapbox/mapbox-sdk-js/issues/510",
+            "created_at": "2026-08-31T14:54:16Z",
+            "closed_at": null,
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 511,
+            "url": "https://github.com/mapbox/mapbox-sdk-js/issues/511",
+            "created_at": "2026-09-15T05:45:43Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 510,
+            "url": "https://github.com/mapbox/mapbox-sdk-js/issues/510",
+            "created_at": "2026-08-31T14:54:16Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/concaveman",
+        "url": "https://github.com/mapbox/concaveman",
+        "description": "A very fast 2D concave hull algorithm in JavaScript",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-24T10:29:32Z",
+        "branch": "master",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/osm-bright",
+        "url": "https://github.com/mapbox/osm-bright",
+        "description": "A Carto template for OpenStreetMap data",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:05:31Z",
+        "branch": "master",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.txt",
+            "osm-bright/res/LICENSE.txt"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/storytelling",
+        "url": "https://github.com/mapbox/storytelling",
+        "description": "Storytelling with maps template",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:16:49Z",
+        "branch": "main",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/leaflet-omnivore",
+        "url": "https://github.com/mapbox/leaflet-omnivore",
+        "description": "universal format parser for Leaflet & Mapbox.js",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-24T10:19:24Z",
+        "branch": "master",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/tiny-sdf",
+        "url": "https://github.com/mapbox/tiny-sdf",
+        "description": "Browser-side SDF font generator",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-08T14:30:37Z",
+        "branch": "main",
+        "license": "BSD-2-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.txt"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 1,
+          "closedPrs": 1,
+          "medianPrCloseHours": 615.2622222222222,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 71,
+            "url": "https://github.com/mapbox/tiny-sdf/pull/71",
+            "created_at": "2026-09-12T22:19:27Z",
+            "closed_at": "2026-10-08T13:35:11Z",
+            "pr": true
+          }
+        ],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/polyline",
+        "url": "https://github.com/mapbox/polyline",
+        "description": "polyline encoding and decoding in javascript",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-24T10:23:07Z",
+        "branch": "master",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mbtiles-spec",
+        "url": "https://github.com/mapbox/mbtiles-spec",
+        "description": "specification documents for the MBTiles tileset format",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T14:59:15Z",
+        "branch": "master",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/martini",
+        "url": "https://github.com/mapbox/martini",
+        "description": "A JavaScript library for real-time RTIN terrain mesh generation",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-24T10:21:40Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mapbox-navigation-android",
+        "url": "https://github.com/mapbox/mapbox-navigation-android",
+        "description": "Mapbox Navigation SDK for Android",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-04T15:19:39Z",
+        "branch": "main",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.md"
+          ],
+          "CODE_OF_CONDUCT": [
+            "CODE_OF_CONDUCT.md"
+          ],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 3,
+          "prsOpened": 9,
+          "closedPrs": 9,
+          "medianPrCloseHours": 0.9133333333333333,
+          "responseSampleSize": 3,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 7978,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/issues/7978",
+            "created_at": "2026-10-22T16:29:08Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 7977,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7977",
+            "created_at": "2026-10-07T07:51:44Z",
+            "closed_at": "2026-10-07T08:46:32Z",
+            "pr": true
+          },
+          {
+            "number": 7976,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7976",
+            "created_at": "2026-10-06T15:39:45Z",
+            "closed_at": "2026-10-06T15:44:14Z",
+            "pr": true
+          },
+          {
+            "number": 7975,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7975",
+            "created_at": "2026-10-06T13:30:51Z",
+            "closed_at": "2026-10-06T14:38:54Z",
+            "pr": true
+          },
+          {
+            "number": 7974,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7974",
+            "created_at": "2026-10-05T16:49:20Z",
+            "closed_at": "2026-10-06T07:08:57Z",
+            "pr": true
+          },
+          {
+            "number": 7973,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7973",
+            "created_at": "2026-10-05T16:49:10Z",
+            "closed_at": "2026-10-06T07:07:50Z",
+            "pr": true
+          },
+          {
+            "number": 7972,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7972",
+            "created_at": "2026-10-05T15:10:47Z",
+            "closed_at": "2026-10-05T15:40:33Z",
+            "pr": true
+          },
+          {
+            "number": 7971,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7971",
+            "created_at": "2026-10-05T15:08:56Z",
+            "closed_at": "2026-10-05T15:10:50Z",
+            "pr": true
+          },
+          {
+            "number": 7970,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7970",
+            "created_at": "2026-10-05T14:00:14Z",
+            "closed_at": "2026-10-05T14:43:47Z",
+            "pr": true
+          },
+          {
+            "number": 7969,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/pull/7969",
+            "created_at": "2026-10-05T09:04:20Z",
+            "closed_at": "2026-10-05T13:52:57Z",
+            "pr": true
+          },
+          {
+            "number": 7968,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/issues/7968",
+            "created_at": "2026-09-30T18:25:31Z",
+            "closed_at": "2026-10-05T16:53:23Z",
+            "pr": false
+          },
+          {
+            "number": 7967,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/issues/7967",
+            "created_at": "2026-09-22T15:35:20Z",
+            "closed_at": null,
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 7978,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/issues/7978",
+            "created_at": "2026-10-22T16:29:08Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 7968,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/issues/7968",
+            "created_at": "2026-09-30T18:25:31Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 7967,
+            "url": "https://github.com/mapbox/mapbox-navigation-android/issues/7967",
+            "created_at": "2026-09-22T15:35:20Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/mapbox-maps-ios",
+        "url": "https://github.com/mapbox/mapbox-maps-ios",
+        "description": "Interactive, thoroughly customizable maps for iOS powered by vector tiles and Metal",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-04T12:41:39Z",
+        "branch": "main",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.md",
+            "Sources/Vendors/Hammer/LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 17,
+          "prsOpened": 2,
+          "closedPrs": 1,
+          "medianPrCloseHours": 0.21666666666666667,
+          "responseSampleSize": 17,
+          "respondedSample": 8,
+          "medianSampleResponseHours": 19.31888888888889
+        },
+        "items": [
+          {
+            "number": 2454,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/pull/2454",
+            "created_at": "2026-11-02T09:57:15Z",
+            "closed_at": "2026-11-02T10:10:15Z",
+            "pr": true
+          },
+          {
+            "number": 2453,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2453",
+            "created_at": "2026-10-31T23:06:29Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2452,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2452",
+            "created_at": "2026-10-28T13:31:17Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2451,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2451",
+            "created_at": "2026-10-28T08:51:45Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2450,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2450",
+            "created_at": "2026-10-27T12:14:48Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2449,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2449",
+            "created_at": "2026-10-26T03:04:21Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2448,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2448",
+            "created_at": "2026-10-24T17:47:01Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2447,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2447",
+            "created_at": "2026-10-23T10:18:28Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2446,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2446",
+            "created_at": "2026-10-18T04:23:21Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2445,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/pull/2445",
+            "created_at": "2026-10-13T23:55:22Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 2444,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2444",
+            "created_at": "2026-10-13T04:36:23Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2443,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2443",
+            "created_at": "2026-10-05T14:10:36Z",
+            "closed_at": "2026-10-20T09:11:58Z",
+            "pr": false
+          },
+          {
+            "number": 2442,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2442",
+            "created_at": "2026-09-26T08:07:17Z",
+            "closed_at": "2026-09-26T08:08:53Z",
+            "pr": false
+          },
+          {
+            "number": 2441,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2441",
+            "created_at": "2026-09-23T13:58:55Z",
+            "closed_at": "2026-10-22T07:21:31Z",
+            "pr": false
+          },
+          {
+            "number": 2440,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2440",
+            "created_at": "2026-09-22T23:31:59Z",
+            "closed_at": "2026-09-28T09:04:56Z",
+            "pr": false
+          },
+          {
+            "number": 2439,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2439",
+            "created_at": "2026-09-06T06:13:25Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2438,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2438",
+            "created_at": "2026-08-18T22:05:07Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2437,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2437",
+            "created_at": "2026-08-12T16:18:51Z",
+            "closed_at": "2026-09-01T12:56:01Z",
+            "pr": false
+          },
+          {
+            "number": 2436,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2436",
+            "created_at": "2026-08-10T11:59:23Z",
+            "closed_at": null,
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 2453,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2453",
+            "created_at": "2026-10-31T23:06:29Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2452,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2452",
+            "created_at": "2026-10-28T13:31:17Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2451,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2451",
+            "created_at": "2026-10-28T08:51:45Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2450,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2450",
+            "created_at": "2026-10-27T12:14:48Z",
+            "responses": [
+              {
+                "created_at": "2026-10-28T09:50:55Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 21.601944444444445
+          },
+          {
+            "number": 2449,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2449",
+            "created_at": "2026-10-26T03:04:21Z",
+            "responses": [
+              {
+                "created_at": "2026-10-26T05:24:59Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-26T07:17:06Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-27T23:02:20Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-30T03:58:13Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-30T10:51:52Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-11-01T09:59:16Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 43.966388888888886
+          },
+          {
+            "number": 2448,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2448",
+            "created_at": "2026-10-24T17:47:01Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2447,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2447",
+            "created_at": "2026-10-23T10:18:28Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2446,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2446",
+            "created_at": "2026-10-18T04:23:21Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2444,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2444",
+            "created_at": "2026-10-13T04:36:23Z",
+            "responses": [
+              {
+                "created_at": "2026-10-13T07:17:21Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-21T11:13:08Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 2.682777777777778
+          },
+          {
+            "number": 2443,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2443",
+            "created_at": "2026-10-05T14:10:36Z",
+            "responses": [
+              {
+                "created_at": "2026-10-07T07:19:46Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 41.15277777777778
+          },
+          {
+            "number": 2442,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2442",
+            "created_at": "2026-09-26T08:07:17Z",
+            "responses": [
+              {
+                "created_at": "2026-09-26T08:08:52Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2441,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2441",
+            "created_at": "2026-09-23T13:58:55Z",
+            "responses": [
+              {
+                "created_at": "2026-09-24T07:01:04Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-09-24T09:53:46Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-07T07:40:04Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-22T07:21:31Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 17.035833333333333
+          },
+          {
+            "number": 2440,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2440",
+            "created_at": "2026-09-22T23:31:59Z",
+            "responses": [
+              {
+                "created_at": "2026-09-23T09:05:33Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 9.559444444444445
+          },
+          {
+            "number": 2439,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2439",
+            "created_at": "2026-09-06T06:13:25Z",
+            "responses": [
+              {
+                "created_at": "2026-09-06T15:59:14Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-14T11:12:03Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 9.76361111111111
+          },
+          {
+            "number": 2438,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2438",
+            "created_at": "2026-08-18T22:05:07Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2437,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2437",
+            "created_at": "2026-08-12T16:18:51Z",
+            "responses": [
+              {
+                "created_at": "2026-09-01T12:56:01Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 476.61944444444447
+          },
+          {
+            "number": 2436,
+            "url": "https://github.com/mapbox/mapbox-maps-ios/issues/2436",
+            "created_at": "2026-08-10T11:59:23Z",
+            "responses": [
+              {
+                "created_at": "2026-08-18T19:58:49Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/mapbox-maps-android",
+        "url": "https://github.com/mapbox/mapbox-maps-android",
+        "description": "Interactive, thoroughly customizable maps in native Android powered by vector tiles and OpenGL.",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-03T17:21:57Z",
+        "branch": "main",
+        "license": "NOASSERTION",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.md"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 11,
+          "prsOpened": 2,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 11,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 2739,
+            "url": "https://github.com/mapbox/mapbox-maps-android/pull/2739",
+            "created_at": "2026-10-31T12:59:31Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 2738,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2738",
+            "created_at": "2026-10-25T15:47:55Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2737,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2737",
+            "created_at": "2026-10-22T16:29:06Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2736,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2736",
+            "created_at": "2026-10-16T05:44:14Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2735,
+            "url": "https://github.com/mapbox/mapbox-maps-android/pull/2735",
+            "created_at": "2026-10-12T09:57:26Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 2734,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2734",
+            "created_at": "2026-10-06T00:42:03Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2733,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2733",
+            "created_at": "2026-10-02T15:00:30Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2732,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2732",
+            "created_at": "2026-09-18T16:19:00Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2731,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2731",
+            "created_at": "2026-08-28T09:25:30Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2730,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2730",
+            "created_at": "2026-08-25T10:01:52Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2729,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2729",
+            "created_at": "2026-08-20T11:12:40Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2728,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2728",
+            "created_at": "2026-08-18T17:53:25Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 2727,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2727",
+            "created_at": "2026-08-14T16:36:54Z",
+            "closed_at": null,
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 2738,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2738",
+            "created_at": "2026-10-25T15:47:55Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2737,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2737",
+            "created_at": "2026-10-22T16:29:06Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2736,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2736",
+            "created_at": "2026-10-16T05:44:14Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2734,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2734",
+            "created_at": "2026-10-06T00:42:03Z",
+            "responses": [
+              {
+                "created_at": "2026-10-30T16:42:54Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2733,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2733",
+            "created_at": "2026-10-02T15:00:30Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2732,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2732",
+            "created_at": "2026-09-18T16:19:00Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2731,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2731",
+            "created_at": "2026-08-28T09:25:30Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2730,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2730",
+            "created_at": "2026-08-25T10:01:52Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2729,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2729",
+            "created_at": "2026-08-20T11:12:40Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2728,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2728",
+            "created_at": "2026-08-18T17:53:25Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 2727,
+            "url": "https://github.com/mapbox/mapbox-maps-android/issues/2727",
+            "created_at": "2026-08-14T16:36:54Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/mapbox-gl-leaflet",
+        "url": "https://github.com/mapbox/mapbox-gl-leaflet",
+        "description": "binding from Mapbox GL JS to the Leaflet API",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-17T19:59:00Z",
+        "branch": "master",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/tilelive",
+        "url": "https://github.com/mapbox/tilelive",
+        "description": "fast interface to tiles with pluggable backends - NOT ACTIVELY MAINTAINED",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:19:34Z",
+        "branch": "master",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.md"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mercantile",
+        "url": "https://github.com/mapbox/mercantile",
+        "description": "Spherical mercator tile and coordinate utilities",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T14:59:51Z",
+        "branch": "main",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.txt",
+            "docs/license.rst"
+          ],
+          "CODE_OF_CONDUCT": [
+            "CODE_OF_CONDUCT.md"
+          ],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mapbox-java",
+        "url": "https://github.com/mapbox/mapbox-java",
+        "description": "The Mapbox Java SDK – Java wrappers around Mapbox APIs and other location data ",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-15T08:32:27Z",
+        "branch": "main",
+        "license": "MIT",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 1,
+          "prsOpened": 1,
+          "closedPrs": 1,
+          "medianPrCloseHours": 139.38111111111112,
+          "responseSampleSize": 1,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 1641,
+            "url": "https://github.com/mapbox/mapbox-java/pull/1641",
+            "created_at": "2026-10-09T13:09:34Z",
+            "closed_at": "2026-10-15T08:32:26Z",
+            "pr": true
+          },
+          {
+            "number": 1640,
+            "url": "https://github.com/mapbox/mapbox-java/issues/1640",
+            "created_at": "2026-08-25T07:11:29Z",
+            "closed_at": null,
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 1640,
+            "url": "https://github.com/mapbox/mapbox-java/issues/1640",
+            "created_at": "2026-08-25T07:11:29Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/cheap-ruler",
+        "url": "https://github.com/mapbox/cheap-ruler",
+        "description": "Fast approximations for common geodesic measurements 🌐",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-10-07T15:32:57Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/vector-tile-js",
+        "url": "https://github.com/mapbox/vector-tile-js",
+        "description": "Parses vector tiles with JavaScript",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-24T10:28:32Z",
+        "branch": "main",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE.txt"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/variant",
+        "url": "https://github.com/mapbox/variant",
+        "description": "C++11/C++14 Variant",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T15:24:24Z",
+        "branch": "master",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/protozero",
+        "url": "https://github.com/mapbox/protozero",
+        "description": "Minimalist protocol buffer decoder and encoder in C++",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-03T08:30:55Z",
+        "branch": "master",
+        "license": "BSD-2-Clause",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.from_folly",
+            "LICENSE.md"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 1,
+          "prsOpened": 12,
+          "closedPrs": 11,
+          "medianPrCloseHours": 34.99333333333333,
+          "responseSampleSize": 1,
+          "respondedSample": 1,
+          "medianSampleResponseHours": 1.95
+        },
+        "items": [
+          {
+            "number": 168,
+            "url": "https://github.com/mapbox/protozero/pull/168",
+            "created_at": "2026-11-03T08:38:13Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 167,
+            "url": "https://github.com/mapbox/protozero/pull/167",
+            "created_at": "2026-11-02T14:49:44Z",
+            "closed_at": "2026-11-02T15:24:07Z",
+            "pr": true
+          },
+          {
+            "number": 166,
+            "url": "https://github.com/mapbox/protozero/pull/166",
+            "created_at": "2026-10-14T12:53:37Z",
+            "closed_at": "2026-11-02T15:23:49Z",
+            "pr": true
+          },
+          {
+            "number": 165,
+            "url": "https://github.com/mapbox/protozero/pull/165",
+            "created_at": "2026-10-14T10:05:55Z",
+            "closed_at": "2026-10-15T20:11:32Z",
+            "pr": true
+          },
+          {
+            "number": 164,
+            "url": "https://github.com/mapbox/protozero/pull/164",
+            "created_at": "2026-10-14T09:34:20Z",
+            "closed_at": "2026-10-15T20:11:50Z",
+            "pr": true
+          },
+          {
+            "number": 163,
+            "url": "https://github.com/mapbox/protozero/pull/163",
+            "created_at": "2026-10-14T09:12:33Z",
+            "closed_at": "2026-10-15T20:12:09Z",
+            "pr": true
+          },
+          {
+            "number": 162,
+            "url": "https://github.com/mapbox/protozero/pull/162",
+            "created_at": "2026-10-13T12:50:49Z",
+            "closed_at": "2026-10-15T21:11:07Z",
+            "pr": true
+          },
+          {
+            "number": 161,
+            "url": "https://github.com/mapbox/protozero/pull/161",
+            "created_at": "2026-10-13T12:19:47Z",
+            "closed_at": "2026-10-14T08:20:28Z",
+            "pr": true
+          },
+          {
+            "number": 160,
+            "url": "https://github.com/mapbox/protozero/pull/160",
+            "created_at": "2026-10-13T11:28:40Z",
+            "closed_at": "2026-10-13T12:26:55Z",
+            "pr": true
+          },
+          {
+            "number": 159,
+            "url": "https://github.com/mapbox/protozero/pull/159",
+            "created_at": "2026-10-08T14:00:06Z",
+            "closed_at": "2026-10-13T08:47:00Z",
+            "pr": true
+          },
+          {
+            "number": 157,
+            "url": "https://github.com/mapbox/protozero/pull/157",
+            "created_at": "2026-10-08T09:40:22Z",
+            "closed_at": "2026-10-13T08:18:53Z",
+            "pr": true
+          },
+          {
+            "number": 156,
+            "url": "https://github.com/mapbox/protozero/pull/156",
+            "created_at": "2026-10-08T09:36:12Z",
+            "closed_at": "2026-10-13T08:46:37Z",
+            "pr": true
+          },
+          {
+            "number": 155,
+            "url": "https://github.com/mapbox/protozero/issues/155",
+            "created_at": "2026-08-25T13:38:31Z",
+            "closed_at": "2026-10-13T08:51:13Z",
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 155,
+            "url": "https://github.com/mapbox/protozero/issues/155",
+            "created_at": "2026-08-25T13:38:31Z",
+            "responses": [
+              {
+                "created_at": "2026-08-25T15:35:31Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-08-26T04:32:41Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-08-28T06:45:51Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-08-28T07:20:53Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-08T14:02:36Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-13T08:51:13Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 1.95
+          }
+        ]
+      },
+      {
+        "name": "mapbox/leaflet-image",
+        "url": "https://github.com/mapbox/leaflet-image",
+        "description": "leaflet maps to images",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-04-13T23:10:32Z",
+        "branch": "gh-pages",
+        "license": "BSD-2-Clause",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.txt"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mapbox-maps-flutter",
+        "url": "https://github.com/mapbox/mapbox-maps-flutter",
+        "description": "Interactive, thoroughly customizable maps for Flutter powered by Mapbox Maps SDK",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-04T10:23:42Z",
+        "branch": "main",
+        "license": "Unspecified",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md",
+            "mapbox_maps_flutter/CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "mapbox_maps_flutter/LICENSE",
+            "mapbox_maps_flutter_mobile/LICENSE",
+            "mapbox_maps_flutter_platform_interface/LICENSE",
+            "mapbox_maps_flutter_web/LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 6,
+          "prsOpened": 2,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 6,
+          "respondedSample": 4,
+          "medianSampleResponseHours": 30.561666666666667
+        },
+        "items": [
+          {
+            "number": 1148,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1148",
+            "created_at": "2026-10-29T08:27:31Z",
+            "closed_at": "2026-11-02T09:27:35Z",
+            "pr": false
+          },
+          {
+            "number": 1147,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1147",
+            "created_at": "2026-10-28T09:24:52Z",
+            "closed_at": "2026-11-02T10:05:05Z",
+            "pr": false
+          },
+          {
+            "number": 1146,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1146",
+            "created_at": "2026-10-21T13:38:03Z",
+            "closed_at": "2026-11-02T10:06:48Z",
+            "pr": false
+          },
+          {
+            "number": 1145,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/pull/1145",
+            "created_at": "2026-09-03T23:58:43Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1144,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1144",
+            "created_at": "2026-09-02T14:18:44Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 1143,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/pull/1143",
+            "created_at": "2026-08-28T10:56:52Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 1142,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1142",
+            "created_at": "2026-08-28T10:56:06Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 1141,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1141",
+            "created_at": "2026-08-10T11:00:48Z",
+            "closed_at": "2026-08-12T07:54:29Z",
+            "pr": false
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 1148,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1148",
+            "created_at": "2026-10-29T08:27:31Z",
+            "responses": [
+              {
+                "created_at": "2026-10-30T09:20:24Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-30T09:58:50Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 24.88138888888889
+          },
+          {
+            "number": 1147,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1147",
+            "created_at": "2026-10-28T09:24:52Z",
+            "responses": [
+              {
+                "created_at": "2026-10-29T19:48:20Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-30T09:58:30Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-11-02T10:05:05Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 34.39111111111111
+          },
+          {
+            "number": 1146,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1146",
+            "created_at": "2026-10-21T13:38:03Z",
+            "responses": [
+              {
+                "created_at": "2026-10-27T17:16:36Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-27T17:53:56Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-28T11:48:36Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-11-02T10:06:48Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 147.6425
+          },
+          {
+            "number": 1144,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1144",
+            "created_at": "2026-09-02T14:18:44Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 1142,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1142",
+            "created_at": "2026-08-28T10:56:06Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 1141,
+            "url": "https://github.com/mapbox/mapbox-maps-flutter/issues/1141",
+            "created_at": "2026-08-10T11:00:48Z",
+            "responses": [
+              {
+                "created_at": "2026-08-11T13:44:44Z",
+                "self": false,
+                "bot": false
+              },
+              {
+                "created_at": "2026-08-12T07:54:29Z",
+                "self": false,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": 26.732222222222223
+          }
+        ]
+      },
+      {
+        "name": "mapbox/csv2geojson",
+        "url": "https://github.com/mapbox/csv2geojson",
+        "description": "magically convert csv files to geojson files",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-29T14:37:22Z",
+        "branch": "gh-pages",
+        "license": "MIT",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/mcp-server",
+        "url": "https://github.com/mapbox/mcp-server",
+        "description": "Mapbox Model Context Protocol (MCP) server",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-11-04T21:44:15Z",
+        "branch": "main",
+        "license": "MIT",
+        "docs": {
+          "CONTRIBUTING": [
+            "CONTRIBUTING.md"
+          ],
+          "LICENSE": [
+            "LICENSE.md"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 18,
+          "prsOpened": 51,
+          "closedPrs": 40,
+          "medianPrCloseHours": 8.983472222222222,
+          "responseSampleSize": 18,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [
+          {
+            "number": 315,
+            "url": "https://github.com/mapbox/mcp-server/pull/315",
+            "created_at": "2026-11-04T21:31:14Z",
+            "closed_at": "2026-11-04T21:44:11Z",
+            "pr": true
+          },
+          {
+            "number": 314,
+            "url": "https://github.com/mapbox/mcp-server/pull/314",
+            "created_at": "2026-11-04T19:53:25Z",
+            "closed_at": "2026-11-04T20:29:55Z",
+            "pr": true
+          },
+          {
+            "number": 313,
+            "url": "https://github.com/mapbox/mcp-server/pull/313",
+            "created_at": "2026-11-04T19:08:38Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 312,
+            "url": "https://github.com/mapbox/mcp-server/pull/312",
+            "created_at": "2026-11-04T18:33:45Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 311,
+            "url": "https://github.com/mapbox/mcp-server/pull/311",
+            "created_at": "2026-11-04T18:20:04Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 310,
+            "url": "https://github.com/mapbox/mcp-server/pull/310",
+            "created_at": "2026-11-04T13:05:14Z",
+            "closed_at": "2026-11-04T13:06:47Z",
+            "pr": true
+          },
+          {
+            "number": 309,
+            "url": "https://github.com/mapbox/mcp-server/pull/309",
+            "created_at": "2026-11-03T16:19:57Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 308,
+            "url": "https://github.com/mapbox/mcp-server/pull/308",
+            "created_at": "2026-11-03T13:33:53Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 307,
+            "url": "https://github.com/mapbox/mcp-server/issues/307",
+            "created_at": "2026-10-31T00:05:59Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 306,
+            "url": "https://github.com/mapbox/mcp-server/pull/306",
+            "created_at": "2026-10-30T13:45:16Z",
+            "closed_at": "2026-10-30T13:47:27Z",
+            "pr": true
+          },
+          {
+            "number": 305,
+            "url": "https://github.com/mapbox/mcp-server/pull/305",
+            "created_at": "2026-10-30T09:44:24Z",
+            "closed_at": "2026-10-30T09:46:33Z",
+            "pr": true
+          },
+          {
+            "number": 304,
+            "url": "https://github.com/mapbox/mcp-server/pull/304",
+            "created_at": "2026-10-26T16:50:44Z",
+            "closed_at": "2026-10-28T19:39:33Z",
+            "pr": true
+          },
+          {
+            "number": 303,
+            "url": "https://github.com/mapbox/mcp-server/pull/303",
+            "created_at": "2026-10-26T14:18:53Z",
+            "closed_at": "2026-10-26T15:48:28Z",
+            "pr": true
+          },
+          {
+            "number": 302,
+            "url": "https://github.com/mapbox/mcp-server/issues/302",
+            "created_at": "2026-10-26T08:58:41Z",
+            "closed_at": "2026-10-26T16:46:15Z",
+            "pr": false
+          },
+          {
+            "number": 301,
+            "url": "https://github.com/mapbox/mcp-server/issues/301",
+            "created_at": "2026-10-26T08:58:27Z",
+            "closed_at": "2026-10-26T16:46:12Z",
+            "pr": false
+          },
+          {
+            "number": 300,
+            "url": "https://github.com/mapbox/mcp-server/issues/300",
+            "created_at": "2026-10-26T08:57:55Z",
+            "closed_at": "2026-10-26T16:46:09Z",
+            "pr": false
+          },
+          {
+            "number": 299,
+            "url": "https://github.com/mapbox/mcp-server/issues/299",
+            "created_at": "2026-10-23T14:35:35Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 298,
+            "url": "https://github.com/mapbox/mcp-server/pull/298",
+            "created_at": "2026-10-21T23:15:03Z",
+            "closed_at": "2026-10-26T14:39:05Z",
+            "pr": true
+          },
+          {
+            "number": 297,
+            "url": "https://github.com/mapbox/mcp-server/pull/297",
+            "created_at": "2026-10-21T23:08:37Z",
+            "closed_at": "2026-10-23T16:04:59Z",
+            "pr": true
+          },
+          {
+            "number": 296,
+            "url": "https://github.com/mapbox/mcp-server/pull/296",
+            "created_at": "2026-10-21T19:19:25Z",
+            "closed_at": "2026-10-23T21:26:16Z",
+            "pr": true
+          },
+          {
+            "number": 295,
+            "url": "https://github.com/mapbox/mcp-server/pull/295",
+            "created_at": "2026-10-21T13:09:01Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 294,
+            "url": "https://github.com/mapbox/mcp-server/pull/294",
+            "created_at": "2026-10-21T10:44:47Z",
+            "closed_at": "2026-10-21T17:35:43Z",
+            "pr": true
+          },
+          {
+            "number": 293,
+            "url": "https://github.com/mapbox/mcp-server/pull/293",
+            "created_at": "2026-10-20T23:57:11Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 292,
+            "url": "https://github.com/mapbox/mcp-server/pull/292",
+            "created_at": "2026-10-19T20:31:50Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 291,
+            "url": "https://github.com/mapbox/mcp-server/pull/291",
+            "created_at": "2026-10-19T16:17:21Z",
+            "closed_at": "2026-10-19T18:09:43Z",
+            "pr": true
+          },
+          {
+            "number": 290,
+            "url": "https://github.com/mapbox/mcp-server/issues/290",
+            "created_at": "2026-10-19T13:21:38Z",
+            "closed_at": "2026-10-19T18:09:44Z",
+            "pr": false
+          },
+          {
+            "number": 289,
+            "url": "https://github.com/mapbox/mcp-server/issues/289",
+            "created_at": "2026-10-16T15:53:23Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 288,
+            "url": "https://github.com/mapbox/mcp-server/issues/288",
+            "created_at": "2026-10-16T15:45:27Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 287,
+            "url": "https://github.com/mapbox/mcp-server/issues/287",
+            "created_at": "2026-10-16T15:45:26Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 286,
+            "url": "https://github.com/mapbox/mcp-server/issues/286",
+            "created_at": "2026-10-16T15:45:24Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 285,
+            "url": "https://github.com/mapbox/mcp-server/issues/285",
+            "created_at": "2026-10-16T15:45:23Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 284,
+            "url": "https://github.com/mapbox/mcp-server/issues/284",
+            "created_at": "2026-10-16T15:45:21Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 283,
+            "url": "https://github.com/mapbox/mcp-server/issues/283",
+            "created_at": "2026-10-16T15:45:19Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 282,
+            "url": "https://github.com/mapbox/mcp-server/pull/282",
+            "created_at": "2026-10-16T15:16:40Z",
+            "closed_at": "2026-10-16T15:18:47Z",
+            "pr": true
+          },
+          {
+            "number": 281,
+            "url": "https://github.com/mapbox/mcp-server/issues/281",
+            "created_at": "2026-10-15T17:15:38Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 280,
+            "url": "https://github.com/mapbox/mcp-server/pull/280",
+            "created_at": "2026-10-15T15:57:05Z",
+            "closed_at": "2026-10-15T16:00:13Z",
+            "pr": true
+          },
+          {
+            "number": 279,
+            "url": "https://github.com/mapbox/mcp-server/pull/279",
+            "created_at": "2026-10-15T15:10:50Z",
+            "closed_at": "2026-10-15T15:44:15Z",
+            "pr": true
+          },
+          {
+            "number": 278,
+            "url": "https://github.com/mapbox/mcp-server/pull/278",
+            "created_at": "2026-10-15T15:05:45Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 277,
+            "url": "https://github.com/mapbox/mcp-server/issues/277",
+            "created_at": "2026-10-15T15:01:40Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 276,
+            "url": "https://github.com/mapbox/mcp-server/pull/276",
+            "created_at": "2026-10-14T21:08:55Z",
+            "closed_at": "2026-10-15T15:50:03Z",
+            "pr": true
+          },
+          {
+            "number": 275,
+            "url": "https://github.com/mapbox/mcp-server/pull/275",
+            "created_at": "2026-10-13T16:58:19Z",
+            "closed_at": "2026-10-14T13:14:15Z",
+            "pr": true
+          },
+          {
+            "number": 274,
+            "url": "https://github.com/mapbox/mcp-server/pull/274",
+            "created_at": "2026-10-12T13:59:07Z",
+            "closed_at": "2026-10-13T18:07:40Z",
+            "pr": true
+          },
+          {
+            "number": 273,
+            "url": "https://github.com/mapbox/mcp-server/pull/273",
+            "created_at": "2026-10-11T16:40:01Z",
+            "closed_at": "2026-10-13T21:34:47Z",
+            "pr": true
+          },
+          {
+            "number": 272,
+            "url": "https://github.com/mapbox/mcp-server/pull/272",
+            "created_at": "2026-10-09T03:17:04Z",
+            "closed_at": "2026-10-09T03:18:20Z",
+            "pr": true
+          },
+          {
+            "number": 271,
+            "url": "https://github.com/mapbox/mcp-server/pull/271",
+            "created_at": "2026-10-08T21:10:45Z",
+            "closed_at": "2026-10-09T03:16:38Z",
+            "pr": true
+          },
+          {
+            "number": 270,
+            "url": "https://github.com/mapbox/mcp-server/pull/270",
+            "created_at": "2026-10-08T18:35:14Z",
+            "closed_at": "2026-10-08T18:36:36Z",
+            "pr": true
+          },
+          {
+            "number": 269,
+            "url": "https://github.com/mapbox/mcp-server/pull/269",
+            "created_at": "2026-10-07T17:35:25Z",
+            "closed_at": "2026-10-08T16:36:19Z",
+            "pr": true
+          },
+          {
+            "number": 268,
+            "url": "https://github.com/mapbox/mcp-server/pull/268",
+            "created_at": "2026-10-07T17:35:22Z",
+            "closed_at": "2026-10-08T15:00:20Z",
+            "pr": true
+          },
+          {
+            "number": 267,
+            "url": "https://github.com/mapbox/mcp-server/pull/267",
+            "created_at": "2026-10-07T17:14:57Z",
+            "closed_at": "2026-10-07T23:09:00Z",
+            "pr": true
+          },
+          {
+            "number": 266,
+            "url": "https://github.com/mapbox/mcp-server/pull/266",
+            "created_at": "2026-10-06T20:21:24Z",
+            "closed_at": "2026-10-06T20:43:02Z",
+            "pr": true
+          },
+          {
+            "number": 265,
+            "url": "https://github.com/mapbox/mcp-server/issues/265",
+            "created_at": "2026-10-06T16:27:07Z",
+            "closed_at": "2026-10-06T20:43:03Z",
+            "pr": false
+          },
+          {
+            "number": 264,
+            "url": "https://github.com/mapbox/mcp-server/pull/264",
+            "created_at": "2026-10-05T14:29:15Z",
+            "closed_at": "2026-10-05T17:19:43Z",
+            "pr": true
+          },
+          {
+            "number": 263,
+            "url": "https://github.com/mapbox/mcp-server/pull/263",
+            "created_at": "2026-09-29T16:39:36Z",
+            "closed_at": "2026-10-06T20:24:28Z",
+            "pr": true
+          },
+          {
+            "number": 262,
+            "url": "https://github.com/mapbox/mcp-server/pull/262",
+            "created_at": "2026-09-23T22:33:21Z",
+            "closed_at": "2026-10-14T21:05:42Z",
+            "pr": true
+          },
+          {
+            "number": 261,
+            "url": "https://github.com/mapbox/mcp-server/pull/261",
+            "created_at": "2026-09-17T03:18:11Z",
+            "closed_at": "2026-09-17T14:17:39Z",
+            "pr": true
+          },
+          {
+            "number": 260,
+            "url": "https://github.com/mapbox/mcp-server/pull/260",
+            "created_at": "2026-09-16T23:11:40Z",
+            "closed_at": "2026-09-17T02:33:37Z",
+            "pr": true
+          },
+          {
+            "number": 259,
+            "url": "https://github.com/mapbox/mcp-server/issues/259",
+            "created_at": "2026-09-14T22:25:25Z",
+            "closed_at": null,
+            "pr": false
+          },
+          {
+            "number": 258,
+            "url": "https://github.com/mapbox/mcp-server/pull/258",
+            "created_at": "2026-08-27T17:50:21Z",
+            "closed_at": null,
+            "pr": true
+          },
+          {
+            "number": 257,
+            "url": "https://github.com/mapbox/mcp-server/pull/257",
+            "created_at": "2026-08-27T16:50:06Z",
+            "closed_at": "2026-10-15T15:45:44Z",
+            "pr": true
+          },
+          {
+            "number": 256,
+            "url": "https://github.com/mapbox/mcp-server/pull/256",
+            "created_at": "2026-08-27T13:42:47Z",
+            "closed_at": "2026-10-28T19:39:52Z",
+            "pr": true
+          },
+          {
+            "number": 255,
+            "url": "https://github.com/mapbox/mcp-server/pull/255",
+            "created_at": "2026-08-27T13:37:50Z",
+            "closed_at": "2026-10-28T21:25:37Z",
+            "pr": true
+          },
+          {
+            "number": 254,
+            "url": "https://github.com/mapbox/mcp-server/pull/254",
+            "created_at": "2026-08-25T19:50:44Z",
+            "closed_at": "2026-09-03T16:14:41Z",
+            "pr": true
+          },
+          {
+            "number": 253,
+            "url": "https://github.com/mapbox/mcp-server/pull/253",
+            "created_at": "2026-08-25T18:47:28Z",
+            "closed_at": "2026-08-26T12:58:21Z",
+            "pr": true
+          },
+          {
+            "number": 252,
+            "url": "https://github.com/mapbox/mcp-server/pull/252",
+            "created_at": "2026-08-25T16:00:45Z",
+            "closed_at": "2026-10-26T15:26:02Z",
+            "pr": true
+          },
+          {
+            "number": 251,
+            "url": "https://github.com/mapbox/mcp-server/pull/251",
+            "created_at": "2026-08-25T15:59:18Z",
+            "closed_at": "2026-08-25T16:00:36Z",
+            "pr": true
+          },
+          {
+            "number": 250,
+            "url": "https://github.com/mapbox/mcp-server/pull/250",
+            "created_at": "2026-08-21T04:50:57Z",
+            "closed_at": "2026-08-21T13:37:03Z",
+            "pr": true
+          },
+          {
+            "number": 249,
+            "url": "https://github.com/mapbox/mcp-server/issues/249",
+            "created_at": "2026-08-21T04:34:16Z",
+            "closed_at": "2026-08-21T13:40:33Z",
+            "pr": false
+          },
+          {
+            "number": 248,
+            "url": "https://github.com/mapbox/mcp-server/pull/248",
+            "created_at": "2026-08-21T04:28:37Z",
+            "closed_at": "2026-08-21T13:40:32Z",
+            "pr": true
+          },
+          {
+            "number": 247,
+            "url": "https://github.com/mapbox/mcp-server/pull/247",
+            "created_at": "2026-08-14T14:08:53Z",
+            "closed_at": null,
+            "pr": true
+          }
+        ],
+        "responseSample": [
+          {
+            "number": 307,
+            "url": "https://github.com/mapbox/mcp-server/issues/307",
+            "created_at": "2026-10-31T00:05:59Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 302,
+            "url": "https://github.com/mapbox/mcp-server/issues/302",
+            "created_at": "2026-10-26T08:58:41Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 301,
+            "url": "https://github.com/mapbox/mcp-server/issues/301",
+            "created_at": "2026-10-26T08:58:27Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 300,
+            "url": "https://github.com/mapbox/mcp-server/issues/300",
+            "created_at": "2026-10-26T08:57:55Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 299,
+            "url": "https://github.com/mapbox/mcp-server/issues/299",
+            "created_at": "2026-10-23T14:35:35Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 290,
+            "url": "https://github.com/mapbox/mcp-server/issues/290",
+            "created_at": "2026-10-19T13:21:38Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 289,
+            "url": "https://github.com/mapbox/mcp-server/issues/289",
+            "created_at": "2026-10-16T15:53:23Z",
+            "responses": [
+              {
+                "created_at": "2026-10-16T15:57:53Z",
+                "self": true,
+                "bot": false
+              },
+              {
+                "created_at": "2026-10-20T23:49:17Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          },
+          {
+            "number": 288,
+            "url": "https://github.com/mapbox/mcp-server/issues/288",
+            "created_at": "2026-10-16T15:45:27Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 287,
+            "url": "https://github.com/mapbox/mcp-server/issues/287",
+            "created_at": "2026-10-16T15:45:26Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 286,
+            "url": "https://github.com/mapbox/mcp-server/issues/286",
+            "created_at": "2026-10-16T15:45:24Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 285,
+            "url": "https://github.com/mapbox/mcp-server/issues/285",
+            "created_at": "2026-10-16T15:45:23Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 284,
+            "url": "https://github.com/mapbox/mcp-server/issues/284",
+            "created_at": "2026-10-16T15:45:21Z",
+            "responses": [
+              {
+                "created_at": "2026-10-19T14:52:56Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          },
+          {
+            "number": 283,
+            "url": "https://github.com/mapbox/mcp-server/issues/283",
+            "created_at": "2026-10-16T15:45:19Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 281,
+            "url": "https://github.com/mapbox/mcp-server/issues/281",
+            "created_at": "2026-10-15T17:15:38Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 277,
+            "url": "https://github.com/mapbox/mcp-server/issues/277",
+            "created_at": "2026-10-15T15:01:40Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 265,
+            "url": "https://github.com/mapbox/mcp-server/issues/265",
+            "created_at": "2026-10-06T16:27:07Z",
+            "responses": [],
+            "firstResponseHours": null
+          },
+          {
+            "number": 259,
+            "url": "https://github.com/mapbox/mcp-server/issues/259",
+            "created_at": "2026-09-14T22:25:25Z",
+            "responses": [
+              {
+                "created_at": "2026-10-21T13:00:03Z",
+                "self": true,
+                "bot": false
+              }
+            ],
+            "firstResponseHours": null
+          },
+          {
+            "number": 249,
+            "url": "https://github.com/mapbox/mcp-server/issues/249",
+            "created_at": "2026-08-21T04:34:16Z",
+            "responses": [],
+            "firstResponseHours": null
+          }
+        ]
+      },
+      {
+        "name": "mapbox/potpack",
+        "url": "https://github.com/mapbox/potpack",
+        "description": "A tiny rectangle packing JavaScript library (for sprite layouts)",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-18T08:17:46Z",
+        "branch": "main",
+        "license": "ISC",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      },
+      {
+        "name": "mapbox/shp-write",
+        "url": "https://github.com/mapbox/shp-write",
+        "description": "create and write to shapefiles in pure javascript",
+        "archived": false,
+        "disabled": false,
+        "pushedAt": "2026-06-24T09:55:10Z",
+        "branch": "master",
+        "license": "BSD-3-Clause",
+        "docs": {
+          "CONTRIBUTING": [],
+          "LICENSE": [
+            "LICENSE"
+          ],
+          "CODE_OF_CONDUCT": [],
+          "SUPPORT": []
+        },
+        "treeTruncated": false,
+        "metrics": {
+          "issuesOpened": 0,
+          "prsOpened": 0,
+          "closedPrs": 0,
+          "medianPrCloseHours": null,
+          "responseSampleSize": 0,
+          "respondedSample": 0,
+          "medianSampleResponseHours": null
+        },
+        "items": [],
+        "responseSample": []
+      }
+    ]
+  }
+}

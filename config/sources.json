@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "windowDays": 90,
+  "sources": [
+    {
+      "id": "github",
+      "type": "github",
+      "enabled": true,
+      "repositories": [
+        "mapbox/mapbox-gl-js",
+        "mapbox/pixelmatch",
+        "mapbox/mapbox-gl-native",
+        "mapbox/tippecanoe",
+        "mapbox/delaunator",
+        "mapbox/mapbox-gl-draw",
+        "mapbox/mapbox-gl-geocoder",
+        "mapbox/awesome-vector-tiles",
+        "mapbox/earcut",
+        "mapbox/supercluster",
+        "mapbox/geojson.io",
+        "mapbox/geojson-vt",
+        "mapbox/robosat",
+        "mapbox/maki",
+        "mapbox/polylabel",
+        "mapbox/togeojson",
+        "mapbox/node-pre-gyp",
+        "mapbox/webgl-wind",
+        "mapbox/earcut.hpp",
+        "mapbox/geobuf",
+        "mapbox/vector-tile-spec",
+        "mapbox/mapbox-navigation-ios",
+        "mapbox/pbf",
+        "mapbox/Fingertips",
+        "mapbox/mapbox-unity-sdk",
+        "mapbox/mapbox-sdk-js",
+        "mapbox/concaveman",
+        "mapbox/osm-bright",
+        "mapbox/storytelling",
+        "mapbox/leaflet-omnivore",
+        "mapbox/tiny-sdf",
+        "mapbox/polyline",
+        "mapbox/mbtiles-spec",
+        "mapbox/martini",
+        "mapbox/mapbox-navigation-android",
+        "mapbox/mapbox-maps-ios",
+        "mapbox/mapbox-maps-android",
+        "mapbox/mapbox-gl-leaflet",
+        "mapbox/tilelive",
+        "mapbox/mercantile",
+        "mapbox/mapbox-java",
+        "mapbox/cheap-ruler",
+        "mapbox/vector-tile-js",
+        "mapbox/variant",
+        "mapbox/protozero",
+        "mapbox/leaflet-image",
+        "mapbox/mapbox-maps-flutter",
+        "mapbox/csv2geojson",
+        "mapbox/mcp-server",
+        "mapbox/potpack",
+        "mapbox/shp-write"
+      ],
+      "responseSampleSize": 20,
+      "discovery": {
+        "query": "org:mapbox archived:false fork:false",
+        "sort": "stars",
+        "limit": 50,
+        "recentPushDays": 365
+      }
+    },
+    {
+      "id": "youtube",
+      "type": "youtube",
+      "enabled": true,
+      "queries": [
+        "Mapbox GL JS tutorial",
+        "Mapbox developer project"
+      ],
+      "maxPages": 1,
+      "resultsPerPage": 10,
+      "excludedChannelIds": []
+    },
+    {
+      "id": "articles",
+      "type": "feed",
+      "enabled": true,
+      "windowDays": 365,
+      "feeds": [
+        {
+          "name": "DEV Community · Mapbox",
+          "url": "https://dev.to/feed/tag/mapbox"
+        }
+      ],
+      "maxItemsPerFeed": 30,
+      "excludedUrlPrefixes": [
+        "https://dev.to/mapbox/"
+      ]
+    },
+    {
+      "id": "curated",
+      "type": "curated",
+      "enabled": true,
+      "items": []
+    },
+    {
+      "id": "discord",
+      "type": "discord-aggregate",
+      "enabled": false,
+      "path": "data/imports/discord-public-aggregates.json",
+      "reason": "Not connected. Requires a server-approved integration and permission to publish aggregate data; an invite is not API access."
+    }
+  ]
+}

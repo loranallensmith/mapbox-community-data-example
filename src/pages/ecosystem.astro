@@ -2,183 +2,235 @@
 import Layout from "../layouts/Layout.astro";
 import data from "../../data/processed/ecosystem.json";
 import { href, hours, date } from "../lib/site";
+const totals = data.repositories.reduce(
+  (n, r) => ({
+    issues: n.issues + r.metrics.issuesOpened,
+    prs: n.prs + r.metrics.prsOpened,
+    closed: n.closed + r.metrics.closedPrs,
+  }),
+  { issues: 0, prs: 0, closed: 0 },
+);
 ---
 
-<Layout title="Ecosystem reconnaissance">
-  <div class="page-intro">
-    <div class="eyebrow">Research / Public GitHub evidence</div>
-    <h1>Signals, with their context.</h1>
-    <p class="lead">
-      An intentionally small sample of developer-facing repositories. No
-      community scores. No maintainer rankings.
-    </p>
-    <p>
-      Collected {date(data.collectedAt)} UTC · Created-item cohort:{" "}
-      {date(data.window.start)}–{date(data.window.end)}. Counts include
-      automation; they do not measure unique people or outside contributions.
-    </p>
-  </div>
-  <section>
-    <h2>Activity in the observation window</h2>
-    <div class="table-wrap">
-      <table>
-        <caption>
-          Four indicators; duration and response are explicitly simplified
-          proxies.
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Repository</th>
-            <th scope="col">New issues</th>
-            <th scope="col">New PRs</th>
-            <th scope="col">PR closure proxy</th>
-            <th scope="col">First-comment response proxy</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.repositories.map((r) => (
-            <tr>
-              <th scope="row">
-                <a href={r.url}>{r.name.replace("mapbox/", "")}</a>
-              </th>
-              <td>{r.metrics.issuesOpened}</td>
-              <td>{r.metrics.prsOpened}</td>
-              <td>
-                {hours(r.metrics.medianPrCloseHours)}
-                <small>{r.metrics.closedPrs} closed PRs</small>
-              </td>
-              <td>
-                {hours(r.metrics.medianSampleResponseHours)}
-                <small>
-                  {r.metrics.respondedSample}/{r.metrics.responseSampleSize}{" "}
-                  sampled issues have an eligible comment
-                </small>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <div class="notice">
-      <strong>Read the denominators.</strong> Closure includes merged and
-      unmerged PRs created in the window and closed by its end; open PRs are
-      censored. Response medians exclude unanswered issues and include only
-      non-author, non-Bot issue comments. Draw’s 0/2 sample means no eligible
-      observed response, not zero-hour response. Geocoder has no new issues to
-      sample. <a href={href("methodology")}>Definitions and bias →</a>
-    </div>
-  </section>
-  <section class="two">
+<Layout title="GitHub activity">
+  <div class="portal-intro">
     <div>
-      <h2>What kind of activity is visible?</h2>
+      <div class="eyebrow">Public GitHub data</div>
+      <h1>GitHub activity</h1>
       <p>
-        Counts show the balance of new issues and PRs inside each repository’s
-        own cohort. They cannot explain who participates or why. Bars show the
-        share of items that are PRs, not community health.
+        {date(data.window.start)}–{date(data.window.end)} · {data.window.days}{" "}
+        days · collected {date(data.collectedAt)}
       </p>
-      {data.repositories.map((r) => {
-        const total = r.metrics.issuesOpened + r.metrics.prsOpened;
-        return (
-          <div style="margin-bottom:20px">
-            <span class="muted">
-              {r.name} · {r.metrics.prsOpened}/{total} items are PRs
-            </span>
-            <div
-              class="bar"
-              role="img"
-              aria-label={`${r.metrics.prsOpened} of ${total} items are pull requests`}
-            >
-              <span
-                style={`width:${total ? (r.metrics.prsOpened / total) * 100 : 0}%`}
-              />
-            </div>
-          </div>
-        );
-      })}
     </div>
-    <div class="card">
-      <span class="badge">Unavailable</span>
-      <h3>A trend needs more than one snapshot</h3>
-      <p>
-        Historical comparisons are not shown. There is one collected window, no
-        reliable baseline, and no contributor identity history.
-      </p>
-      <p>
-        New contributors, concentration, review duration, and newcomer success
-        remain unavailable. GitHub data alone cannot measure belonging, private
-        support, or developer satisfaction.
-      </p>
-      <a class="text-link" href={href("opportunities")}>
-        Questions worth testing →
+    <div class="actions">
+      <a class="button secondary" href={href("sources")}>
+        Change repositories
+      </a>
+      <a class="text-link" href={href("data/github.json")}>
+        Download evidence ↗
       </a>
     </div>
+  </div>
+  <div class="stats">
+    <div>
+      <span>Tracked repositories</span>
+      <strong>{data.repositories.length}</strong>
+      <small>
+        {data.repositories.filter((r) => r.archived).length} archived
+      </small>
+    </div>
+    <div>
+      <span>New issues</span>
+      <strong>{totals.issues}</strong>
+      <small>Created in this window</small>
+    </div>
+    <div>
+      <span>New pull requests</span>
+      <strong>{totals.prs}</strong>
+      <small>Includes automation</small>
+    </div>
+    <div>
+      <span>Closed PRs in cohort</span>
+      <strong>{totals.closed}</strong>
+      <small>Closed by window end · not acceptance</small>
+    </div>
+  </div>
+  <div class="content-controls">
+    <label>
+      Find a repository
+      <input id="repo-query" type="search" placeholder="Repository name" />
+    </label>
+    <label>
+      Repository status
+      <select id="repo-status" aria-label="Repository status">
+        <option value="all">All repositories</option>
+        <option value="active">Unarchived</option>
+        <option value="archived">Archived</option>
+      </select>
+    </label>
+    <span class="muted" id="repo-count" role="status" aria-live="polite">
+      {data.repositories.length} repositories
+    </span>
+  </div>
+  <section class="table-wrap">
+    <table>
+      <caption>
+        Activity and response indicators. Duration and response measurements are
+        proxies; see definitions below.
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Repository</th>
+          <th scope="col">Issues</th>
+          <th scope="col">PRs</th>
+          <th scope="col">Median PR closure</th>
+          <th scope="col">Median sampled response</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.repositories.map((r) => (
+          <tr
+            class="repo-row"
+            data-name={r.name.toLowerCase()}
+            data-archived={String(r.archived)}
+          >
+            <th scope="row">
+              <a href={r.url}>{r.name} ↗</a>
+              <small style="display:block;font-weight:400;margin-top:5px">
+                {r.archived ? "Archived" : "Unarchived"} · last push{" "}
+                {date(r.pushedAt)}
+              </small>
+            </th>
+            <td>{r.metrics.issuesOpened}</td>
+            <td>{r.metrics.prsOpened}</td>
+            <td>
+              {hours(r.metrics.medianPrCloseHours)}
+              <small>
+                {r.metrics.closedPrs} closed of {r.metrics.prsOpened} opened
+              </small>
+            </td>
+            <td>
+              {hours(r.metrics.medianSampleResponseHours)}
+              <small>
+                {r.metrics.respondedSample}/{r.metrics.responseSampleSize}{" "}
+                sampled issues responded
+              </small>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </section>
-  <section id="pathways">
-    <h2>Repository purpose & contribution pathways</h2>
+  <p id="repo-empty" class="notice" hidden>
+    No repositories match these filters.
+  </p>
+  <details>
+    <summary>How to read these metrics</summary>
     <p>
-      File presence is a discoverability check, not a measure of documentation
-      quality. Missing files may be replaced by README guidance or
-      organization-level defaults. Public visibility does not imply an
-      open-source license or unrestricted outside contribution.
+      Issue and PR counts include all authors and automation. PR closure
+      includes both merged and unmerged requests; open PRs are excluded from the
+      median. Response times use only the newest bounded issue sample, exclude
+      author/Bot comments, and exclude unanswered items from the median.
+      Unavailable means no eligible observations, not a zero-hour response.
     </p>
+    <p>
+      GL JS documents internal import and Copybara sync: accepted public PRs can
+      appear closed rather than merged. Closure cannot be interpreted as
+      rejection. These measurements are not health scores or maintainer
+      evaluations.
+    </p>
+    <a class="text-link" href={href("methodology")}>
+      CHAOSS definitions, bias, and reproducibility →
+    </a>
+  </details>
+  <section style="margin-top:28px">
+    <div class="section-head">
+      <h2>Repository details</h2>
+      <span class="muted">Purpose, licensing, contribution entry points</span>
+    </div>
     {data.repositories.map((r) => (
-      <details open>
+      <details>
         <summary>
-          {r.name} · {r.archived ? "Archived" : "Unarchived"} · last push{" "}
-          {date(r.pushedAt)}
+          {r.name} · {r.archived ? "Archived" : "Unarchived"} · {r.license}
         </summary>
         <p>{r.description}</p>
-        <p>
-          <strong>License:</strong>{" "}
-          {r.license === "NOASSERTION"
-            ? "GitHub could not assign a standard SPDX license. GL JS uses Mapbox-specific terms; inspect LICENSE.txt before reuse."
-            : r.license}{" "}
-          ·{" "}
-          <a href={`${r.url}/blob/${r.branch}/${r.docs.LICENSE[0]}`}>
-            Read license ↗
-          </a>
-        </p>
-        <p>
-          <strong>Contribution entry:</strong>{" "}
-          {r.docs.CONTRIBUTING.length ? (
-            <a href={`${r.url}/blob/${r.branch}/${r.docs.CONTRIBUTING[0]}`}>
-              CONTRIBUTING guidance ↗
+        <div class="actions">
+          {r.docs.CONTRIBUTING[0] ? (
+            <a
+              class="text-link"
+              href={`${r.url}/blob/${r.branch}/${r.docs.CONTRIBUTING[0]}`}
+            >
+              Contribution guide ↗
             </a>
           ) : (
-            <a href={`${r.url}#developing-and-testing`}>
-              README development & custom modes ↗
+            <a class="text-link" href={`${r.url}#readme`}>
+              README contribution entry ↗
             </a>
           )}
-          .{" "}
-          {r.name.endsWith("mapbox-gl-js")
-            ? "The guide describes development and tests, plus an internal import and Copybara sync workflow: accepted public PRs may appear Closed rather than Merged. Closure cannot be interpreted as rejection."
-            : r.name.endsWith("mapbox-gl-draw")
-              ? "The README invites pull requests and describes development/testing; no standalone CONTRIBUTING file was found."
-              : "The contribution guide provides a development and testing entry point; confirm issue scope before proposing changes."}
-        </p>
+          {r.docs.LICENSE[0] && (
+            <a
+              class="text-link"
+              href={`${r.url}/blob/${r.branch}/${r.docs.LICENSE[0]}`}
+            >
+              License ↗
+            </a>
+          )}
+        </div>
         <p class="muted">
-          No dedicated SUPPORT or CODE_OF_CONDUCT filename found in this
-          repository tree. Organization defaults and README channels were not
-          exhaustively audited. Tree truncated: {String(r.treeTruncated)}.
+          CONTRIBUTING:{" "}
+          {r.docs.CONTRIBUTING.length ? "file found" : "no named file found"} ·
+          SUPPORT:{" "}
+          {r.docs.SUPPORT.length ? "file found" : "no named file found"} ·
+          CODE_OF_CONDUCT:{" "}
+          {r.docs.CODE_OF_CONDUCT.length ? "file found" : "no named file found"}{" "}
+          · tree truncated: {String(r.treeTruncated)}. Organization defaults and
+          README guidance may exist.
         </p>
+        {r.license === "NOASSERTION" && (
+          <p class="muted">
+            GitHub did not assign a standard SPDX license. Read the license
+            terms at source; public visibility does not imply an open-source
+            license.
+          </p>
+        )}
       </details>
     ))}
   </section>
-  <div class="notice">
-    <strong>Candidate excluded:</strong>{" "}
-    {data.candidates.map((c) => (
-      <p>
-        {c.name}: {c.status}{" "}
-        <a href="https://docs.mapbox.com/mapbox-search-js/">
-          Public Search JS documentation ↗
-        </a>{" "}
-        is a product reference, not evidence of a public contribution
-        repository.
-      </p>
-    ))}
-  </div>
-  <p>
-    <a href={href("data/github.json")}>Download normalized evidence JSON ↗</a> ·{" "}
-    <a href={href("data/ecosystem.json")}>Download presentation snapshot ↗</a>
+  {data.candidates.length > 0 && (
+    <details>
+      <summary>
+        Unavailable repository candidates ({data.candidates.length})
+      </summary>
+      {(data.candidates as { name: string; status: string }[]).map((c) => (
+        <p>
+          {c.name}: {c.status}
+        </p>
+      ))}
+    </details>
+  )}
+  <p class="muted">
+    One window, no longitudinal trend. Contributors, review-cycle duration,
+    private support, and developer satisfaction are not measured.
   </p>
 </Layout>
+<script>
+  const query = document.querySelector<HTMLInputElement>("#repo-query")!,
+    status = document.querySelector<HTMLSelectElement>("#repo-status")!,
+    rows = [...document.querySelectorAll<HTMLTableRowElement>(".repo-row")];
+  function filter() {
+    let count = 0;
+    for (const row of rows) {
+      const visible =
+        row.dataset.name!.includes(query.value.toLowerCase().trim()) &&
+        (status.value === "all" ||
+          (status.value === "archived") === (row.dataset.archived === "true"));
+      row.hidden = !visible;
+      if (visible) count++;
+    }
+    document.querySelector("#repo-count")!.textContent =
+      `${count} repositories`;
+    document.querySelector<HTMLElement>("#repo-empty")!.hidden = count > 0;
+  }
+  query.addEventListener("input", filter);
+  status.addEventListener("change", filter);
+</script>

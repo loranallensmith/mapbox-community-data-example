@@ -11,11 +11,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - run: npm ci
       - run: npm run research:collect
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       - run: npm test
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: research-snapshot-review-required
           path: data/

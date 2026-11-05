@@ -1,0 +1,69 @@
+---
+const { type = "map" } = Astro.props;
+---
+
+{type === "map" ? (
+  <div class="project-art">
+    <svg
+      viewBox="0 0 600 230"
+      role="img"
+      aria-label="Illustrative venue map preview"
+    >
+      <defs>
+        <pattern
+          id="map-grid"
+          width="35"
+          height="35"
+          patternUnits="userSpaceOnUse"
+        >
+          <path d="M35 0H0V35" fill="none" stroke="#284561" stroke-width=".5" />
+        </pattern>
+      </defs>
+      <rect width="600" height="230" fill="url(#map-grid)" />
+      <g fill="#284b62" stroke="#4b7183">
+        <path d="M45 55L95 20 165 26 219 60 202 96 160 101 135 139 110 159 80 121 50 108Z" />
+        <path d="M145 148L176 148 203 177 178 225 153 201Z" />
+        <path d="M350 56L380 33 423 45 463 30 520 54 580 58 570 120 527 140 484 105 448 128 410 98 376 104Z" />
+        <path d="M363 103L405 111 426 142 397 209 370 175 351 138Z" />
+      </g>
+      <path
+        d="M156 90Q250 -15 370 64L397 75"
+        stroke="#6eadd4"
+        stroke-dasharray="4 5"
+        fill="none"
+      />
+      <g fill="#61dbdd" stroke="#153551" stroke-width="4">
+        <circle cx="156" cy="90" r="7" />
+        <circle cx="367" cy="65" r="7" />
+        <circle cx="378" cy="77" r="7" />
+        <circle cx="401" cy="68" r="7" />
+      </g>
+      <g font-family="sans-serif" font-size="9" fill="#b8d9ed">
+        <text x="107" y="75">
+          PITTSBURGH
+        </text>
+        <text x="322" y="45">
+          LONDON
+        </text>
+        <text x="350" y="100">
+          BRUSSELS
+        </text>
+        <text x="415" y="64">
+          BERLIN
+        </text>
+      </g>
+    </svg>
+    <span class="art-label">4 SOURCED VENUES · ILLUSTRATIVE PREVIEW</span>
+  </div>
+) : (
+  <div
+    class="project-art pixel"
+    role="img"
+    aria-label="Illustration of original, changed, and pixel-difference images"
+  >
+    <div class="mini-image"></div>
+    <div class="mini-image changed"></div>
+    <div class="mini-image diff"></div>
+    <span class="art-label">ORIGINAL → CHANGED → DIFFERENCE</span>
+  </div>
+)}

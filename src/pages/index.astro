@@ -1,156 +1,215 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MapPreview from "../components/MapPreview.astro";
+import ProjectArt from "../components/ProjectArt.astro";
+import { sourceStatus } from "../lib/channels";
+import { projects } from "../lib/projects";
 import data from "../../data/processed/ecosystem.json";
+import channels from "../../data/processed/channels.json";
 import { href, date } from "../lib/site";
-const total = data.repositories.reduce(
-  (s, r) => s + r.metrics.issuesOpened + r.metrics.prsOpened,
-  0,
-);
+const issues = data.repositories.reduce(
+    (n, r) => n + r.metrics.issuesOpened,
+    0,
+  ),
+  prs = data.repositories.reduce((n, r) => n + r.metrics.prsOpened, 0);
+const featured = [...data.repositories]
+  .sort(
+    (a, b) =>
+      b.metrics.issuesOpened +
+      b.metrics.prsOpened -
+      (a.metrics.issuesOpened + a.metrics.prsOpened),
+  )
+  .slice(0, 4);
 ---
 
 <Layout title="Overview">
-  <div class="hero">
+  <div class="portal-intro">
     <div>
-      <div class="eyebrow">A developer relations notebook</div>
-      <h1>
-        Mapbox Developer
-        <br />
-        Ecosystem <em>Field Notes.</em>
-      </h1>
-      <p class="lead">
-        Build something useful. Follow the public evidence. Find the next
-        question worth asking.
-      </p>
+      <div class="eyebrow">Projects + public ecosystem data</div>
+      <h1>Mapbox in practice.</h1>
       <p>
-        An independent, time-boxed exploration of Mapbox’s developer tools and
-        contribution pathways, pairing a working geographic experiment with
-        careful ecosystem research.
+        Try the tools. Explore repository activity. Find community-created
+        resources.
       </p>
-      <div class="actions">
-        <a class="button" href={href("explorer")}>
-          Explore the experiment ↗
-        </a>
-        <a class="text-link" href={href("ecosystem")}>
-          Read the research →
-        </a>
-      </div>
-      <div class="meta rule">
-        Collected {date(data.collectedAt)} · {date(data.window.start)}–
-        {date(data.window.end)}
-        <br />
-        Public GitHub evidence only · AI-assisted, review pending
-      </div>
     </div>
-    <MapPreview />
+    <div class="actions">
+      <a class="button" href={href("projects")}>
+        Browse projects ↗
+      </a>
+      <a class="button secondary" href={href("sources")}>
+        View data sources
+      </a>
+    </div>
   </div>
   <div class="stats">
     <div>
+      <span>Repositories tracked</span>
       <strong>{data.repositories.length}</strong>
-      <span>repositories observed</span>
+      <small>
+        {data.repositories.filter((r) => r.archived).length} archived ·
+        explicitly selected
+      </small>
     </div>
     <div>
-      <strong>{data.window.days} days</strong>
-      <span>bounded observation window</span>
+      <span>Issues opened</span>
+      <strong>{issues}</strong>
+      <small>GitHub · {data.window.days}-day window</small>
     </div>
     <div>
-      <strong>{total}</strong>
-      <span>new issues + pull requests</span>
+      <span>Pull requests opened</span>
+      <strong>{prs}</strong>
+      <small>Includes automated activity</small>
+    </div>
+    <div>
+      <span>Community resources</span>
+      <strong>{channels.items.length}</strong>
+      <small>Collected links · not total ecosystem size</small>
     </div>
   </div>
-  <section>
-    <div class="section-head">
-      <h2>What the evidence says so far</h2>
-      <a class="text-link" href={href("methodology")}>
-        Inspect the method ↗
+  <div class="portal-grid">
+    <div>
+      <section>
+        <div class="section-head">
+          <h2>Try a project</h2>
+          <a class="text-link" href={href("projects")}>
+            All projects →
+          </a>
+        </div>
+        <div class="two">
+          {projects.map((p) => (
+            <article class="card project-card">
+              <a href={href(p.slug)} aria-label={`Open ${p.name}`}>
+                <ProjectArt type={p.art} />
+              </a>
+              <div class="project-body">
+                <span class="badge">{p.library}</span>
+                <h3>{p.name}</h3>
+                <p>{p.description}</p>
+                <div class="project-tags">
+                  {p.tags.map((t) => (
+                    <span>{t}</span>
+                  ))}
+                </div>
+                <a class="text-link" href={href(p.slug)}>
+                  Launch demo ↗
+                </a>
+                <span class="muted" style="display:block;margin-top:8px">
+                  {p.status}
+                </span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section class="card">
+        <div class="section-head">
+          <h2>Community resources</h2>
+          <a class="text-link" href={href("community")}>
+            Browse content →
+          </a>
+        </div>
+        {channels.items.length ? (
+          <div class="compact-list">
+            {channels.items.slice(0, 4).map((item) => (
+              <div class="compact-row">
+                <div>
+                  <a href={item.url}>{item.title} ↗</a>
+                  <small>
+                    {item.publisher} · {item.kind} · affiliation unverified
+                  </small>
+                </div>
+                <span class="badge gray">{item.sourceId}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p class="muted">
+            No resources collected yet. Add feeds, curated links, or a YouTube
+            API key in source configuration.
+          </p>
+        )}
+      </section>
+    </div>
+    <div>
+      <section class="card">
+        <div class="section-head">
+          <h2>Repository activity</h2>
+          <a class="text-link" href={href("ecosystem")}>
+            Details →
+          </a>
+        </div>
+        <p class="metric-note">
+          New issues + PRs · {date(data.window.start)}–{date(data.window.end)}
+        </p>
+        <div class="compact-list">
+          {featured.map((r) => (
+            <div class="compact-row">
+              <span class="repo-icon" aria-hidden="true">
+                ⌘
+              </span>
+              <div class="repo-info">
+                <a href={r.url}>{r.name.split("/")[1]} ↗</a>
+                <small>
+                  {r.metrics.issuesOpened} issues · {r.metrics.prsOpened} PRs
+                </small>
+              </div>
+              <div class="compact-stat">
+                <strong>{r.metrics.issuesOpened + r.metrics.prsOpened}</strong>
+                <small>items</small>
+              </div>
+            </div>
+          ))}
+        </div>
+        <a
+          class="text-link"
+          href={href("ecosystem")}
+          style="display:block;margin-top:15px"
+        >
+          Compare all {data.repositories.length} repositories →
+        </a>
+      </section>
+      <section class="card">
+        <div class="section-head">
+          <h2>Source coverage</h2>
+          <a class="text-link" href={href("sources")}>
+            Configure →
+          </a>
+        </div>
+        {channels.sources.map((s) => (
+          <div class="source-tile">
+            <div>
+              <h3 class="source-name">
+                {s.id === "articles" ? "Published articles" : s.id}
+              </h3>
+              <p>
+                {s.type === "github"
+                  ? `${data.repositories.length} tracked repositories`
+                  : `${s.itemCount} resource links`}
+              </p>
+            </div>
+            <span
+              class={`badge ${["collected", "imported"].includes(s.status) ? "green" : "gray"}`}
+            >
+              {sourceStatus(s)}
+            </span>
+          </div>
+        ))}
+      </section>
+      <a
+        class="card"
+        href={href("opportunities")}
+        style="display:block;text-decoration:none"
+      >
+        <span class="badge">Evidence → experiments</span>
+        <h3>Opportunities to test ↗</h3>
+        <p style="margin:0">
+          Specific developer questions, interventions, and success measures.
+        </p>
       </a>
     </div>
-    <div class="grid">
-      <article class="card">
-        <span class="number">01 /</span>
-        <span class="badge">Observation</span>
-        <h3>One ecosystem, several entry points</h3>
-        <p>
-          GL JS, Draw, and Geocoder are public and unarchived in this snapshot.
-          The candidate Search JS repository returned 404; its SDK documentation
-          remains public.
-        </p>
-        <a class="text-link" href={href("ecosystem")}>
-          Repository evidence →
-        </a>
-      </article>
-      <article class="card">
-        <span class="number">02 /</span>
-        <span class="badge">Observation</span>
-        <h3>File visibility is only a starting point</h3>
-        <p>
-          Two sampled repositories expose a CONTRIBUTING file. Draw’s guidance
-          lives in its README. A filename check alone would miss that pathway.
-        </p>
-        <a class="text-link" href={href("ecosystem") + "#pathways"}>
-          Inspect contribution pathways →
-        </a>
-      </article>
-      <article class="card">
-        <span class="number">03 /</span>
-        <span class="badge">Limitation</span>
-        <h3>Public PR status needs context</h3>
-        <p>
-          GL JS documents an internal import and sync process: accepted public
-          PRs can appear closed rather than merged. Public state counts alone
-          cannot establish acceptance or rejection.
-        </p>
-        <a class="text-link" href={href("methodology")}>
-          Understand the boundaries →
-        </a>
-      </article>
-    </div>
-  </section>
-  <section class="two">
-    <div>
-      <div class="eyebrow">From implementation to inquiry</div>
-      <h2 style="margin-top:20px">A notebook you can inspect.</h2>
-      <p>
-        The explorer tests GeoJSON styling, filtering, and token-aware states.
-        The research keeps generated evidence separate from editorial
-        interpretation. Proposed interventions remain hypotheses.
-      </p>
-    </div>
-    <div>
-      <details open>
-        <summary>01 · Build and learn</summary>
-        <p>
-          Browse real, historical conference venues with a map and an equivalent
-          list. The map needs your public token.
-        </p>
-      </details>
-      <details>
-        <summary>02 · Investigate public pathways</summary>
-        <p>
-          Inspect bounded GitHub cohorts and reproducible indicators without
-          scoring communities or maintainers.
-        </p>
-      </details>
-      <details>
-        <summary>03 · Test a useful intervention</summary>
-        <p>
-          Turn specific observations into small DevRel experiments with explicit
-          measures and dependencies.
-        </p>
-      </details>
-    </div>
-  </section>
-  <div class="notice">
-    This is independent research, not an official Mapbox assessment, audit, or
-    endorsement. Firsthand field notes and strategic interpretations require the
-    author’s review.{" "}
-    {import.meta.env.PUBLIC_REPO_URL ? (
-      <a href={import.meta.env.PUBLIC_REPO_URL}>View the GitHub repository ↗</a>
-    ) : (
-      <span>
-        GitHub publication is pending; setup and source structure are documented
-        on the methodology page.
-      </span>
-    )}
   </div>
+  <p class="meta">
+    GitHub collected {date(data.collectedAt)}. Source windows and freshness
+    differ; see Data sources. Metrics are observations, not community-health
+    scores.
+  </p>
 </Layout>

@@ -1,0 +1,266 @@
+---
+import Layout from "../layouts/Layout.astro";
+import config from "../../config/sources.json";
+import data from "../../data/processed/channels.json";
+import github from "../../data/processed/ecosystem.json";
+import { sourceStatus } from "../lib/channels";
+import { href, date } from "../lib/site";
+import { readFile } from "node:fs/promises";
+interface Discovery {
+  collectedAt: string;
+  query: string;
+  sort: string;
+  totalMatches: number;
+  limitations: string;
+  repositories: {
+    name: string;
+    url: string;
+    stars: number;
+    forks: number;
+    pushedAt: string;
+    selected: boolean;
+  }[];
+}
+let discovery: Discovery | undefined;
+try {
+  discovery = JSON.parse(
+    await readFile("data/processed/discovery.json", "utf8"),
+  );
+} catch (error) {
+  if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+}
+---
+
+<Layout title="Data sources">
+  <div class="page-intro">
+    <div class="eyebrow">Collection / Configuration / Freshness</div>
+    <h1>Data sources</h1>
+    <p class="lead">
+      One configuration file. Independent collectors. Visible coverage and
+      missing access.
+    </p>
+    <div class="actions">
+      <a class="button secondary" href={href("data/source-config.json")}>
+        View source configuration ↗
+      </a>
+      <a class="text-link" href={href("data/channels.json")}>
+        Download channel status ↗
+      </a>
+    </div>
+  </div>
+  <section class="table-wrap">
+    <table>
+      <caption>
+        Latest source-run status. GitHub data is retained from its own snapshot;
+        channel windows can differ.
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Source</th>
+          <th scope="col">Status</th>
+          <th scope="col">Coverage</th>
+          <th scope="col">Last collected</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.sources.map((s) => (
+          <tr>
+            <th scope="row" class="source-name">
+              {s.id}
+            </th>
+            <td>
+              <span class="status-label">{sourceStatus(s)}</span>
+              {s.retained && (
+                <small>Previous records retained; not refreshed</small>
+              )}
+            </td>
+            <td>
+              {s.type === "github"
+                ? `${github.repositories.length} repositories`
+                : `${s.itemCount} resource links`}
+              <small>
+                {s.window
+                  ? `${s.window.days}-day window`
+                  : "No collection window"}
+              </small>
+            </td>
+            <td>
+              {s.lastCollectedAt ? date(s.lastCollectedAt) : "Not collected"}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+  <div class="two">
+    <section class="card">
+      <h2>Add or change a repository</h2>
+      <p>
+        Edit the GitHub source’s <code>repositories</code> list in{" "}
+        <code>config/sources.json</code>. Use full owner/repository names; your
+        seven selected repositories are preserved, including archived projects.
+      </p>
+      <pre>{`"repositories": [
+  "mapbox/mapbox-gl-js",
+  "mapbox/pixelmatch",
+  "another-owner/another-repo"
+]`}</pre>
+      <pre>npm run research:collect -- --source github</pre>
+      <p class="muted">
+        The collector automatically reads .env. Explicit selection is separate
+        from popularity discovery.
+      </p>
+    </section>
+    <section class="card">
+      <h2>Discover popular repositories</h2>
+      <p>
+        Configure the query, star/fork/updated ordering, recent-push interval,
+        and result limit. Generate a shortlist before changing the tracked
+        sample.
+      </p>
+      <pre>npm run research:discover</pre>
+      <p>
+        Copy candidates into the repository list, or explicitly merge the
+        shortlist:
+      </p>
+      <pre>npm run research:discover -- --apply</pre>
+      <p class="muted">
+        The apply option retains existing repositories. Stars are cumulative
+        popularity, not usage or community health. Discovery changes the sample
+        and needs methodological review.
+      </p>
+    </section>
+  </div>
+  <section>
+    <div class="section-head">
+      <h2>Discovery shortlist</h2>
+      <span class="muted">
+        {discovery
+          ? `Collected ${date(discovery.collectedAt)}`
+          : "No discovery snapshot yet"}
+      </span>
+    </div>
+    {discovery ? (
+      <>
+        <p class="metric-note">
+          Query: <code>{discovery.query}</code> · ordered by {discovery.sort} ·{" "}
+          {discovery.totalMatches} matching repositories; bounded shortlist
+          below.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Repository</th>
+                <th scope="col">Stars at collection</th>
+                <th scope="col">Last push</th>
+                <th scope="col">Tracked now</th>
+              </tr>
+            </thead>
+            <tbody>
+              {discovery.repositories.map((r) => (
+                <tr>
+                  <th scope="row">
+                    <a href={r.url}>{r.name} ↗</a>
+                  </th>
+                  <td>{r.stars.toLocaleString()}</td>
+                  <td>{date(r.pushedAt)}</td>
+                  <td>
+                    {config.sources
+                      .find((s) => s.type === "github")
+                      ?.repositories?.includes(r.name)
+                      ? "Yes"
+                      : "Candidate"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    ) : (
+      <div class="notice">
+        Run <code>npm run research:discover</code> to fetch public GitHub
+        candidates. No popularity data has been invented or substituted.
+      </div>
+    )}
+  </section>
+  <section>
+    <h2>Connect another channel</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="badge">RSS / Atom</span>
+        <h3>Published articles</h3>
+        <p>
+          Add feed URLs, retention limits, and excluded publisher URL prefixes
+          to the <code>articles</code> source. Only titles, dates, publisher
+          names, and public links are saved.
+        </p>
+        <pre>npm run research:collect -- --source articles</pre>
+      </article>
+      <article class="card">
+        <span class="badge">YouTube Data API</span>
+        <h3>Community videos</h3>
+        <p>
+          Set <code>YOUTUBE_API_KEY</code> in .env. Enable YouTube Data API v3
+          in its Google Cloud project. Configure queries, page bounds, and known
+          official channel IDs to exclude.
+        </p>
+        <pre>npm run research:collect -- --source youtube</pre>
+        <a
+          class="text-link"
+          href="https://developers.google.com/youtube/v3/docs/search/list"
+        >
+          API and quota reference ↗
+        </a>
+      </article>
+      <article class="card">
+        <span class="badge">Manual curation</span>
+        <h3>Any public resource</h3>
+        <p>
+          Add an item with a title, URL, publisher, optional publication date,
+          and kind (Article, Video, or Project). Useful for sites without feeds.
+        </p>
+        <pre>npm run research:collect -- --source curated</pre>
+      </article>
+    </div>
+  </section>
+  <section class="card">
+    <span class="badge gray">Access required</span>
+    <h2>Mapbox Discord</h2>
+    <p>
+      An invite does not grant API access to server messages. This project
+      supports an aggregate import, not message scraping. Only enable it for a
+      publishable export from an approved integration or a public source.
+    </p>
+    <p>
+      The import schema requires <code>publishable: true</code>, a public source
+      URL, exact observation bounds, and labeled nonnegative integer totals. No
+      message bodies, user IDs, or member lists are retained. Set the import
+      path and enable the source in configuration.
+    </p>
+    <a
+      class="text-link"
+      href="https://docs.discord.com/developers/resources/channel"
+    >
+      Discord API access reference ↗
+    </a>
+  </section>
+  <section>
+    <h2>Collection status details</h2>
+    {data.sources.map((s) => (
+      <details>
+        <summary>
+          <span class="source-name">{s.id}</span> · {sourceStatus(s)}
+        </summary>
+        <p>{s.message}</p>
+        <p class="muted">{s.window && `${s.window.start} – ${s.window.end}`}</p>
+      </details>
+    ))}
+  </section>
+  <p class="muted">
+    Source adapters and extension instructions: <code>docs/SOURCES.md</code>.
+    This is a static view; edit configuration and rebuild to change collection
+    or presentation.
+  </p>
+</Layout>

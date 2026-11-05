@@ -1,12 +1,68 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-04T15:32:31.879Z",
+  "collectedAt": "2026-11-05T00:41:59.273Z",
   "window": {
-    "start": "2026-08-06T15:32:31.870Z",
-    "end": "2026-11-04T15:32:31.870Z",
+    "start": "2026-08-07T00:41:59.272Z",
+    "end": "2026-11-05T00:41:59.272Z",
     "days": 90
   },
-  "responseSampling": "Newest five non-PR issues created in the window per repository; comments only, excludes author and GitHub Bot accounts. Censored unanswered items excluded from median.",
+  "responseSampling": "Newest 20 non-PR issues created in the window per repository; comments only, excludes author and GitHub Bot accounts. Censored unanswered items excluded from median.",
+  "selection": {
+    "mode": "explicit",
+    "repositories": [
+      "mapbox/mapbox-gl-js",
+      "mapbox/pixelmatch",
+      "mapbox/mapbox-gl-native",
+      "mapbox/tippecanoe",
+      "mapbox/delaunator",
+      "mapbox/mapbox-gl-draw",
+      "mapbox/mapbox-gl-geocoder",
+      "mapbox/awesome-vector-tiles",
+      "mapbox/earcut",
+      "mapbox/supercluster",
+      "mapbox/geojson.io",
+      "mapbox/geojson-vt",
+      "mapbox/robosat",
+      "mapbox/maki",
+      "mapbox/polylabel",
+      "mapbox/togeojson",
+      "mapbox/node-pre-gyp",
+      "mapbox/webgl-wind",
+      "mapbox/earcut.hpp",
+      "mapbox/geobuf",
+      "mapbox/vector-tile-spec",
+      "mapbox/mapbox-navigation-ios",
+      "mapbox/pbf",
+      "mapbox/Fingertips",
+      "mapbox/mapbox-unity-sdk",
+      "mapbox/mapbox-sdk-js",
+      "mapbox/concaveman",
+      "mapbox/osm-bright",
+      "mapbox/storytelling",
+      "mapbox/leaflet-omnivore",
+      "mapbox/tiny-sdf",
+      "mapbox/polyline",
+      "mapbox/mbtiles-spec",
+      "mapbox/martini",
+      "mapbox/mapbox-navigation-android",
+      "mapbox/mapbox-maps-ios",
+      "mapbox/mapbox-maps-android",
+      "mapbox/mapbox-gl-leaflet",
+      "mapbox/tilelive",
+      "mapbox/mercantile",
+      "mapbox/mapbox-java",
+      "mapbox/cheap-ruler",
+      "mapbox/vector-tile-js",
+      "mapbox/variant",
+      "mapbox/protozero",
+      "mapbox/leaflet-image",
+      "mapbox/mapbox-maps-flutter",
+      "mapbox/csv2geojson",
+      "mapbox/mcp-server",
+      "mapbox/potpack",
+      "mapbox/shp-write"
+    ]
+  },
   "candidates": [],
   "repositories": [
     {
@@ -35,9 +91,9 @@
         "prsOpened": 12,
         "closedPrs": 2,
         "medianPrCloseHours": 138.5375,
-        "responseSampleSize": 5,
-        "respondedSample": 3,
-        "medianSampleResponseHours": 33.02583333333333
+        "responseSampleSize": 20,
+        "respondedSample": 11,
+        "medianSampleResponseHours": 30.230833333333333
       }
     },
     {
@@ -213,6 +269,1283 @@
         "prsOpened": 10,
         "closedPrs": 10,
         "medianPrCloseHours": 14.514305555555556,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/awesome-vector-tiles",
+      "url": "https://github.com/mapbox/awesome-vector-tiles",
+      "description": "Awesome implementations of the Mapbox Vector Tile specification",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-08-10T19:17:38Z",
+      "branch": "master",
+      "license": "CC0-1.0",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 2,
+        "closedPrs": 1,
+        "medianPrCloseHours": 1.0691666666666666,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/earcut",
+      "url": "https://github.com/mapbox/earcut",
+      "description": "The fastest and smallest JavaScript polygon triangulation library for your WebGL apps",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-23T10:20:57Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 7,
+        "prsOpened": 9,
+        "closedPrs": 8,
+        "medianPrCloseHours": 18.605833333333337,
+        "responseSampleSize": 7,
+        "respondedSample": 2,
+        "medianSampleResponseHours": 1.4738888888888888
+      }
+    },
+    {
+      "name": "mapbox/supercluster",
+      "url": "https://github.com/mapbox/supercluster",
+      "description": "A very fast geospatial point clustering library for browsers and Node.",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-09-03T08:35:00Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 1,
+        "prsOpened": 2,
+        "closedPrs": 1,
+        "medianPrCloseHours": 0.02861111111111111,
+        "responseSampleSize": 1,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/geojson.io",
+      "url": "https://github.com/mapbox/geojson.io",
+      "description": "A quick, simple tool for creating, viewing, and sharing spatial data",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-08-17T20:17:11Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 2,
+        "prsOpened": 5,
+        "closedPrs": 2,
+        "medianPrCloseHours": 83.71944444444445,
+        "responseSampleSize": 2,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/geojson-vt",
+      "url": "https://github.com/mapbox/geojson-vt",
+      "description": "Slice GeoJSON into vector tiles on the fly in the browser",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-09-30T14:41:39Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 1,
+        "prsOpened": 2,
+        "closedPrs": 1,
+        "medianPrCloseHours": 2.151111111111111,
+        "responseSampleSize": 1,
+        "respondedSample": 1,
+        "medianSampleResponseHours": 15.734166666666667
+      }
+    },
+    {
+      "name": "mapbox/robosat",
+      "url": "https://github.com/mapbox/robosat",
+      "description": " Semantic segmentation on aerial and satellite imagery. Extracts features such as: buildings, parking lots, roads, water, clouds",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:11:59Z",
+      "branch": "master",
+      "license": "MIT",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/maki",
+      "url": "https://github.com/mapbox/maki",
+      "description": "A POI Icon Set",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-24T09:57:57Z",
+      "branch": "main",
+      "license": "CC0-1.0",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/polylabel",
+      "url": "https://github.com/mapbox/polylabel",
+      "description": "A fast algorithm for finding the pole of inaccessibility of a polygon (in JavaScript and C++)",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-25T10:36:23Z",
+      "branch": "master",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/togeojson",
+      "url": "https://github.com/mapbox/togeojson",
+      "description": "convert KML and GPX to GeoJSON, without the fuss",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:20:50Z",
+      "branch": "master",
+      "license": "BSD-2-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/node-pre-gyp",
+      "url": "https://github.com/mapbox/node-pre-gyp",
+      "description": "Node.js tool for easy binary deployment of C++ addons",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-28T07:26:07Z",
+      "branch": "master",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [
+          "contributing.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 2,
+        "prsOpened": 34,
+        "closedPrs": 28,
+        "medianPrCloseHours": 138.67902777777778,
+        "responseSampleSize": 2,
+        "respondedSample": 1,
+        "medianSampleResponseHours": 0.2475
+      }
+    },
+    {
+      "name": "mapbox/webgl-wind",
+      "url": "https://github.com/mapbox/webgl-wind",
+      "description": "Wind power visualization with WebGL particles",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-08-06T18:42:10Z",
+      "branch": "master",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/earcut.hpp",
+      "url": "https://github.com/mapbox/earcut.hpp",
+      "description": "Fast, header-only polygon triangulation",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-31T08:51:06Z",
+      "branch": "master",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 1,
+        "prsOpened": 4,
+        "closedPrs": 2,
+        "medianPrCloseHours": 235.00875,
+        "responseSampleSize": 1,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/geobuf",
+      "url": "https://github.com/mapbox/geobuf",
+      "description": "A compact binary encoding for geographic data.",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:21:16Z",
+      "branch": "master",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/vector-tile-spec",
+      "url": "https://github.com/mapbox/vector-tile-spec",
+      "description": "Mapbox Vector Tile specification",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:24:39Z",
+      "branch": "master",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [
+          "CODE_OF_CONDUCT.md"
+        ],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-navigation-ios",
+      "url": "https://github.com/mapbox/mapbox-navigation-ios",
+      "description": "Turn-by-turn navigation logic and UI in Swift on iOS",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-04T08:18:44Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.md"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 5,
+        "prsOpened": 9,
+        "closedPrs": 9,
+        "medianPrCloseHours": 1.7241666666666666,
+        "responseSampleSize": 5,
+        "respondedSample": 1,
+        "medianSampleResponseHours": 2.28
+      }
+    },
+    {
+      "name": "mapbox/pbf",
+      "url": "https://github.com/mapbox/pbf",
+      "description": "A low-level, lightweight protocol buffers implementation in JavaScript.",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-09-02T10:42:00Z",
+      "branch": "main",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 1,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 1,
+        "respondedSample": 1,
+        "medianSampleResponseHours": 258.1613888888889
+      }
+    },
+    {
+      "name": "mapbox/Fingertips",
+      "url": "https://github.com/mapbox/Fingertips",
+      "description": "Touch indicators on external displays for iOS applications.",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-16T13:47:46Z",
+      "branch": "main",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.md"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-unity-sdk",
+      "url": "https://github.com/mapbox/mapbox-unity-sdk",
+      "description": "Mapbox Unity SDK - https://www.mapbox.com/unity/",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-20T10:55:23Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE",
+          "LICENSE.meta",
+          "Runtime/Mapbox/BaseModule/Plugins/iOS/LICENSE.md",
+          "Runtime/Mapbox/BaseModule/Plugins/iOS/LICENSE.md.meta"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 2,
+        "prsOpened": 1,
+        "closedPrs": 1,
+        "medianPrCloseHours": 23.588055555555556,
+        "responseSampleSize": 2,
+        "respondedSample": 1,
+        "medianSampleResponseHours": 0.37722222222222224
+      }
+    },
+    {
+      "name": "mapbox/mapbox-sdk-js",
+      "url": "https://github.com/mapbox/mapbox-sdk-js",
+      "description": "A JavaScript client to Mapbox services, supporting Node, browsers, and React Native",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-09-10T20:11:02Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [
+          "CODE_OF_CONDUCT.md"
+        ],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 2,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 2,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/concaveman",
+      "url": "https://github.com/mapbox/concaveman",
+      "description": "A very fast 2D concave hull algorithm in JavaScript",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-24T10:29:32Z",
+      "branch": "master",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/osm-bright",
+      "url": "https://github.com/mapbox/osm-bright",
+      "description": "A Carto template for OpenStreetMap data",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:05:31Z",
+      "branch": "master",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.txt",
+          "osm-bright/res/LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/storytelling",
+      "url": "https://github.com/mapbox/storytelling",
+      "description": "Storytelling with maps template",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:16:49Z",
+      "branch": "main",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/leaflet-omnivore",
+      "url": "https://github.com/mapbox/leaflet-omnivore",
+      "description": "universal format parser for Leaflet & Mapbox.js",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-24T10:19:24Z",
+      "branch": "master",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/tiny-sdf",
+      "url": "https://github.com/mapbox/tiny-sdf",
+      "description": "Browser-side SDF font generator",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-08T14:30:37Z",
+      "branch": "main",
+      "license": "BSD-2-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 1,
+        "closedPrs": 1,
+        "medianPrCloseHours": 615.2622222222222,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/polyline",
+      "url": "https://github.com/mapbox/polyline",
+      "description": "polyline encoding and decoding in javascript",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-24T10:23:07Z",
+      "branch": "master",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mbtiles-spec",
+      "url": "https://github.com/mapbox/mbtiles-spec",
+      "description": "specification documents for the MBTiles tileset format",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T14:59:15Z",
+      "branch": "master",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/martini",
+      "url": "https://github.com/mapbox/martini",
+      "description": "A JavaScript library for real-time RTIN terrain mesh generation",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-24T10:21:40Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-navigation-android",
+      "url": "https://github.com/mapbox/mapbox-navigation-android",
+      "description": "Mapbox Navigation SDK for Android",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-04T15:19:39Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.md"
+        ],
+        "CODE_OF_CONDUCT": [
+          "CODE_OF_CONDUCT.md"
+        ],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 3,
+        "prsOpened": 9,
+        "closedPrs": 9,
+        "medianPrCloseHours": 0.9133333333333333,
+        "responseSampleSize": 3,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-maps-ios",
+      "url": "https://github.com/mapbox/mapbox-maps-ios",
+      "description": "Interactive, thoroughly customizable maps for iOS powered by vector tiles and Metal",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-04T12:41:39Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.md",
+          "Sources/Vendors/Hammer/LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 17,
+        "prsOpened": 2,
+        "closedPrs": 1,
+        "medianPrCloseHours": 0.21666666666666667,
+        "responseSampleSize": 17,
+        "respondedSample": 8,
+        "medianSampleResponseHours": 19.31888888888889
+      }
+    },
+    {
+      "name": "mapbox/mapbox-maps-android",
+      "url": "https://github.com/mapbox/mapbox-maps-android",
+      "description": "Interactive, thoroughly customizable maps in native Android powered by vector tiles and OpenGL.",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-03T17:21:57Z",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.md"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 11,
+        "prsOpened": 2,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 11,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-gl-leaflet",
+      "url": "https://github.com/mapbox/mapbox-gl-leaflet",
+      "description": "binding from Mapbox GL JS to the Leaflet API",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-17T19:59:00Z",
+      "branch": "master",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/tilelive",
+      "url": "https://github.com/mapbox/tilelive",
+      "description": "fast interface to tiles with pluggable backends - NOT ACTIVELY MAINTAINED",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:19:34Z",
+      "branch": "master",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.md"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mercantile",
+      "url": "https://github.com/mapbox/mercantile",
+      "description": "Spherical mercator tile and coordinate utilities",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T14:59:51Z",
+      "branch": "main",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.txt",
+          "docs/license.rst"
+        ],
+        "CODE_OF_CONDUCT": [
+          "CODE_OF_CONDUCT.md"
+        ],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-java",
+      "url": "https://github.com/mapbox/mapbox-java",
+      "description": "The Mapbox Java SDK – Java wrappers around Mapbox APIs and other location data ",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-15T08:32:27Z",
+      "branch": "main",
+      "license": "MIT",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 1,
+        "prsOpened": 1,
+        "closedPrs": 1,
+        "medianPrCloseHours": 139.38111111111112,
+        "responseSampleSize": 1,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/cheap-ruler",
+      "url": "https://github.com/mapbox/cheap-ruler",
+      "description": "Fast approximations for common geodesic measurements 🌐",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-10-07T15:32:57Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/vector-tile-js",
+      "url": "https://github.com/mapbox/vector-tile-js",
+      "description": "Parses vector tiles with JavaScript",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-24T10:28:32Z",
+      "branch": "main",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/variant",
+      "url": "https://github.com/mapbox/variant",
+      "description": "C++11/C++14 Variant",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T15:24:24Z",
+      "branch": "master",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/protozero",
+      "url": "https://github.com/mapbox/protozero",
+      "description": "Minimalist protocol buffer decoder and encoder in C++",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-03T08:30:55Z",
+      "branch": "master",
+      "license": "BSD-2-Clause",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.from_folly",
+          "LICENSE.md"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 1,
+        "prsOpened": 12,
+        "closedPrs": 11,
+        "medianPrCloseHours": 34.99333333333333,
+        "responseSampleSize": 1,
+        "respondedSample": 1,
+        "medianSampleResponseHours": 1.95
+      }
+    },
+    {
+      "name": "mapbox/leaflet-image",
+      "url": "https://github.com/mapbox/leaflet-image",
+      "description": "leaflet maps to images",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-04-13T23:10:32Z",
+      "branch": "gh-pages",
+      "license": "BSD-2-Clause",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.txt"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mapbox-maps-flutter",
+      "url": "https://github.com/mapbox/mapbox-maps-flutter",
+      "description": "Interactive, thoroughly customizable maps for Flutter powered by Mapbox Maps SDK",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-04T10:23:42Z",
+      "branch": "main",
+      "license": "Unspecified",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md",
+          "mapbox_maps_flutter/CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "mapbox_maps_flutter/LICENSE",
+          "mapbox_maps_flutter_mobile/LICENSE",
+          "mapbox_maps_flutter_platform_interface/LICENSE",
+          "mapbox_maps_flutter_web/LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 6,
+        "prsOpened": 2,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 6,
+        "respondedSample": 4,
+        "medianSampleResponseHours": 30.561666666666667
+      }
+    },
+    {
+      "name": "mapbox/csv2geojson",
+      "url": "https://github.com/mapbox/csv2geojson",
+      "description": "magically convert csv files to geojson files",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-29T14:37:22Z",
+      "branch": "gh-pages",
+      "license": "MIT",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/mcp-server",
+      "url": "https://github.com/mapbox/mcp-server",
+      "description": "Mapbox Model Context Protocol (MCP) server",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-11-04T21:44:15Z",
+      "branch": "main",
+      "license": "MIT",
+      "docs": {
+        "CONTRIBUTING": [
+          "CONTRIBUTING.md"
+        ],
+        "LICENSE": [
+          "LICENSE.md"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 18,
+        "prsOpened": 51,
+        "closedPrs": 40,
+        "medianPrCloseHours": 8.983472222222222,
+        "responseSampleSize": 18,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/potpack",
+      "url": "https://github.com/mapbox/potpack",
+      "description": "A tiny rectangle packing JavaScript library (for sprite layouts)",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-18T08:17:46Z",
+      "branch": "main",
+      "license": "ISC",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
+        "responseSampleSize": 0,
+        "respondedSample": 0,
+        "medianSampleResponseHours": null
+      }
+    },
+    {
+      "name": "mapbox/shp-write",
+      "url": "https://github.com/mapbox/shp-write",
+      "description": "create and write to shapefiles in pure javascript",
+      "archived": false,
+      "disabled": false,
+      "pushedAt": "2026-06-24T09:55:10Z",
+      "branch": "master",
+      "license": "BSD-3-Clause",
+      "docs": {
+        "CONTRIBUTING": [],
+        "LICENSE": [
+          "LICENSE"
+        ],
+        "CODE_OF_CONDUCT": [],
+        "SUPPORT": []
+      },
+      "treeTruncated": false,
+      "metrics": {
+        "issuesOpened": 0,
+        "prsOpened": 0,
+        "closedPrs": 0,
+        "medianPrCloseHours": null,
         "responseSampleSize": 0,
         "respondedSample": 0,
         "medianSampleResponseHours": null
